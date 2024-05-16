@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "id": 2,
+      "attributes": {
+        "slug": "post-2",
+        "title": "Post 2",
+        "subtitle": "The best post 2",
+        "publishedAt": "2024-04-14T09:01:44.668Z",
+        "body": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non** numquam eius modi tempora incidunt** ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit _qui in ea voluptate velit esse quam_ nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas <u>nulla pariatur?</u>",
+        "image": {
+          "data": {
+            "id": 2,
+            "attributes": {
+              "url": "/uploads/johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_1_caca80ac5b.png"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pageSize": 1
+    }
+  }
+}
