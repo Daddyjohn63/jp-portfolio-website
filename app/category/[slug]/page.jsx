@@ -10,8 +10,9 @@ import { formatDateString } from '@/lib/date';
 //get the params
 const CategoryPostsPage = async ({ params: { slug } }) => {
   const categoryTitle = await getCategoryTitleBySlug(slug);
+  console.log('CATEGORY TITLE', categoryTitle);
   const categoryPosts = await getCategoryPosts(slug);
-
+  console.log('CATEGORY POSTS', categoryPosts);
   //console.log('CAT TITLE', categoryTitle);
 
   //return the JSX needed to render the data.
@@ -30,7 +31,7 @@ const CategoryPostsPage = async ({ params: { slug } }) => {
                   src={post?.image}
                   width="400"
                   height="300"
-                  alt=""
+                  alt={post?.title || ''}
                   className="rounded-t"
                 />
                 <div className="p-3">

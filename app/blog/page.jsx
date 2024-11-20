@@ -35,17 +35,18 @@ const BlogPage = async () => {
                   <div className="flex flex-col">
                     <span>{formatDateString(post?.date)}</span>
 
-                    <span className="text-gray-600  mt-1 block">
-                      {post.categories.map((cat, index) => [
-                        <Link
-                          key={cat.slug}
-                          href={`/category/${cat.slug}`}
-                          className="hover:underline capitalize"
-                        >
-                          {cat.title}
-                        </Link>,
-                        index < post.categories.length - 1 && ', '
-                      ])}
+                    <span className="text-gray-600 mt-1 block">
+                      {post.categories.map((cat, index) => (
+                        <span key={cat.slug}>
+                          <Link
+                            href={`/category/${cat.slug}`}
+                            className="hover:underline capitalize"
+                          >
+                            {cat.title}
+                          </Link>
+                          {index < post.categories.length - 1 && ', '}
+                        </span>
+                      ))}
                     </span>
                   </div>
 

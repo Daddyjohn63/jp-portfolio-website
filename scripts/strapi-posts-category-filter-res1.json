@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 2,
+      "attributes": {
+        "publishedAt": "2024-11-20T10:22:53.598Z",
+        "slug": "this-is-post-two",
+        "title": "This is post two",
+        "subtitle": "A very good post about stuff",
+        "categories": {
+          "data": [
+            {
+              "id": 1,
+              "attributes": {
+                "title": "Next JS",
+                "slug": "next-js"
+              }
+            },
+            {
+              "id": 2,
+              "attributes": {
+                "title": "Website Design",
+                "slug": "website-design"
+              }
+            }
+          ]
+        },
+        "image": {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "url": "/uploads/johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 1,
+      "attributes": {
+        "publishedAt": "2024-11-20T09:05:04.220Z",
+        "slug": "this-is-post-one",
+        "title": "This is post 1",
+        "subtitle": "A very good post about stuff!",
+        "categories": {
+          "data": [
+            {
+              "id": 1,
+              "attributes": {
+                "title": "Next JS",
+                "slug": "next-js"
+              }
+            }
+          ]
+        },
+        "image": {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "url": "/uploads/johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pageSize": 6,
+      "pageCount": 1,
+      "total": 2
+    }
+  }
+}
