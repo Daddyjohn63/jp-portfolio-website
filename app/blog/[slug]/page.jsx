@@ -1,48 +1,52 @@
-//Posts single
 import Heading from '@/components/common/Heading';
 import { getBlogPost, getSlugs } from '@/lib/blog';
 import { formatDateString } from '@/lib/date';
-
 import { MoveLeft, MoveRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Suspense } from 'react';
+import LoadingState from '@/components/common/Loading-state';
+import { fetchData } from '@/lib/utils';
 
 export async function generateStaticParams() {
   const slugs = await getSlugs();
-
-  return slugs.map(slug => ({ slug })); //convert string to object
+  return slugs.map(slug => ({ slug }));
 }
 
 export async function generateMetadata({ params: { slug } }) {
   const post = await getBlogPost(slug);
-
   return {
     title: post.currentPost?.title
   };
 }
 
-const BlogSinglePage = async ({ params: { slug } }) => {
-  const { currentPost, previousPost, nextPost } = await getBlogPost(slug);
+const BlogPost = async ({ slug }) => {
+  const { data } = await fetchData(getBlogPost, slug);
+  const { currentPost, previousPost, nextPost } = data;
 
-  const formattedDate = formatDateString(currentPost?.date);
+  if (!currentPost) {
+    throw new Error(`Blog post "${slug}" not found`);
+  }
+
+  const formattedDate = formatDateString(currentPost.date);
 
   return (
     <div className="container mt-[1rem]">
       <div>
-        <Heading>{currentPost?.title}</Heading>
-        <h3>{currentPost?.subtitle}</h3>
+        <Heading>{currentPost.title}</Heading>
+        <h3>{currentPost.subtitle}</h3>
         <span>{formattedDate}</span>
       </div>
       <Image
-        src={currentPost?.image}
-        alt="image"
+        src={currentPost.image}
+        alt={currentPost.title || 'Blog post image'}
         width={1000}
         height={753}
         className="w-full rounded-lg"
       />
       <div className="w-full mt-[2rem] pb-[2rem]">
         <article
-          dangerouslySetInnerHTML={{ __html: currentPost?.body }}
+          dangerouslySetInnerHTML={{ __html: currentPost.body }}
           className="prose min-w-full"
         />
       </div>
@@ -84,4 +88,13 @@ const BlogSinglePage = async ({ params: { slug } }) => {
     </div>
   );
 };
+
+const BlogSinglePage = ({ params: { slug } }) => {
+  return (
+    <Suspense fallback={<LoadingState />}>
+      <BlogPost slug={slug} />
+    </Suspense>
+  );
+};
+
 export default BlogSinglePage;
