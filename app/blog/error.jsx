@@ -1,6 +1,6 @@
 'use client';
 
-import ErrorState from '@/components/common/Error-state';
+import { ErrorState } from '@/components/common/Error-state';
 
 export default function Error({ error, reset }) {
   return (

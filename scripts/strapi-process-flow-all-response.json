@@ -1,0 +1,33 @@
+{
+  "data": {
+    "id": 1,
+    "attributes": {
+      "createdAt": "2024-11-21T18:01:09.523Z",
+      "updatedAt": "2024-11-21T18:16:56.660Z",
+      "publishedAt": "2024-11-21T18:01:26.803Z",
+      "process_cards": [
+        {
+          "id": 1,
+          "Time": "1 HOUR",
+          "subheading": "DO WE MATCH",
+          "mainheading": "DISCOVERY CALL",
+          "description": "Before we start, we determine if and how I can help you. What are your requirements for your new website? Why do you need a new website? What goals do you have, and what problems can we solve with a new website",
+          "bullet_one": "We get to know each other better",
+          "bullet_two": "Determine how I can best assist you",
+          "bullet_three": "Understand the goals you have for your website"
+        },
+        {
+          "id": 2,
+          "Time": "1 WEEK",
+          "subheading": "LOREM IPSUM",
+          "mainheading": "CONCEPT & STRATEGY",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+          "bullet_one": "UX Design",
+          "bullet_two": "Wireframes",
+          "bullet_three": "Interactive Prototype"
+        }
+      ]
+    }
+  },
+  "meta": {}
+}
