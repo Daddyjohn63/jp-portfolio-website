@@ -24,8 +24,8 @@ const PortfolioSection = () => {
                 Victorian Dresses
               </h3>
               <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore
-                adipisci placeat.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                dolore adipisci placeat.
               </p>
               <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                 See More
@@ -48,8 +48,8 @@ const PortfolioSection = () => {
                 Mens Waistcoat & Jacket
               </h3>
               <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore
-                adipisci placeat.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                dolore adipisci placeat.
               </p>
               <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                 See More
@@ -72,8 +72,8 @@ const PortfolioSection = () => {
                 Victorian Corsets
               </h3>
               <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore
-                adipisci placeat.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                dolore adipisci placeat.
               </p>
               <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                 See More
