@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={afacad.variable} suppressHydrationWarning>
-      <body className={afacad.className}>
+      <body className={`dark ${afacad.className}`}>
         <Header />
         {children}
       </body>

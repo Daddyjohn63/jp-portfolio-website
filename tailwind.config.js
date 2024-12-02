@@ -53,6 +53,14 @@ module.exports = {
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))'
+        },
+        button: {
+          DEFAULT: 'hsl(var(--button-bg))',
+          foreground: 'hsl(var(--button-text))'
+        },
+        link: {
+          DEFAULT: 'hsl(var(--link))',
+          foreground: 'hsl(var(--link-hover))'
         }
       },
       borderRadius: {
@@ -73,6 +81,14 @@ module.exports = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out'
+      },
+      backgroundColor: {
+        button: 'hsl(var(--button-bg))'
+      },
+      textColor: {
+        button: 'hsl(var(--button-text))',
+        link: 'hsl(var(--link))',
+        'link-hover': 'hsl(var(--link-hover))'
       }
     }
   },

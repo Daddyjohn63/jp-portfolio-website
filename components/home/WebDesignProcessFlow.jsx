@@ -12,13 +12,13 @@ export const WebDesignProcessFlow = ({ processFlow }) => {
   return (
     <div className="py-12 bg-neutral-800">
       <div className="container py-12 ">
-        <h2 className="text-3xl font-bold text-center mb-12">
+        <h2 className="text-3xl text-customBiege font-bold text-center mb-12">
           Web Design Process
         </h2>
 
         <div className="relative">
           {/* Vertical Line - left aligned on mobile, centered on larger screens */}
-          <div className="absolute md:left-1/2 left-4 transform md:-translate-x-1/2 h-full w-1 bg-gray-200" />
+          <div className="absolute md:left-1/2 left-4 transform md:-translate-x-1/2 h-full w-[1px] bg-customBiege" />
 
           <div className="relative">
             {processFlow.map((process, index) => (
@@ -82,7 +82,7 @@ export const WebDesignProcessFlow = ({ processFlow }) => {
 
                 {/* Timeline Node - centered on the line for both mobile and desktop */}
                 <div className="absolute md:left-1/2 left-4 transform -translate-x-1/2 flex items-center justify-center">
-                  <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                  <div className="w-8 h-8 bg-gray-800 rounded-full border-[1px] border-customBiege flex items-center justify-center text-white font-bold text-sm">
                     {index + 1}
                   </div>
                 </div>

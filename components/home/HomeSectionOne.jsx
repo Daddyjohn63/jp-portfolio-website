@@ -1,4 +1,8 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid';
+import {
+  CloudArrowUpIcon,
+  LockClosedIcon,
+  ServerIcon
+} from '@heroicons/react/20/solid';
 import Image from 'next/image';
 
 const features = [
@@ -24,20 +28,20 @@ const features = [
 
 const HomeSectionOne = () => {
   return (
-    <div className="container flex flex-col md:flex-row gap-8 pt-24">
+    <div className="container  flex flex-col md:flex-row gap-8 pt-24">
       {/* <!-- Left side: Text --> */}
       <div className="md:w-1/2 pt-12">
         <h2 className="text-2xl font-bold mb-4">Your Text Goes Here</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod scelerisque
-          turpis, vitae posuere lectus sagittis vel. Phasellus hendrerit lorem id libero
-          ultrices, in varius elit efficitur.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
+          scelerisque turpis, vitae posuere lectus sagittis vel. Phasellus
+          hendrerit lorem id libero ultrices, in varius elit efficitur.
         </p>
         <br></br>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod scelerisque
-          turpis, vitae posuere lectus sagittis vel. Phasellus hendrerit lorem id libero
-          ultrices, in varius elit efficitur.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
+          scelerisque turpis, vitae posuere lectus sagittis vel. Phasellus
+          hendrerit lorem id libero ultrices, in varius elit efficitur.
         </p>
       </div>
 

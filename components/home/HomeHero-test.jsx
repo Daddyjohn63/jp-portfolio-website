@@ -4,14 +4,14 @@ import Link from 'next/link';
 
 import Reveal from '@/components/common/ScrollAnimation';
 
-const HomeHero = () => {
+const HomeHeroTest = () => {
   return (
     <>
       <div
-        className="bg-cover bg-center"
-        style={{ backgroundImage: `url('/images/img8.jpg')` }}
+      // className="bg-cover bg-center"
+      // style={{ backgroundImage: `url('/images/img8.jpg')` }}
       >
-        <div className="w-full relative isolate overflow-hidden bg-background/70 bg-opacity-70">
+        <div className="w-full relative isolate overflow-hidden bg-black ">
           <svg
             className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
             aria-hidden="true"
@@ -49,7 +49,7 @@ const HomeHero = () => {
               className="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-20"
               style={{
                 clipPath:
-                  'polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)'
+                  'polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 63% 88%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 0 25%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)'
               }}
             />
           </div>
@@ -58,17 +58,17 @@ const HomeHero = () => {
               <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
                 <div className="mt-24 sm:mt-32 lg:mt-16">
                   <Link href="#" className="inline-flex space-x-6">
-                    <span className="rounded-full bg-muted-foreground/10 px-3 py-1 text-sm font-semibold leading-6 text-accent ring-1 ring-inset ring-accent/20">
+                    <span className="rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-500/20">
                       Some catchy sub-heading
                     </span>
                   </Link>
                 </div>
 
-                <h1 className="mt-10 text-4xl font-bold tracking-tight sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary via-link to-foreground">
+                <h1 className="mt-10 text-4xl font-bold tracking-tight sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-300 to-indigo-300">
                   Vintage Costume Tailoring
                 </h1>
 
-                <p className="mt-6 text-lg leading-8 ">
+                <p className="mt-6 text-lg leading-8 text-gray-300">
                   Jackie Paul designs, anim aute id magna aliqua ad ad non
                   deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit
                   sunt amet fugiat veniam occaecat fugiat aliqua.
@@ -76,13 +76,13 @@ const HomeHero = () => {
                 <div className="mt-10 flex items-center gap-x-6">
                   <Link
                     href="#"
-                    className="rounded-md bg-button px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-600 focus-visible:outline-sky-400"
+                    className="rounded-md bg-button px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                   >
                     View My Work
                   </Link>
                   <Link
                     href="#"
-                    className="text-sm link-hover font-semibold leading-6 text-white"
+                    className="text-sm font-semibold leading-6 text-white"
                   >
                     Learn more <span aria-hidden="true">→</span>
                   </Link>
@@ -90,20 +90,20 @@ const HomeHero = () => {
               </div>
             </Reveal>
             {/* <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
-          <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-            <img
-              src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
-              alt="App screenshot"
-              width={2432}
-              height={1442}
-              className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
-            />
-          </div>
-        </div> */}
+              <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
+                <img
+                  src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+                  alt="App screenshot"
+                  width={2432}
+                  height={1442}
+                  className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+                />
+              </div>
+            </div> */}
           </div>
         </div>
       </div>
     </>
   );
 };
-export default HomeHero;
+export default HomeHeroTest;
