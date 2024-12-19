@@ -61,6 +61,17 @@ module.exports = {
         link: {
           DEFAULT: 'hsl(var(--link))',
           foreground: 'hsl(var(--link-hover))'
+        },
+        customShades: {
+          shade1: 'hsl(var(--shade-1))',
+          shade2: 'hsl(var(--shade-2))',
+          shade3: 'hsl(var(--shade-3))',
+          shade4: 'hsl(var(--shade-4))',
+          shade5: 'hsl(var(--shade-5))',
+          shade6: 'hsl(var(--shade-6))',
+          shade7: 'hsl(var(--shade-7))',
+          shade8: 'hsl(var(--shade-8))',
+          shade9: 'hsl(var(--shade-9))'
         }
       },
       borderRadius: {

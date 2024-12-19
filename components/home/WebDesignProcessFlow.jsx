@@ -10,15 +10,15 @@ export const WebDesignProcessFlow = ({ processFlow }) => {
   if (!processFlow?.length) return null;
 
   return (
-    <div className="py-12 bg-neutral-800">
+    <div className="py-[50px]">
       <div className="container py-12 ">
-        <h2 className="text-3xl text-customBiege font-bold text-center mb-12">
+        <h2 className="text-5xl text-customBiege font-bold text-center mb-12">
           Web Design Process
         </h2>
 
         <div className="relative">
           {/* Vertical Line - left aligned on mobile, centered on larger screens */}
-          <div className="absolute md:left-1/2 left-4 transform md:-translate-x-1/2 h-full w-[1px] bg-customBiege" />
+          <div className="absolute md:left-1/2 left-4 transform md:-translate-x-1/2 h-full w-[1px] bg-customShades-shade8" />
 
           <div className="relative">
             {processFlow.map((process, index) => (
@@ -36,7 +36,7 @@ export const WebDesignProcessFlow = ({ processFlow }) => {
                     index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'
                   }`}
                 >
-                  <Card className="flex flex-col h-full">
+                  <Card className="flex flex-col h-full bg-customShades-shade1">
                     <CardHeader>
                       <div className="flex justify-between items-center mb-2">
                         <span className="text-sm text-gray-500">
@@ -52,11 +52,11 @@ export const WebDesignProcessFlow = ({ processFlow }) => {
                     </CardHeader>
 
                     <CardContent className="flex-grow">
-                      <CardDescription className="mb-4">
+                      <CardDescription className="mb-4 text-secondary-foreground ">
                         {process.description}
                       </CardDescription>
 
-                      <ul className="space-y-2">
+                      <ul className="space-y-2 ">
                         {process.bullet_one && (
                           <li className="flex items-center">
                             <span className="mr-2">•</span>

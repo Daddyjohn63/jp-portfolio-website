@@ -1,8 +1,10 @@
 // import { Inter } from 'next/font/google';
-import { afacad } from './fonts';
+import { afacad, poppins } from './fonts';
+
 import '../custom-styles/custom-styles.css';
 import './globals.css';
 import Header from '@/components/layout/Header';
+import { Poppins } from 'next/font/google';
 
 // const inter = Inter({ subsets: ['latin'] });
 

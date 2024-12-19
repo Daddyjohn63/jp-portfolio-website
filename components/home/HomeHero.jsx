@@ -1,5 +1,5 @@
 'use client';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, MoveRight, MoveUpRight, Star } from 'lucide-react';
 import Link from 'next/link';
 
 import Reveal from '@/components/common/ScrollAnimation';
@@ -58,33 +58,44 @@ const HomeHero = () => {
               <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
                 <div className="mt-24 sm:mt-32 lg:mt-16">
                   <Link href="#" className="inline-flex space-x-6">
-                    <span className="rounded-full bg-muted-foreground/10 px-3 py-1 text-sm font-semibold leading-6 text-accent ring-1 ring-inset ring-accent/20">
-                      Some catchy sub-heading
-                    </span>
+                    <p className="flex items-center gap-1 rounded-full bg-muted-foreground/10 px-3 py-1 text-sm font-semibold leading-6  ring-1 ring-inset ">
+                      5 <Star className="size-3" /> Rated on Google
+                    </p>
                   </Link>
                 </div>
 
-                <h1 className="mt-10 text-4xl font-bold tracking-tight sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary via-link to-foreground">
-                  Vintage Costume Tailoring
+                <h1 className="mt-10 text-4xl font-bold tracking-tight sm:text-6xl bg-clip-text  ">
+                  Transforming Ideas into Powerful Web Solutions
                 </h1>
 
-                <p className="mt-6 text-lg leading-8 ">
-                  Jackie Paul designs, anim aute id magna aliqua ad ad non
-                  deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit
-                  sunt amet fugiat veniam occaecat fugiat aliqua.
+                <p className="mt-6 text-xl leading-8 ">
+                  Stay ahead of the competition with modern, scalable web
+                  applications built on the latest technologies.
                 </p>
+                <ul className="flex flex-col mt-3  gap-1">
+                  <li className="flex items-center gap-1">
+                    <MoveRight className="size-5 text-muted-foreground mr-2 " />
+                    point 1
+                  </li>
+                  <li className="flex items-center gap-1">
+                    <MoveRight className="size-5 text-muted-foreground mr-2 " />
+                    point 2
+                  </li>
+                </ul>
                 <div className="mt-10 flex items-center gap-x-6">
                   <Link
+                    className="flex items-center gap-2 bg-transparent rounded-lg border border-muted-foreground/50  px-3 py-2"
                     href="#"
-                    className="rounded-md bg-button px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-600 focus-visible:outline-sky-400"
                   >
-                    View My Work
+                    <MoveUpRight className="w-8 h-8 text-primary-foreground bg-muted-foreground rounded-full p-2" />
+                    <p className="text-white  text-xl z-100 pl-2">Contact me</p>
                   </Link>
                   <Link
+                    className="flex items-center gap-2 bg-transparent rounded-lg border border-muted-foreground/50  px-3 py-2"
                     href="#"
-                    className="text-sm link-hover font-semibold leading-6 text-white"
                   >
-                    Learn more <span aria-hidden="true">→</span>
+                    <MoveUpRight className="w-8 h-8 text-primary-foreground bg-muted-foreground rounded-full p-2" />
+                    <p className="text-white  text-xl z-100 pl-3">Learn more</p>
                   </Link>
                 </div>
               </div>

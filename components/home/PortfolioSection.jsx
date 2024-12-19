@@ -1,12 +1,18 @@
+import { CloudArrowUpIcon } from '@heroicons/react/20/solid';
+import { MoveUpRight } from 'lucide-react';
 import Image from 'next/image';
 
 const PortfolioSection = () => {
   return (
-    <div className="py-[100px] ">
-      <div className="flex bg-neutral-800 items-center justify-center py-16">
-        <h2 className="text-white text-3xl z-100">My Work</h2>
+    <div className="py-[50px] ">
+      <div className="flex container justify-between items-center  py-16">
+        <h2 className="text-white  text-5xl z-100">Selected Work</h2>
+        <div className="flex items-center gap-2">
+          <MoveUpRight className="w-8 h-8 text-primary-foreground bg-muted-foreground rounded-full p-2" />
+          <p className="text-white  text-xl z-100">see all</p>
+        </div>
       </div>
-      <div className="flex pb-[100px] items-center justify-center bg-neutral-800">
+      <div className="flex pb-[100px] items-center justify-center">
         <div className="container grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
             <div className="h-96 w-120">
