@@ -3,13 +3,14 @@ import { ChevronRight, MoveRight, MoveUpRight, Star } from 'lucide-react';
 import Link from 'next/link';
 
 import Reveal from '@/components/common/ScrollAnimation';
+import Image from 'next/image';
 
 const HomeHero = () => {
   return (
     <>
       <div
         className="bg-cover bg-center"
-        style={{ backgroundImage: `url('/images/img8.jpg')` }}
+        // style={{ backgroundImage: `url('/images/img8.jpg')` }}
       >
         <div className="w-full relative isolate overflow-hidden bg-background/70 bg-opacity-70">
           <svg
@@ -53,64 +54,70 @@ const HomeHero = () => {
               }}
             />
           </div>
-          <div className="container mx-auto max-w-8xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
-            <Reveal from={200}>
-              <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
-                <div className="mt-24 sm:mt-32 lg:mt-16">
-                  <Link href="#" className="inline-flex space-x-6">
-                    <p className="flex items-center gap-1 rounded-full bg-muted-foreground/10 px-3 py-1 text-sm font-semibold leading-6  ring-1 ring-inset ">
-                      5 <Star className="size-3" /> Rated on Google
-                    </p>
-                  </Link>
-                </div>
 
-                <h1 className="mt-10 text-4xl font-bold tracking-tight sm:text-6xl bg-clip-text  ">
+          <div className="container mx-auto max-w-8xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
+            {/* Text Section */}
+            <Reveal from={200} className="lg:w-1/3 lg:pr-8 flex-grow">
+              <div className="w-full">
+                <Link href="#" className="inline-flex space-x-6">
+                  <p className="flex items-center gap-1 rounded-full bg-muted-foreground/10 px-3 py-1 text-sm font-semibold leading-6 ring-1 ring-inset">
+                    5 <Star className="size-3 fill-yellow-600" /> Rated on
+                    Google
+                  </p>
+                </Link>
+                <h1 className="mt-10 text-4xl font-bold tracking-tight sm:text-6xl">
                   Transforming Ideas into Powerful Web Solutions
                 </h1>
-
-                <p className="mt-6 text-xl leading-8 ">
+                <p className="mt-6 text-xl leading-8">
                   Stay ahead of the competition with modern, scalable web
-                  applications built on the latest technologies.
+                  applications built with the latest ideas and technologies.
                 </p>
-                <ul className="flex flex-col mt-3  gap-1">
+                <ul className="flex flex-col mt-3 gap-1">
                   <li className="flex items-center gap-1">
-                    <MoveRight className="size-5 text-muted-foreground mr-2 " />
+                    <MoveRight className="size-5 text-muted-foreground mr-2" />
                     point 1
                   </li>
                   <li className="flex items-center gap-1">
-                    <MoveRight className="size-5 text-muted-foreground mr-2 " />
+                    <MoveRight className="size-5 text-muted-foreground mr-2" />
                     point 2
+                  </li>
+                  <li className="flex items-center gap-1">
+                    <MoveRight className="size-5 text-muted-foreground mr-2" />
+                    point 3
                   </li>
                 </ul>
                 <div className="mt-10 flex items-center gap-x-6">
                   <Link
-                    className="flex items-center gap-2 bg-transparent rounded-lg border border-muted-foreground/50  px-3 py-2"
+                    className="flex items-center gap-2 bg-transparent rounded-3xl border border-muted-foreground/50 px-3 py-2"
                     href="#"
                   >
                     <MoveUpRight className="w-8 h-8 text-primary-foreground bg-muted-foreground rounded-full p-2" />
-                    <p className="text-white  text-xl z-100 pl-2">Contact me</p>
+                    <p className="text-white text-xl z-100 pl-2">Contact me</p>
                   </Link>
                   <Link
-                    className="flex items-center gap-2 bg-transparent rounded-lg border border-muted-foreground/50  px-3 py-2"
+                    className="flex items-center gap-2 bg-transparent rounded-3xl border border-muted-foreground/50 px-3 py-2"
                     href="#"
                   >
                     <MoveUpRight className="w-8 h-8 text-primary-foreground bg-muted-foreground rounded-full p-2" />
-                    <p className="text-white  text-xl z-100 pl-3">Learn more</p>
+                    <p className="text-white text-xl z-100 pl-3">Learn more</p>
                   </Link>
                 </div>
               </div>
             </Reveal>
-            {/* <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
-          <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-            <img
-              src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
-              alt="App screenshot"
-              width={2432}
-              height={1442}
-              className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
-            />
-          </div>
-        </div> */}
+
+            {/* Image Section */}
+            <div className="relative w-full flex justify-center lg:ml-10">
+              <div className="aspect-w-16 aspect-h-9 w-full overflow-visible">
+                <Image
+                  src="/images/chameleon-v1.jpg"
+                  alt="App screenshot"
+                  layout="responsive"
+                  width={1600}
+                  height={900}
+                  className="rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
