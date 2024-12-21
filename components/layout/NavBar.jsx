@@ -25,7 +25,7 @@ const NavBar = ({ pathname }) => {
               {item.subMenuItems && item.subMenuItems.length > 0 ? (
                 <span
                   className={cn(
-                    'flex items-center hover:text-zinc-500 transition-all duration-500',
+                    'flex text-[1.2rem] items-center hover:text-zinc-500 transition-all duration-500',
                     isActive(item.link) && 'text-sky-700 hover:text-sky-900'
                   )}
                 >
@@ -36,7 +36,7 @@ const NavBar = ({ pathname }) => {
                 <Link href={item.link}>
                   <span
                     className={cn(
-                      'flex items-center hover:text-zinc-500 transition-all duration-500',
+                      'flex text-[1.2rem] items-center hover:text-zinc-500 transition-all duration-500',
                       isActive(item.link) && 'text-sky-700 hover:text-sky-900'
                     )}
                   >
@@ -52,7 +52,9 @@ const NavBar = ({ pathname }) => {
                       key={i}
                       className="text-black hover:text-violet-500 transition-all duration-300 ease-in-out px-6"
                     >
-                      <Link href={dropdownItem.link}>{dropdownItem.label}</Link>
+                      <Link className="text-[1.2rem]" href={dropdownItem.link}>
+                        {dropdownItem.label}
+                      </Link>
                     </li>
                   ))}
                 </ul>
