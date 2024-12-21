@@ -6,6 +6,7 @@ import { formatDateString } from '@/lib/date';
 import { Suspense } from 'react';
 import LoadingState from '@/components/common/Loading-state';
 import { fetchData } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 
 const BlogPosts = async () => {
   const { data: blogPosts } = await fetchData(getBlogPosts);
@@ -15,11 +16,11 @@ const BlogPosts = async () => {
   }
 
   return (
-    <ul className="flex flex-row flex-wrap gap-3">
+    <ul className="flex flex-row flex-wrap gap-6 ">
       {blogPosts.map(post => (
         <li
           key={post.slug}
-          className="bg-white border rounded shadow w-80 hover:shadow-xl"
+          className="bg-customShades-shade2 border rounded-md shadow w-80 hover:shadow-xl"
         >
           <Link href={`/blog/${post.slug}`}>
             <Image
@@ -31,9 +32,11 @@ const BlogPosts = async () => {
             />
             <div className="p-3">
               <div className="flex flex-col">
-                <span>{formatDateString(post?.date)}</span>
+                <span className="text-muted-foreground">
+                  {formatDateString(post?.date)}
+                </span>
 
-                <span className="text-gray-600 mt-1 block">
+                <span className=" mt-1 block">
                   {post.categories.map((cat, index) => (
                     <span key={cat.slug}>
                       <Link
@@ -48,8 +51,13 @@ const BlogPosts = async () => {
                 </span>
               </div>
 
-              <h2 className="font-semibold py-1">{post?.title}</h2>
-              <p>{post?.excerpt}</p>
+              <h2 className=" font-semibold py-1">{post?.title}</h2>
+              <p className="">{post?.excerpt}</p>
+              <div className="flex justify-start mt-4">
+                <Button className="bg-primary  text-white w-[80%]">
+                  View All Reviews
+                </Button>
+              </div>
             </div>
           </Link>
         </li>

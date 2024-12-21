@@ -1,37 +1,57 @@
-import dynamic from 'next/dynamic';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa6';
-const FeedBackSwiper = dynamic(() => import('./FeedBackSwiper'));
+'use client';
+import { testimonialData } from './Data';
+import { Autoplay, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { FaQuoteLeft } from 'react-icons/fa6';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
-const FeedBack = () => {
+const FeedBackSwiper = () => {
   return (
-    <section className="py-16 sm:py-24 overflow-x-hidden">
-      <div className="container" data-aos="fade-up" data-aos-duration="600">
-        <div className="grid xl:grid-cols-4 grid-cols-3 gap-6">
-          <div className="col-span-3 lg:col-span-1">
-            <span className="text-sm font-medium py-1 px-3 rounded-full text-primary bg-primary/10">
-              Feedback
-            </span>
-            <h1 className="text-3xl/tight font-medium mt-3 mb-4">
-              What people say
-            </h1>
-            <p className="text-gray-500">
-              Few valuables words from our customers
-            </p>
-
-            <div className="flex gap-4 mt-10">
-              <div className="button-prev swiper-custom-prev cursor-pointer text-xl transition-all duration-300 hover:text-primary">
-                <FaArrowLeft />
-              </div>
-              <div className="button-next text-xl swiper-custom-next cursor-pointer transition-all duration-300 hover:text-primary">
-                <FaArrowRight />
-              </div>
-            </div>
-          </div>
-          <FeedBackSwiper />
+    <div className="col-span-3 lg:col-span-2 xl:col-span-3">
+      <div className="relative">
+        <div className="hidden sm:block">
+          <div className="before:w-24 before:h-24 before:absolute before:-top-8 before:-end-8 before:bg-[url('/images/patterns/dot5.svg')]"></div>
+          <div className="after:w-24 after:h-24 after:absolute after:-bottom-8 after:-start-8 after:bg-[url('/images/patterns/dot2.svg')]"></div>
+        </div>
+        <div id="swiper_one" className="swiper relative">
+          <Swiper
+            modules={[Autoplay, Navigation]}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false
+            }}
+            speed={1000}
+            navigation={{
+              nextEl: '.swiper-custom-next',
+              prevEl: '.swiper-custom-prev'
+            }}
+            loop
+            spaceBetween={30}
+          >
+            {testimonialData.map(testimonial => (
+              <SwiperSlide
+                key={testimonial.id}
+                className="p-10 border rounded-xl bg-white shadow"
+              >
+                <FaQuoteLeft className="text-primary text-5xl" />
+                <p className="mt-4 text-gray-500 ">{testimonial.quote}</p>
+                <div className="border-b border-gray-200 w-full my-7"></div>
+                <div className="flex flex-wrap items-center justify-between gap-10">
+                  <div className="flex items-center gap-2">
+                    <p className="text font-bold text-gray-500 ">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-gray-500 text">{testimonial.role}</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default FeedBack;
+export default FeedBackSwiper;
