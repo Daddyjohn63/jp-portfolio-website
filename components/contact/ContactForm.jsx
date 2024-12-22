@@ -85,8 +85,6 @@ export default function ContactForm() {
   const handleSubmit = async values => {
     try {
       setIsLoading(true);
-      console.log('values', values);
-
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -94,7 +92,10 @@ export default function ContactForm() {
         },
         body: JSON.stringify(values)
       });
-      console.log('response', response);
+
+      if (response.status === 429) {
+        throw new Error('Too many requests. Please wait before trying again.');
+      }
 
       if (!response.ok) {
         throw new Error('Failed to submit form');
@@ -133,7 +134,7 @@ export default function ContactForm() {
     } catch (error) {
       console.error('Submission error:', error);
       setIsError(true);
-      toast.error('Failed to submit form');
+      toast.error(error.message || 'Failed to submit form');
     } finally {
       setIsLoading(false);
     }
