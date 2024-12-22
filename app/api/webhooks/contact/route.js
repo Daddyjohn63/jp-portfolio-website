@@ -1,0 +1,124 @@
+import { NextResponse } from 'next/server';
+import { google } from 'googleapis';
+import nodemailer from 'nodemailer';
+const OAuth2 = google.auth.OAuth2;
+const createTransporter = async () => {
+  try {
+    const oauth2Client = new OAuth2(
+      process.env.GMAIL_CLIENT_ID,
+      process.env.GMAIL_CLIENT_SECRET,
+      'https://developers.google.com/oauthplayground'
+    );
+    oauth2Client.setCredentials({
+      refresh_token: process.env.GMAIL_REFRESH_TOKEN
+    });
+    const accessToken = await new Promise((resolve, reject) => {
+      oauth2Client.getAccessToken((err, token) => {
+        if (err) {
+          console.error('Error getting access token:', err);
+          reject(new Error(`Failed to create access token: ${err.message}`));
+        }
+        resolve(token);
+      });
+    });
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        type: 'OAuth2',
+        user: process.env.GMAIL_USER,
+        clientId: process.env.GMAIL_CLIENT_ID,
+        clientSecret: process.env.GMAIL_CLIENT_SECRET,
+        refreshToken: process.env.GMAIL_REFRESH_TOKEN,
+        accessToken
+      }
+    });
+    // Verify transporter
+    await transporter.verify();
+
+    return transporter;
+  } catch (error) {
+    console.error('Error creating transporter:', error);
+    throw error;
+  }
+};
+
+export async function POST(request) {
+  try {
+    // Verify webhook secret
+    const secret = request.headers.get('x-webhook-secret');
+    if (!secret || secret !== process.env.WEBHOOK_SECRET) {
+      console.error('Invalid webhook secret');
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+    const payload = await request.json();
+
+    // Validate payload
+    if (!payload || !payload.entry) {
+      console.error('Invalid payload structure');
+      return NextResponse.json(
+        { error: 'Invalid payload structure' },
+        { status: 400 }
+      );
+    }
+    const contactData = payload.entry;
+    // Validate required fields
+    if (!contactData.email || !contactData.name) {
+      console.error('Missing required fields');
+      return NextResponse.json(
+        { error: 'Missing required fields' },
+        { status: 400 }
+      );
+    }
+    // Create transporter with OAuth2
+    const transporter = await createTransporter();
+    // Send emails in parallel
+    await Promise.all([
+      // User confirmation
+      transporter.sendMail({
+        from: `"${process.env.SMTP_FROM_NAME}" <${process.env.GMAIL_USER}>`,
+        to: contactData.email,
+        subject: 'Thank you for contacting Web and Prosper',
+        html: `
+         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+           <h2>Thank you for your message</h2>
+           <p>Dear ${contactData.name},</p>
+           <p>We have received your message and will get back to you shortly.</p>
+           <p>Best regards,<br>${process.env.SMTP_FROM_NAME}</p>
+         </div>
+       `
+      }),
+      // Admin notification
+      transporter.sendMail({
+        from: `"${process.env.SMTP_FROM_NAME}" <${process.env.GMAIL_USER}>`,
+        to: process.env.GMAIL_USER,
+        subject: 'New Contact Form Submission',
+        html: `
+         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+           <h2>New Contact Form Submission</h2>
+           <p><strong>Name:</strong> ${contactData.name}</p>
+           ${
+             contactData.companyName
+               ? `<p><strong>Company:</strong> ${contactData.companyName}</p>`
+               : ''
+           }
+           <p><strong>Email:</strong> ${contactData.email}</p>
+           ${
+             contactData.phoneNumber
+               ? `<p><strong>Phone:</strong> ${contactData.phoneNumber}</p>`
+               : ''
+           }
+           <p><strong>Message:</strong></p>
+           <p>${contactData.message}</p>
+         </div>
+       `
+      })
+    ]);
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    console.error('Webhook processing error:', error);
+    return NextResponse.json(
+      { error: 'Failed to process webhook' },
+      { status: 500 }
+    );
+  }
+}
