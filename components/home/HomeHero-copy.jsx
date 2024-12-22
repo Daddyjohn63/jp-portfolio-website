@@ -4,12 +4,12 @@ import Link from 'next/link';
 
 import Reveal from '@/components/common/ScrollAnimation';
 
-const HomeHero = () => {
+const HomeHeroCopy = () => {
   return (
     <>
       <div
         className="bg-cover bg-center"
-        style={{ backgroundImage: `url('/images/img8.jpg')` }}
+        style={{ backgroundImage: `url('/images/chamofficev2.jpg')` }}
       >
         <div className="w-full relative isolate overflow-hidden bg-background/70 bg-opacity-70">
           <svg
@@ -123,4 +123,4 @@ const HomeHero = () => {
     </>
   );
 };
-export default HomeHero;
+export default HomeHeroCopy;

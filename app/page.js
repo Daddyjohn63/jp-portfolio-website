@@ -9,6 +9,8 @@ import { WebDesignProcessFlow } from '@/components/home/WebDesignProcessFlow';
 import HomeHero from '@/components/home/HomeHero';
 import ServicesSection from '@/components/home/ServicesSection';
 import FeedBack from '@/components/FeedbackTestimonial';
+import HomeHeroCopy from '@/components/home/HomeHero-copy';
+import { Wave } from '@/components/svgs/Effects';
 
 // const processFlow = await getWebDesignProcessFlow();
 // console.log('Process Flow in Home:', processFlow);

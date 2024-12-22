@@ -1,7 +1,7 @@
 'use client';
 import { ChevronRight, MoveRight, MoveUpRight, Star } from 'lucide-react';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import Reveal from '@/components/common/ScrollAnimation';
 import Image from 'next/image';
 
@@ -9,8 +9,8 @@ const HomeHero = () => {
   return (
     <>
       <div
-        className="bg-cover bg-center"
-        // style={{ backgroundImage: `url('/images/img8.jpg')` }}
+      // className="bg-cover bg-center"
+      //style={{ backgroundImage: `url('/images/chamofficev2.jpg')` }}
       >
         <div className="w-full relative isolate overflow-hidden bg-background/70 bg-opacity-70">
           <svg
@@ -66,11 +66,14 @@ const HomeHero = () => {
                   </p>
                 </Link>
                 <h1 className="mt-10 text-4xl font-bold tracking-tight sm:text-6xl">
-                  Transforming Ideas into Powerful Web Solutions
+                  Transforming Ideas into Powerful{' '}
+                  <span className="text-4xl font-bold tracking-tight sm:text-6xl text-accent">
+                    Web Solutions
+                  </span>
                 </h1>
                 <p className="mt-6 text-xl leading-8">
                   Adapt and stay ahead of the competition with modern, scalable
-                  web applications built with the latest ideas and technologies.
+                  web applications that will convert new business.
                 </p>
                 <ul className="flex flex-col mt-3 gap-1">
                   <li className="flex items-center gap-1">
@@ -91,14 +94,14 @@ const HomeHero = () => {
                     className="flex items-center gap-2 bg-transparent rounded-3xl border border-muted-foreground/50 px-3 py-2"
                     href="#"
                   >
-                    <MoveUpRight className="w-8 h-8 text-primary-foreground bg-muted-foreground rounded-full p-2" />
+                    <MoveUpRight className="w-8 h-8 text-primary-foreground bg-accent rounded-full p-2" />
                     <p className="text-white text-xl z-100 pl-2">Contact me</p>
                   </Link>
                   <Link
                     className="flex items-center gap-2 bg-transparent rounded-3xl border border-muted-foreground/50 px-3 py-2"
                     href="#"
                   >
-                    <MoveUpRight className="w-8 h-8 text-primary-foreground bg-muted-foreground rounded-full p-2" />
+                    <MoveUpRight className="w-8 h-8 text-primary-foreground bg-accent rounded-full p-2" />
                     <p className="text-white text-xl z-100 pl-3">Learn more</p>
                   </Link>
                 </div>
@@ -108,7 +111,18 @@ const HomeHero = () => {
             {/* Image Section */}
             <div className="relative w-full flex justify-center lg:ml-10">
               <div className="aspect-w-16 aspect-h-9 w-full overflow-visible relative">
-                <div className="absolute inset-0 bg-accent rounded-md transform translate-x-8 translate-y-8"></div>
+                {/* <div className="absolute inset-0 bg-accent rounded-md transform translate-x-8 translate-y-8"></div> */}
+                {/* <div className="absolute inset-0 rounded-lg transform translate-x-8 translate-y-8 bg-transparent bg-[radial-gradient(#b16cf1f8_1px,transparent_1px)] [background-size:8px_8px]"></div> */}
+                <motion.div
+                  className="absolute inset-0 rounded-lg transform translate-x-8 translate-y-8 bg-transparent bg-[radial-gradient(#b16cf1bc_1px,transparent_1px)] [background-size:8px_8px]"
+                  initial={{ opacity: 0, scale: 0.9, x: 0, y: 100 }}
+                  animate={{ opacity: 1, scale: 1, x: 32, y: 32 }} // 32px = translate-x-8 and translate-y-8
+                  transition={{
+                    duration: 0.8,
+                    delay: 0.5,
+                    ease: 'easeOut'
+                  }}
+                />
                 <Image
                   src="/images/chameleon-v1.jpg"
                   alt="App screenshot"

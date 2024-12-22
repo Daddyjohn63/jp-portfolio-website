@@ -8,8 +8,8 @@ const HomeHeroTest = () => {
   return (
     <>
       <div
-      // className="bg-cover bg-center"
-      // style={{ backgroundImage: `url('/images/img8.jpg')` }}
+        className="bg-cover bg-center"
+        style={{ backgroundImage: `url('/images/chamofficev2.jpg')` }}
       >
         <div className="w-full relative isolate overflow-hidden bg-black ">
           <svg
