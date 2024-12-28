@@ -12,9 +12,16 @@ export const WebDesignProcessFlow = ({ processFlow }) => {
   return (
     <div className="py-[50px]">
       <div className="container py-12 ">
-        <h2 className="text-5xl text-customBiege font-bold text-center mb-12">
-          Web Design Process
+        <h2 className="text-5xl text-customBiege font-bold text-center mb-2">
+          Customer Solution Process
         </h2>
+        <h3 className="text-2xl text-customBiege font-bold text-center mb-1">
+          A typical process for delivering a website or web application.
+        </h3>
+        <p className="text-customShades-shade8 text-center mb-12">
+          * Timescales are provide for simple to moderately complex
+          applications.
+        </p>
 
         <div className="relative">
           {/* Vertical Line - left aligned on mobile, centered on larger screens */}
@@ -40,14 +47,14 @@ export const WebDesignProcessFlow = ({ processFlow }) => {
                     <CardHeader>
                       <div className="flex justify-between items-center mb-2">
                         <span className="text-sm text-gray-500">
-                          {process.subheading}
+                          {process.subheading.toUpperCase()}
                         </span>
                         <span className="text-sm text-indigo-600 uppercase">
-                          {process.Time}
+                          {process.time.toUpperCase()}
                         </span>
                       </div>
                       <CardTitle className="text-xl">
-                        {process.mainheading}
+                        {process.mainheading.toUpperCase()}
                       </CardTitle>
                     </CardHeader>
 
@@ -73,6 +80,18 @@ export const WebDesignProcessFlow = ({ processFlow }) => {
                           <li className="flex items-center">
                             <span className="mr-2">•</span>
                             {process.bullet_three}
+                          </li>
+                        )}
+                        {process.bullet_four && (
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            {process.bullet_four}
+                          </li>
+                        )}
+                        {process.bullet_five && (
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            {process.bullet_five}
                           </li>
                         )}
                       </ul>
