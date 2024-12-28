@@ -11,6 +11,7 @@ import ServicesSection from '@/components/home/ServicesSection';
 import FeedBack from '@/components/FeedbackTestimonial';
 import HomeHeroCopy from '@/components/home/HomeHero-copy';
 import { Wave } from '@/components/svgs/Effects';
+import { AboutSection } from '@/components/home/AboutSection';
 
 // const processFlow = await getWebDesignProcessFlow();
 // console.log('Process Flow in Home:', processFlow);
@@ -24,6 +25,7 @@ export default async function Home() {
 
       <ServicesSection />
       {/* <HomeSectionOne /> */}
+      <AboutSection />
       <FeedBack />
       {/* <SomeText /> */}
       <PortfolioSection />
