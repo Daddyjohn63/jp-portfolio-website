@@ -2,6 +2,8 @@
 import Image from 'next/image';
 import { useScroll, motion, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import { Bot, MoveUpRight, PoundSterling, Trophy } from 'lucide-react';
+import Link from 'next/link';
 
 export const AboutSection = () => {
   const containerRef = useRef(null);
@@ -18,15 +20,42 @@ export const AboutSection = () => {
       <div className="flex flex-col md:flex-row items-center gap-8 py-16">
         {/* Left column - Text content */}
         <div className="flex-1 w-full">
-          <h2 className="text-3xl font-bold mb-4">About Us</h2>
+          <h2 className="text-3xl font-bold mb-4">About</h2>
           <p className=" mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris.
+            As a seasoned full-stack web developer, I bring your digital visions
+            to life. With expertise in both front-end and back-end technologies,
+            including AI integration, I create seamless, efficient, and
+            intelligent web solutions tailored to your unique business needs.
           </p>
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">
-            Learn More
-          </button>
+          <div className="flex flex-col gap-2 mt-10">
+            <p className="flex items-center gap-3">
+              <span>
+                <Trophy className="size-8 text-primary-foreground bg-accent rounded-full p-2" />
+              </span>
+              Proven track record of delivering successful projects
+            </p>
+            <p className="flex items-center gap-3">
+              <span>
+                <Bot className="size-8 text-primary-foreground bg-accent rounded-full p-2" />
+              </span>
+              Expertise in both front-end and back-end technologies, including
+              AI integration
+            </p>
+            <p className="flex items-center gap-3">
+              <span>
+                <PoundSterling className="size-8 text-primary-foreground bg-accent rounded-full p-2" />
+              </span>
+              Tailored solutions that drive real business value and enhance user
+              experience
+            </p>
+          </div>
+          <Link
+            className="flex items-center gap-2 bg-transparent rounded-3xl border border-muted-foreground/50 px-3 py-2 w-fit mt-10"
+            href="#"
+          >
+            <MoveUpRight className="w-8 h-8 text-primary-foreground bg-accent rounded-full p-2" />
+            <p className="text-white text-xl z-100 pl-3">Learn more</p>
+          </Link>
         </div>
 
         {/* Right column - Image */}
