@@ -78,15 +78,15 @@ const HomeHero = () => {
                 <ul className="flex flex-col mt-3 gap-1">
                   <li className="flex items-center gap-1">
                     <MoveRight className="size-5 text-muted-foreground mr-2" />
-                    point 1
+                    Websites that convert
                   </li>
                   <li className="flex items-center gap-1">
                     <MoveRight className="size-5 text-muted-foreground mr-2" />
-                    point 2
+                    Business applications that will increase productivity
                   </li>
                   <li className="flex items-center gap-1">
                     <MoveRight className="size-5 text-muted-foreground mr-2" />
-                    point 3
+                    AI and Chatbot solutions
                   </li>
                 </ul>
                 <div className="mt-10 flex items-center gap-x-6">
@@ -124,7 +124,7 @@ const HomeHero = () => {
                   }}
                 />
                 <Image
-                  src="/images/chameleon-v1.jpg"
+                  src="/images/chameleon-v1-r-1-5.jpg"
                   alt="App screenshot"
                   layout="responsive"
                   width={1600}

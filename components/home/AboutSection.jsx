@@ -2,7 +2,13 @@
 import Image from 'next/image';
 import { useScroll, motion, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { Bot, MoveUpRight, PoundSterling, Trophy } from 'lucide-react';
+import {
+  Bot,
+  MoveRight,
+  MoveUpRight,
+  PoundSterling,
+  Trophy
+} from 'lucide-react';
 import Link from 'next/link';
 
 export const AboutSection = () => {
@@ -30,20 +36,20 @@ export const AboutSection = () => {
           <div className="flex flex-col gap-2 mt-10">
             <p className="flex items-center gap-3">
               <span>
-                <Trophy className="size-8 text-primary-foreground bg-accent rounded-full p-2" />
+                <MoveRight className="size-5 text-muted-foreground " />
               </span>
               Proven track record of delivering successful projects
             </p>
             <p className="flex items-center gap-3">
               <span>
-                <Bot className="size-8 text-primary-foreground bg-accent rounded-full p-2" />
+                <MoveRight className="size-5 text-muted-foreground " />
               </span>
               Expertise in both front-end and back-end technologies, including
               AI integration
             </p>
             <p className="flex items-center gap-3">
               <span>
-                <PoundSterling className="size-8 text-primary-foreground bg-accent rounded-full p-2" />
+                <MoveRight className="size-5 text-muted-foreground " />
               </span>
               Tailored solutions that drive real business value and enhance user
               experience
@@ -61,24 +67,13 @@ export const AboutSection = () => {
         {/* Right column - Image */}
         <div className="flex-1 w-full">
           <div className="relative">
-            <motion.div style={{ y: y1 }}>
-              <Image
-                src="/images/chameleon-v1-750.jpg"
-                alt="About us"
-                width={448}
-                height={440}
-                className="w-full h-auto rounded-lg shadow-lg"
-              />
-            </motion.div>
-            <motion.div style={{ y: y2 }}>
-              <Image
-                src="/images/placeholders/img-r-25.png"
-                alt="About us"
-                width={219}
-                height={300}
-                className="border-2 border-red-500 absolute end-[30px] bottom-[140px] md:bottom-[60px] lg:bottom-[-30px]  w-full md:max-w-[219px]"
-              />
-            </motion.div>
+            <Image
+              src="/images/chameleon-v1-750.jpg"
+              alt="About us"
+              width={448}
+              height={440}
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
           </div>
         </div>
       </div>
