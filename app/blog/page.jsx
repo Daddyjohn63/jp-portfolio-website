@@ -7,9 +7,17 @@ import { Suspense } from 'react';
 import LoadingState from '@/components/common/Loading-state';
 import { fetchData } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import qs from 'qs';
+import { PagePagination } from '@/components/common/Pagination';
 
-const BlogPosts = async () => {
-  const { data: blogPosts } = await fetchData(getBlogPosts);
+const PAGE_SIZE = 6;
+
+const BlogPosts = async ({ page }) => {
+  const { data } = await fetchData(getBlogPosts, PAGE_SIZE, page);
+  const { posts: blogPosts, pageCount } = data;
+
+  // console.log('DATA', data);
+  // console.log('pageCount', pageCount);
 
   if (!blogPosts?.length) {
     return <p className="text-center text-gray-600">No blog posts found.</p>;
@@ -55,8 +63,9 @@ const BlogPosts = async () => {
               <p className="">{post?.excerpt}</p>
               <div className="flex justify-start mt-4">
                 <Button className="bg-primary  text-white w-[80%]">
-                  View All Reviews
+                  Read More
                 </Button>
+                <p>{page}</p>
               </div>
             </div>
           </Link>
@@ -66,13 +75,16 @@ const BlogPosts = async () => {
   );
 };
 
-const BlogPage = () => {
+const BlogPage = ({ searchParams }) => {
+  console.log(searchParams);
+  const page = searchParams.page ? parseInt(searchParams.page) : 1;
   return (
     <div className="container py-12">
       <Heading>Blog</Heading>
       <Suspense fallback={<LoadingState />}>
-        <BlogPosts />
+        <BlogPosts page={page} />
       </Suspense>
+      <PagePagination currentPage={page} pageCount={pageCount} />
     </div>
   );
 };

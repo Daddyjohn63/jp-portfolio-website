@@ -95,6 +95,10 @@ h4 {
     --accent: 267 85% 65%;
     --accent-foreground: 250 35% 8%;
 
+    --accent-orange: 39 100% 50%;
+    --accent-red: 0 100% 50%;
+    --accent-green: 153 60% 53%;
+
     --destructive: 0 75% 50%;
     --destructive-foreground: 255 40% 98%;
 

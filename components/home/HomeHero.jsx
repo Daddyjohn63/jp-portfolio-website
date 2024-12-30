@@ -126,7 +126,6 @@ const HomeHero = () => {
                 <Image
                   src="/images/chameleon-v1-r-1-5.jpg"
                   alt="App screenshot"
-                  layout="responsive"
                   width={1600}
                   height={900}
                   className="relative rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"

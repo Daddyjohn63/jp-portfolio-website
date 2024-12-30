@@ -79,13 +79,13 @@ const ServicesSection = () => {
                     {item.serviceNumber}
                   </span>
                 </div>
-                <CardTitle className="text-xl uppercase tracking-wide">
-                  {item.serviceName}
+                <CardTitle className="uppercase tracking-wide">
+                  <h2 className="text-2xl">{item.serviceName}</h2>
                 </CardTitle>
               </CardHeader>
               <CardContent className="flex-grow">
                 <CardDescription className="mb-4 text-secondary-foreground ">
-                  {item.description}
+                  <p>{item.description}</p>
                 </CardDescription>
               </CardContent>
               <CardFooter>
