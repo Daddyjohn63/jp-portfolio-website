@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "attributes": {
+        "client": "Ashdown Cookery School",
+        "summary": "The increase in business was immediate and is still strong today. The new website leap-frogged the competition and has sustained the business for many years.",
+        "featured": false,
+        "createdAt": "2024-12-30T18:57:35.123Z",
+        "updatedAt": "2025-01-02T13:51:32.663Z",
+        "publishedAt": "2024-12-30T18:59:25.060Z",
+        "order": 1,
+        "slug": "ashdown-cookery-school",
+        "title": "eCommerce",
+        "body": "This is some text in the body",
+        "excerpt": "This is some text in the excerpt",
+        "image": {
+          "data": {
+            "id": 2,
+            "attributes": {
+              "name": "Ashdown-Manna-Cookery-School-Mockup.jpg",
+              "alternativeText": "ashdown manna cookery school",
+              "caption": null,
+              "width": 1500,
+              "height": 1000,
+              "formats": {
+                "large": {
+                  "ext": ".jpg",
+                  "url": "/uploads/large_Ashdown_Manna_Cookery_School_Mockup_37573f622c.jpg",
+                  "hash": "large_Ashdown_Manna_Cookery_School_Mockup_37573f622c",
+                  "mime": "image/jpeg",
+                  "name": "large_Ashdown-Manna-Cookery-School-Mockup.jpg",
+                  "path": null,
+                  "size": 86.35,
+                  "width": 1000,
+                  "height": 667,
+                  "sizeInBytes": 86352
+                },
+                "small": {
+                  "ext": ".jpg",
+                  "url": "/uploads/small_Ashdown_Manna_Cookery_School_Mockup_37573f622c.jpg",
+                  "hash": "small_Ashdown_Manna_Cookery_School_Mockup_37573f622c",
+                  "mime": "image/jpeg",
+                  "name": "small_Ashdown-Manna-Cookery-School-Mockup.jpg",
+                  "path": null,
+                  "size": 26.81,
+                  "width": 500,
+                  "height": 333,
+                  "sizeInBytes": 26814
+                },
+                "medium": {
+                  "ext": ".jpg",
+                  "url": "/uploads/medium_Ashdown_Manna_Cookery_School_Mockup_37573f622c.jpg",
+                  "hash": "medium_Ashdown_Manna_Cookery_School_Mockup_37573f622c",
+                  "mime": "image/jpeg",
+                  "name": "medium_Ashdown-Manna-Cookery-School-Mockup.jpg",
+                  "path": null,
+                  "size": 53.14,
+                  "width": 750,
+                  "height": 500,
+                  "sizeInBytes": 53144
+                },
+                "thumbnail": {
+                  "ext": ".jpg",
+                  "url": "/uploads/thumbnail_Ashdown_Manna_Cookery_School_Mockup_37573f622c.jpg",
+                  "hash": "thumbnail_Ashdown_Manna_Cookery_School_Mockup_37573f622c",
+                  "mime": "image/jpeg",
+                  "name": "thumbnail_Ashdown-Manna-Cookery-School-Mockup.jpg",
+                  "path": null,
+                  "size": 7.65,
+                  "width": 234,
+                  "height": 156,
+                  "sizeInBytes": 7649
+                }
+              },
+              "hash": "Ashdown_Manna_Cookery_School_Mockup_37573f622c",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "size": 115.69,
+              "url": "/uploads/Ashdown_Manna_Cookery_School_Mockup_37573f622c.jpg",
+              "previewUrl": null,
+              "provider": "local",
+              "provider_metadata": null,
+              "createdAt": "2024-12-30T18:54:34.073Z",
+              "updatedAt": "2025-01-02T13:51:21.394Z"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pageSize": 25,
+      "pageCount": 1,
+      "total": 1
+    }
+  }
+}
