@@ -9,6 +9,7 @@ import { fetchData } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import qs from 'qs';
 import { PagePagination } from '@/components/common/Pagination';
+import { NotFoundError, CMSError } from '@/lib/errors';
 
 const PAGE_SIZE = 2;
 
@@ -73,20 +74,41 @@ const BlogPosts = ({ posts }) => {
 };
 
 const BlogPage = async ({ searchParams }) => {
-  const page = searchParams.page ? parseInt(searchParams.page) : 1;
-  // console.log('params', params);
-  const { data } = await fetchData(getBlogPosts, PAGE_SIZE, page);
-  const { posts: blogPosts, pageCount } = data;
+  try {
+    const page = searchParams.page ? parseInt(searchParams.page) : 1;
+    if (isNaN(page) || page < 1) {
+      throw new CMSError(
+        'Invalid page number',
+        400,
+        'Page number must be a positive integer'
+      );
+    }
+    const { data } = await fetchData(getBlogPosts, PAGE_SIZE, page);
+    const { posts: blogPosts, pageCount } = data;
+    if (!blogPosts?.length) {
+      throw new NotFoundError('No blog posts found');
+    }
+    if (page > pageCount) {
+      throw new NotFoundError('Page not found');
+    }
 
-  return (
-    <div className="container py-12">
-      <Heading>Blog</Heading>
-      <Suspense fallback={<LoadingState />}>
-        <BlogPosts posts={blogPosts} />
-      </Suspense>
-      <PagePagination currentPage={page} pageCount={pageCount} />
-    </div>
-  );
+    return (
+      <div className="container py-12">
+        <Heading>Blog</Heading>
+        <Suspense fallback={<LoadingState />}>
+          <BlogPosts posts={blogPosts} />
+        </Suspense>
+        <PagePagination currentPage={page} pageCount={pageCount} />
+      </div>
+    );
+  } catch (error) {
+    //error caught in the error boundary
+
+    throw error;
+  }
+  // Log the error for monitoring but don't expose it to the user
+  console.error('Blog page error:', error);
+  throw new CMSError('Failed to load blog posts', 500, error.message);
 };
 
 export default BlogPage;
