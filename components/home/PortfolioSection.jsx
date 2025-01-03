@@ -5,6 +5,7 @@ import { getFeaturedProjects } from '@/lib/projects';
 const PortfolioSection = async () => {
   const { projects } = await getFeaturedProjects();
 
+  //TODO: Add a loading state AND validation checks
   return (
     <div className="py-[50px]">
       <div className="flex container justify-between items-center py-16">
@@ -17,12 +18,12 @@ const PortfolioSection = async () => {
         <div className="container grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {projects.map(project => (
             <PortfolioCard
-              key={project.id}
-              image={project.image}
-              alt={project.alternativeText}
-              title={project.title}
-              summary={project.summary}
-              slug={project.slug}
+              key={project?.slug}
+              image={project?.image}
+              alt={project?.alternativeText || project?.title}
+              title={project?.title}
+              summary={project?.summary}
+              slug={project?.slug}
             />
           ))}
         </div>
