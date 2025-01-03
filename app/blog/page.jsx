@@ -1,4 +1,5 @@
 import { getBlogPosts } from '@/lib/blog';
+import { getBlogCategories } from '@/lib/blog';
 import Link from 'next/link';
 import Image from 'next/image';
 import Heading from '@/components/common/Heading';
@@ -10,8 +11,15 @@ import { Button } from '@/components/ui/button';
 import qs from 'qs';
 import { PagePagination } from '@/components/common/Pagination';
 import { NotFoundError, CMSError } from '@/lib/errors';
+import { NavSidebar } from '@/components/blog/Nav-sidebar';
+import { Sidebar } from '@/components/common/Sidebar';
 
-const PAGE_SIZE = 2;
+export const metadata = {
+  title: 'Blog',
+  description: 'News and articles to get you thinking'
+};
+
+const PAGE_SIZE = 6;
 
 const BlogPosts = ({ posts }) => {
   if (!posts?.length) {
@@ -20,55 +28,68 @@ const BlogPosts = ({ posts }) => {
 
   return (
     <ul className="flex flex-row flex-wrap gap-6">
-      {posts.map(post => (
-        <li
-          key={post.slug}
-          className="bg-customShades-shade2 border rounded-md shadow w-80 hover:shadow-xl"
-        >
-          <div>
-            <Link href={`/blog/${post.slug}`}>
-              <Image
-                src={post?.image}
-                width="400"
-                height="300"
-                alt=""
-                className="rounded-t"
-              />
-            </Link>
-            <div className="p-3">
-              <div className="flex flex-col">
-                <span className="text-muted-foreground">
-                  {formatDateString(post?.date)}
-                </span>
-
-                <span className="mt-1 block">
-                  {post.categories.map((cat, index) => (
-                    <span key={cat.slug}>
-                      <Link
-                        href={`/category/${cat.slug}`}
-                        className="hover:underline capitalize"
-                      >
-                        {cat.title}
-                      </Link>
-                      {index < post.categories.length - 1 && ', '}
-                    </span>
-                  ))}
-                </span>
-              </div>
-
+      {posts.map(post => {
+        //early return if no posts
+        if (!post?.slug || !post?.title) {
+          return null;
+        }
+        return (
+          <li
+            key={post.slug}
+            className="bg-customShades-shade2 border rounded-md shadow w-80 hover:shadow-xl"
+          >
+            <div>
               <Link href={`/blog/${post.slug}`}>
-                <h2 className="font-semibold py-1">{post?.title}</h2>
-                <p>{post?.excerpt}</p>
-                <div className="flex justify-start mt-4">
-                  <Button className="bg-primary text-white w-[80%]">
-                    Read More
-                  </Button>
-                </div>
+                {post?.image && (
+                  <Image
+                    src={post?.image}
+                    width="400"
+                    height="225"
+                    alt=""
+                    className="rounded-t aspect-[16/9] object-cover w-full"
+                  />
+                )}
               </Link>
+              <div className="p-3">
+                <div className="flex flex-col">
+                  {post?.date && (
+                    <span className="text-muted-foreground">
+                      {formatDateString(post?.date)}
+                    </span>
+                  )}
+                  {post?.categories?.length > 0 && (
+                    <span className="mt-1 block">
+                      {post.categories.map((cat, index) => (
+                        <span key={cat?.slug || index}>
+                          {cat?.slug && cat?.title && (
+                            <Link
+                              href={`/category/${cat.slug}`}
+                              className="hover:underline capitalize"
+                            >
+                              {cat.title}
+                            </Link>
+                          )}
+                          {index < post.categories.length - 1 && ', '}
+                        </span>
+                      ))}
+                    </span>
+                  )}
+                </div>
+
+                <Link href={`/blog/${post.slug}`}>
+                  <h2 className="font-semibold py-1">{post.title}</h2>
+                  {post?.excerpt && <p>{post.excerpt}</p>}
+                  <div className="flex justify-start mt-4">
+                    <Button className="bg-primary text-white w-full">
+                      Read More
+                    </Button>
+                  </div>
+                </Link>
+              </div>
             </div>
-          </div>
-        </li>
-      ))}
+          </li>
+        );
+      })}
     </ul>
   );
 };
@@ -93,12 +114,24 @@ const BlogPage = async ({ searchParams }) => {
     }
 
     return (
-      <div className="container py-12">
-        <Heading>Blog</Heading>
-        <Suspense fallback={<LoadingState />}>
-          <BlogPosts posts={blogPosts} />
-        </Suspense>
-        <PagePagination currentPage={page} pageCount={pageCount} />
+      <div className="container">
+        <div className="flex items-center justify-center mt-12">
+          <Heading>Blog</Heading>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 mt-6">
+          <div className="flex flex-col gap-6">
+            <Sidebar />
+            <NavSidebar />
+          </div>
+
+          <div>
+            <Suspense fallback={<LoadingState />}>
+              <BlogPosts posts={blogPosts} />
+            </Suspense>
+            <PagePagination currentPage={page} pageCount={pageCount} />
+          </div>
+        </div>
       </div>
     );
   } catch (error) {

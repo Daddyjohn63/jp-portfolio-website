@@ -20,6 +20,13 @@ module.exports = {
       fontFamily: {
         afacad: ['var(--font-afacad)', 'sans-serif']
       },
+      aspectRatio: {
+        '4/3': '4 / 3',
+        '3/2': '3 / 2',
+        '2/1': '2 / 1',
+        '16/9': '16 / 9'
+        // Add any other custom ratios you need
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
