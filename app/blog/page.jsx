@@ -27,7 +27,7 @@ const BlogPosts = ({ posts }) => {
   }
 
   return (
-    <ul className="flex flex-row flex-wrap gap-6">
+    <ul className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
       {posts.map(post => {
         //early return if no posts
         if (!post?.slug || !post?.title) {
@@ -36,7 +36,7 @@ const BlogPosts = ({ posts }) => {
         return (
           <li
             key={post.slug}
-            className="bg-customShades-shade2 border rounded-md shadow w-80 hover:shadow-xl"
+            className="bg-customShades-shade2 border rounded-md shadow hover:shadow-xl"
           >
             <div>
               <Link href={`/blog/${post.slug}`}>
@@ -120,11 +120,13 @@ const BlogPage = async ({ searchParams }) => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 mt-6">
+          {/* first column */}
           <div className="flex flex-col gap-6">
             <Sidebar />
             <NavSidebar />
           </div>
 
+          {/* second column */}
           <div>
             <Suspense fallback={<LoadingState />}>
               <BlogPosts posts={blogPosts} />

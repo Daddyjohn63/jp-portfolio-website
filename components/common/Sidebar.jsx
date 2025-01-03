@@ -12,7 +12,7 @@ import { BlogCategories } from '../blog/Categories';
 
 export const Sidebar = () => {
   return (
-    <Card className=" border-2 border-customShades-shade2">
+    <Card className=" border-2 border-customShades-shade3">
       <CardHeader>
         <CardTitle>
           <h2 className="text-3xl font-bold">Contact me</h2>

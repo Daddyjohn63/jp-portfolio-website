@@ -42,7 +42,7 @@ const Categories = async () => {
 
 export const NavSidebar = () => {
   return (
-    <Card className="border-2 border-customShades-shade2">
+    <Card className="border-2 border-customShades-shade3">
       <CardHeader>
         <CardTitle>
           <h2 className="text-3xl font-bold">Categories</h2>
