@@ -26,7 +26,8 @@ const NavBar = ({ pathname }) => {
                 <span
                   className={cn(
                     'flex text-[1.2rem] items-center hover:text-zinc-500 transition-all duration-500',
-                    isActive(item.link) && 'text-sky-700 hover:text-sky-900'
+                    isActive(item.link) &&
+                      'text-purple-500 hover:text-purple-700'
                   )}
                 >
                   {item.label}
@@ -37,7 +38,8 @@ const NavBar = ({ pathname }) => {
                   <span
                     className={cn(
                       'flex text-[1.2rem] items-center hover:text-zinc-500 transition-all duration-500',
-                      isActive(item.link) && 'text-sky-700 hover:text-sky-900'
+                      isActive(item.link) &&
+                        'text-purple-500 hover:text-purple-700'
                     )}
                   >
                     {item.label}

@@ -1,6 +1,7 @@
 import { CloudArrowUpIcon } from '@heroicons/react/20/solid';
 import { MoveUpRight } from 'lucide-react';
 import Image from 'next/image';
+import { CtaButton } from '../common/Cta-button';
 
 const PortfolioSection = () => {
   return (
@@ -8,8 +9,7 @@ const PortfolioSection = () => {
       <div className="flex container justify-between items-center  py-16">
         <h2 className="text-white  text-5xl z-100">Selected Work</h2>
         <div className="flex items-center gap-2">
-          <MoveUpRight className="w-8 h-8 text-primary-foreground bg-muted-foreground rounded-full p-2" />
-          <p className="text-white  text-xl z-100">see all</p>
+          <CtaButton label="See More" />
         </div>
       </div>
       <div className="flex pb-[100px] items-center justify-center">
@@ -74,7 +74,7 @@ const PortfolioSection = () => {
             </div>
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
             <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-              <h3 className="font-dmserif text-2xl font-bold text-white">
+              <h3 className="font-dmserif pb-2 text-2xl font-bold text-white">
                 Victorian Corsets
               </h3>
               <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">

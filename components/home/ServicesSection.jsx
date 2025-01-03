@@ -9,6 +9,7 @@ import {
 import { CloudArrowUpIcon } from '@heroicons/react/20/solid';
 import { Button } from '../ui/button';
 import { MoveUpRight } from 'lucide-react';
+import Link from 'next/link';
 
 const data = [
   // {
@@ -27,7 +28,8 @@ const data = [
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
     icon: MoveUpRight,
-    cta: 'About Web Development'
+    cta: 'About Web Development',
+    href: '/services/web-development'
   },
   {
     id: 2,
@@ -36,7 +38,8 @@ const data = [
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
     icon: MoveUpRight,
-    cta: 'About Business Applications'
+    cta: 'About Business Applications',
+    href: '/services/business-applications'
   },
   {
     id: 3,
@@ -45,7 +48,8 @@ const data = [
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
     icon: MoveUpRight,
-    cta: 'About Content & SEO'
+    cta: 'About Content & SEO',
+    href: '/services/content-seo'
   }
 ];
 
@@ -80,7 +84,11 @@ const ServicesSection = () => {
                   </span>
                 </div>
                 <CardTitle className="uppercase tracking-wide">
-                  <h2 className="text-2xl">{item.serviceName}</h2>
+                  <Link href={item.href}>
+                    <h2 className="text-2xl hover:text-accent">
+                      {item.serviceName}
+                    </h2>
+                  </Link>
                 </CardTitle>
               </CardHeader>
               <CardContent className="flex-grow">
@@ -89,10 +97,14 @@ const ServicesSection = () => {
                 </CardDescription>
               </CardContent>
               <CardFooter>
-                {item.icon && (
-                  <item.icon className="w-8 h-8 text-primary-foreground bg-muted-foreground rounded-full p-2" />
-                )}
-                <p className="pl-4">{item.cta}</p>
+                <Link href={item.href} className=" group flex items-center">
+                  {item.icon && (
+                    <item.icon className="w-8 h-8 text-primary-foreground bg-muted-foreground group-hover:bg-accent rounded-full p-2 transition-transform duration-300 group-hover:rotate-45" />
+                  )}
+                  <p className="pl-4  transition-colors duration-300 group-hover:text-accent">
+                    {item.cta}
+                  </p>
+                </Link>
               </CardFooter>
             </Card>
           ))}

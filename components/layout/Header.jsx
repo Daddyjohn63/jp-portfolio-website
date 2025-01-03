@@ -23,14 +23,19 @@ const Header = () => {
   const headerClass = cn('top-0 left-0 w-full z-10', {
     'page-header is-sticky bg-white shadow-md': sticky,
     'bg-transparent absolute': !sticky && isHome, // Transparent only when not sticky and on the home page
-    'bg-white shadow-md': !isHome || sticky // White background if not on the home page or if sticky
+    'bg-transparent border-b border-customShades-shade2 shadow-md':
+      !isHome || sticky // White background if not on the home page or if sticky
   });
 
   // Adjust text color based on the page
   const textColorClass = cn({
-    'text-black': !isHome || sticky, // Black text if not on the home page or if sticky
+    'text-white': !isHome || sticky, // Black text if not on the home page or if sticky
     'text-white': isHome && !sticky // White text only when on the home page and not sticky
   });
+
+  // <span className="text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-blue-600 via-green-600 to-orange-600 inline-block text-transparent bg-clip-text">
+  //   Web Solutions
+  // </span>;
 
   return (
     <header className={headerClass}>
@@ -38,7 +43,12 @@ const Header = () => {
         className={`flex h-[80px] container  items-center justify-between px-9 ${textColorClass}`}
       >
         {/* LOGO START */}
-        <Logo />
+        <Link
+          href="/"
+          className=" font-bold tracking-tight sm:text-4xl bg-gradient-to-r from-purple-300 via-purple-300 to-purple-300 inline-block text-transparent bg-clip-text"
+        >
+          Web and Prosper
+        </Link>
         {/* LOGO END */}
 
         {/* NAVBAR START */}

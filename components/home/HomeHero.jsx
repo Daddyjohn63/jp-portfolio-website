@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Reveal from '@/components/common/ScrollAnimation';
 import Image from 'next/image';
+import { CtaButton } from '../common/Cta-button';
 
 const HomeHero = () => {
   return (
@@ -67,7 +68,7 @@ const HomeHero = () => {
                 </Link>
                 <h1 className="mt-10 text-4xl font-bold tracking-tight sm:text-6xl">
                   Transforming Ideas into Powerful{' '}
-                  <span className="text-4xl font-bold tracking-tight sm:text-6xl text-accent">
+                  <span className="text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-purple-600 via-blue-400 to-orange-300 inline-block text-transparent bg-clip-text">
                     Web Solutions
                   </span>
                 </h1>
@@ -90,19 +91,19 @@ const HomeHero = () => {
                   </li>
                 </ul>
                 <div className="mt-10 flex items-center gap-x-6">
+                  <CtaButton label="Contact me" />
                   <Link
-                    className="flex items-center gap-2 bg-transparent rounded-3xl border border-muted-foreground/50 px-3 py-2"
+                    className="group flex items-center gap-2 bg-transparent rounded-3xl border border-muted-foreground/50 px-3 py-2
+                    transition-all duration-300 hover:scale-105 hover:border-accent hover:shadow-[0_0_10px_rgba(167,139,250,0.3)]"
                     href="#"
                   >
-                    <MoveUpRight className="w-8 h-8 text-primary-foreground bg-accent rounded-full p-2" />
-                    <p className="text-white text-xl z-100 pl-2">Contact me</p>
-                  </Link>
-                  <Link
-                    className="flex items-center gap-2 bg-transparent rounded-3xl border border-muted-foreground/50 px-3 py-2"
-                    href="#"
-                  >
-                    <MoveUpRight className="w-8 h-8 text-primary-foreground bg-accent rounded-full p-2" />
-                    <p className="text-white text-xl z-100 pl-3">Learn more</p>
+                    <MoveUpRight
+                      className="w-8 h-8 text-primary-foreground bg-accent rounded-full p-2 
+                    transition-transform duration-300 group-hover:rotate-45"
+                    />
+                    <p className="text-white text-xl z-100 pl-2 transition-colors duration-300 group-hover:text-accent">
+                      View my work
+                    </p>
                   </Link>
                 </div>
               </div>
