@@ -1,5 +1,4 @@
 import { getBlogPosts } from '@/lib/blog';
-import { getBlogCategories } from '@/lib/blog';
 import Link from 'next/link';
 import Image from 'next/image';
 import Heading from '@/components/common/Heading';
@@ -8,7 +7,6 @@ import { Suspense } from 'react';
 import LoadingState from '@/components/common/Loading-state';
 import { fetchData } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import qs from 'qs';
 import { PagePagination } from '@/components/common/Pagination';
 import { NotFoundError, CMSError } from '@/lib/errors';
 import { NavSidebar } from '@/components/blog/Nav-sidebar';
