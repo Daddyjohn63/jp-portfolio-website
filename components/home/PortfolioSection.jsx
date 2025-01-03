@@ -19,6 +19,7 @@ const PortfolioSection = async () => {
             <PortfolioCard
               key={project.id}
               image={project.image}
+              alt={project.alternativeText}
               title={project.title}
               summary={project.summary}
               slug={project.slug}

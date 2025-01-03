@@ -8,7 +8,7 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
-export const PortfolioCard = ({ image, title, summary, slug }) => {
+export const PortfolioCard = ({ image, alt, title, summary, slug }) => {
   return (
     <Card className="group relative overflow-hidden">
       <CardHeader className="p-0">
@@ -16,7 +16,7 @@ export const PortfolioCard = ({ image, title, summary, slug }) => {
           <Image
             className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
             src={image}
-            alt={title}
+            alt={alt}
             width={400}
             height={400}
           />
