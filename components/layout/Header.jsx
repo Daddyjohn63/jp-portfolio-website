@@ -20,17 +20,17 @@ const Header = () => {
   //   pathname?.startsWith(`${href}/`);
 
   // Adjust header classes based on the page and scroll position
-  const headerClass = cn('top-0 left-0 w-full z-10', {
-    'page-header is-sticky bg-white shadow-md': sticky,
-    'bg-transparent absolute': !sticky && isHome, // Transparent only when not sticky and on the home page
-    'bg-transparent border-b border-customShades-shade2 shadow-md':
-      !isHome || sticky // White background if not on the home page or if sticky
+  const headerClass = cn('w-full z-10 transition-all duration-300', {
+    'fixed top-0 left-0 animate-slideDown bg-background/80 backdrop-blur-md border-b border-border/40':
+      sticky,
+    'absolute top-0 left-0': !sticky && isHome,
+    relative: !isHome && !sticky
   });
 
   // Adjust text color based on the page
   const textColorClass = cn({
-    'text-white': !isHome || sticky, // Black text if not on the home page or if sticky
-    'text-white': isHome && !sticky // White text only when on the home page and not sticky
+    'text-white': !sticky && isHome, // White text only when on home and not sticky
+    'text-foreground': sticky || !isHome // Default text color when sticky or not home
   });
 
   // <span className="text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-blue-600 via-green-600 to-orange-600 inline-block text-transparent bg-clip-text">
@@ -38,35 +38,41 @@ const Header = () => {
   // </span>;
 
   return (
-    <header className={headerClass}>
-      <div
-        className={`flex h-[80px] container  items-center justify-between px-9 ${textColorClass}`}
-      >
-        {/* LOGO START */}
-        <Link
-          href="/"
-          className=" font-bold tracking-tight sm:text-4xl bg-gradient-to-r from-purple-300 via-purple-300 to-purple-300 inline-block text-transparent bg-clip-text"
+    <>
+      {/* Header placeholder - maintains layout when header is fixed */}
+      <div className={cn('h-[80px]', { hidden: !sticky })} />
+
+      {/* Actual header */}
+      <header className={headerClass}>
+        <div
+          className={`flex h-[80px] container  items-center justify-between px-9 ${textColorClass}`}
         >
-          Web and Prosper
-        </Link>
-        {/* LOGO END */}
+          {/* LOGO START */}
+          <Link
+            href="/"
+            className=" font-bold tracking-tight sm:text-4xl bg-gradient-to-r from-purple-300 via-purple-300 to-purple-300 inline-block text-transparent bg-clip-text"
+          >
+            Web and Prosper
+          </Link>
+          {/* LOGO END */}
 
-        {/* NAVBAR START */}
-        <NavBar textColorClass={textColorClass} pathname={pathname} />
-        {/* I think am supposed to pass both these props */}
-        {/* NAVBAR END */}
+          {/* NAVBAR START */}
+          <NavBar textColorClass={textColorClass} pathname={pathname} />
+          {/* I think am supposed to pass both these props */}
+          {/* NAVBAR END */}
 
-        {/* SOCIAL MEDIA START */}
-        <div>
-          <p className={textColorClass}>Social Media</p>
+          {/* SOCIAL MEDIA START */}
+          <div>
+            <p className={textColorClass}>Social Media</p>
+          </div>
+          {/* SOCIAL MEDIA END */}
+          {/* ADD SIDEBAR MOBILE HERE */}
+          <div className="md:hidden">
+            <MobileSideBar pathname={pathname} />
+          </div>
         </div>
-        {/* SOCIAL MEDIA END */}
-        {/* ADD SIDEBAR MOBILE HERE */}
-        <div className="md:hidden">
-          <MobileSideBar pathname={pathname} />
-        </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 };
 

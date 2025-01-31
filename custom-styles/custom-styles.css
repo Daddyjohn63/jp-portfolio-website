@@ -2,7 +2,9 @@
   position: fixed;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
   animation: slideDown 0.5s ease-out;
-  background: hsl(var(--card));
+  background: hsl(var(--background));
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid hsl(var(--border) / 0.4);
 }
 .page-header.is-sticky nav ul {
   color: white;
@@ -21,6 +23,15 @@
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+/* Add transition properties */
+.page-header {
+  transition: all 0.3s ease-in-out;
 }
 
 /* Section Spacing */
