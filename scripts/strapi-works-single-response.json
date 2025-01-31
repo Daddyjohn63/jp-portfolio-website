@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "attributes": {
+        "slug": "ashdown-cookery-school",
+        "title": "eCommerce",
+        "publishedAt": "2024-12-30T18:59:25.060Z",
+        "body": "This is some text in the body",
+        "image": {
+          "data": {
+            "id": 2,
+            "attributes": {
+              "url": "/uploads/Ashdown_Manna_Cookery_School_Mockup_37573f622c.jpg"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pageSize": 1
+    }
+  }
+}
