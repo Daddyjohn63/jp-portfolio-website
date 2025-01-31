@@ -119,6 +119,114 @@ module.exports = {
         button: 'hsl(var(--button-text))',
         link: 'hsl(var(--link))',
         'link-hover': 'hsl(var(--link-hover))'
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            // Customize default prose styles
+            color: 'hsl(var(--foreground))', // Use your design system color
+            maxWidth: '100%', // Override max-width
+
+            // Customize headings
+            h1: {
+              color: 'hsl(var(--primary))',
+              fontWeight: '700',
+              fontSize: '2.25em'
+            },
+            h2: {
+              color: 'hsl(var(--primary))',
+              fontWeight: '600',
+              fontSize: '1.875em'
+            },
+            h3: {
+              color: 'hsl(var(--primary))',
+              fontWeight: '600',
+              fontSize: '1.5em'
+            },
+            h4: {
+              color: 'hsl(var(--primary))',
+              fontWeight: '600',
+              fontSize: '1.25em'
+            },
+
+            // Customize links
+            a: {
+              color: 'hsl(var(--link))',
+              textDecoration: 'none',
+              '&:hover': {
+                color: 'hsl(var(--link-hover))',
+                textDecoration: 'underline'
+              }
+            },
+
+            // Customize paragraphs
+            p: {
+              marginTop: '1.25em',
+              marginBottom: '1.25em'
+            },
+
+            // Customize lists
+            'ul > li': {
+              paddingLeft: '1.5em',
+              '&::before': {
+                backgroundColor: 'hsl(var(--primary))'
+              }
+            },
+
+            // Customize blockquotes
+            blockquote: {
+              borderLeftColor: 'hsl(var(--primary))',
+              fontStyle: 'italic',
+              color: 'hsl(var(--muted-foreground))'
+            },
+
+            // Customize code blocks
+            pre: {
+              backgroundColor: 'hsl(var(--accent))',
+              color: 'hsl(var(--accent-foreground))'
+            },
+            code: {
+              color: 'hsl(var(--primary))',
+              '&::before': {
+                content: '""'
+              },
+              '&::after': {
+                content: '""'
+              }
+            },
+
+            // Customize strong tags
+            strong: {
+              color: 'hsl(var(--primary))',
+              fontWeight: '600'
+            }
+          }
+        },
+        // Add custom size variants
+        lg: {
+          css: {
+            fontSize: '1.125rem',
+            h1: {
+              fontSize: '2.5em'
+            },
+            h2: {
+              fontSize: '2em'
+            }
+          }
+        },
+        // Add dark mode variant
+        invert: {
+          css: {
+            '--tw-prose-body': 'hsl(var(--foreground))',
+            '--tw-prose-headings': 'hsl(var(--primary))',
+            '--tw-prose-links': 'hsl(var(--link))',
+            '--tw-prose-bold': 'hsl(var(--primary))',
+            '--tw-prose-quotes': 'hsl(var(--muted-foreground))',
+            '--tw-prose-code': 'hsl(var(--primary))',
+            '--tw-prose-quote-borders': 'hsl(var(--primary))',
+            '--tw-prose-pre-bg': 'hsl(var(--accent))'
+          }
+        }
       }
     }
   },
