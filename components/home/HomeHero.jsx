@@ -9,10 +9,7 @@ import { CtaButton } from '../common/Cta-button';
 const HomeHero = () => {
   return (
     <>
-      <div
-      // className="bg-cover bg-center"
-      //style={{ backgroundImage: `url('/images/chamofficev2.jpg')` }}
-      >
+      <div>
         <div className="w-full relative isolate overflow-hidden bg-background/70 bg-opacity-70">
           <svg
             className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"

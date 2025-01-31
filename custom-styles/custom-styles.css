@@ -22,3 +22,55 @@
     opacity: 1;
   }
 }
+
+/* Section Spacing */
+.section-spacing-lg {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.section-spacing-md {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.section-spacing-sm {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Responsive Section Spacing */
+.section-spacing-responsive {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .section-spacing-responsive {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-spacing-responsive {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+
+/* Section Padding Variants */
+.section-padding-lg {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section-padding-md {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.section-padding-sm {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
