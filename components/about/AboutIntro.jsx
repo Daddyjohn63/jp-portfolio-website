@@ -4,12 +4,14 @@ import { twMerge } from 'tailwind-merge';
 import Reveal from '@/components/common/ScrollAnimation';
 import Title from '@/components/common/Title';
 import { aboutUsData } from './AboutUsData';
+import Link from 'next/link';
+import { MoveUpRight, Star, MoveRight } from 'lucide-react';
+import { CtaButton } from '../common/Cta-button';
 
 const AboutIntro = () => {
   return (
-    <div className="py-20">
+    <div className="">
       <div className="container">
-        <Title subTitle="Jackie Paul" title="My Journey" primary={true} />
         <div className="grid md:grid-cols-2 lg:gap-16 gap-10 items-center">
           {/* ABOUT IMAGE SIDE */}
           <Reveal from={200}>
@@ -40,27 +42,54 @@ const AboutIntro = () => {
           {/* ABOUT IMAGE SIDE */}
 
           {/* ABOUT CONTENT */}
-          <Reveal from={200}>
-            <div>
-              <p className={` text-justify transition-all`}>
-                {aboutUsData?.aboutDescription}
+          {/* Text Section and buttons */}
+          <Reveal from={200} className="lg:w-1/3 lg:pr-8 flex-grow">
+            <div className="w-full">
+              {/* <Link href="#" className="inline-flex space-x-6">
+                <p className="flex items-center gap-1 rounded-full bg-muted-foreground/10 px-3 py-1 text-sm font-semibold leading-6 ring-1 ring-inset">
+                  5 <Star className="size-3 fill-yellow-600" /> Rated on Google
+                </p>
+              </Link> */}
+              <h1 className="mt-10 text-4xl font-bold tracking-tight sm:text-6xl">
+                Transforming Ideas into Powerful{' '}
+                <span className="text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-purple-600 via-blue-400 to-orange-300 inline-block text-transparent bg-clip-text">
+                  Web Solutions
+                </span>
+              </h1>
+              <p className="mt-6 text-xl leading-8">
+                Adapt and stay ahead of the competition with modern, scalable
+                web applications that will convert new business.
               </p>
-
-              {/* POINTS */}
-              <ul className="mt-8 grid lg:grid-cols-2 gap-1 w-full">
-                {aboutUsData?.keyPoints.map((point, i) => (
-                  <div className="flex flex-col md:flex-row md:gap-2 gap-2" key={i}>
-                    <span className="text-5xl text-gray-500">
-                      <point.icon />
-                    </span>
-                    <div>
-                      <h5 className="text-[1.2rem] font-medium">{point.title}</h5>
-                      <p className=" text-gray-600 ">{point.description}</p>
-                    </div>
-                  </div>
-                ))}
+              <ul className="flex flex-col mt-3 gap-1">
+                <li className="flex items-center gap-1">
+                  <MoveRight className="size-5 text-muted-foreground mr-2" />
+                  Websites that convert
+                </li>
+                <li className="flex items-center gap-1">
+                  <MoveRight className="size-5 text-muted-foreground mr-2" />
+                  Business applications that will increase productivity
+                </li>
+                <li className="flex items-center gap-1">
+                  <MoveRight className="size-5 text-muted-foreground mr-2" />
+                  AI and Chatbot solutions
+                </li>
               </ul>
-              {/* POINTS */}
+              <div className="mt-10 flex items-center gap-x-6">
+                <CtaButton label="Contact me" />
+                <Link
+                  className="group flex items-center gap-2 bg-transparent rounded-3xl border border-muted-foreground/50 px-3 py-2
+                    transition-all duration-300 hover:scale-105 hover:border-accent hover:shadow-[0_0_10px_rgba(167,139,250,0.3)]"
+                  href="#"
+                >
+                  <MoveUpRight
+                    className="w-8 h-8 text-primary-foreground bg-accent rounded-full p-2 
+                    transition-transform duration-300 group-hover:rotate-45"
+                  />
+                  <p className="text-white text-xl z-100 pl-2 transition-colors duration-300 group-hover:text-accent">
+                    View my work
+                  </p>
+                </Link>
+              </div>
             </div>
           </Reveal>
           {/* ABOUT CONTENT */}

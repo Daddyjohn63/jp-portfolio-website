@@ -93,7 +93,7 @@ const skills = [
 
 export default function SkillsShowcase() {
   return (
-    <div className="p-6 max-w-5xl mx-auto">
+    <div className="p-6 max-w-7xl mx-auto">
       <h2 className="text-3xl font-bold text-center mb-6">
         My Skills & Expertise
       </h2>
@@ -104,7 +104,7 @@ export default function SkillsShowcase() {
             whileHover={{ scale: 1.05 }}
             className="h-full"
           >
-            <Card className="p-4 border border-gray-200 rounded-2xl shadow-md hover:shadow-lg h-full">
+            <Card className="p-4 border border-gray-500 rounded-2xl shadow-md hover:shadow-lg h-full">
               <CardContent className="flex flex-col items-center text-center h-full">
                 {skill.icon}
                 <h3 className="text-lg font-semibold mt-2">{skill.category}</h3>
