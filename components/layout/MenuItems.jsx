@@ -7,20 +7,20 @@ export const headerMenuItems = [
   {
     id: 2,
     label: 'about',
-    link: '/about',
-    submenu: true,
-    subMenuItems: [
-      {
-        id: 20,
-        label: 'History',
-        link: '/about/history'
-      },
-      {
-        id: 22,
-        label: 'My CV',
-        link: '/about/my-cv'
-      }
-    ]
+    link: '/about'
+    // submenu: false,
+    // subMenuItems: [
+    //   {
+    //     id: 20,
+    //     label: 'History',
+    //     link: '/about/history'
+    //   },
+    //   {
+    //     id: 22,
+    //     label: 'My CV',
+    //     link: '/about/my-cv'
+    //   }
+    // ]
   },
   {
     id: 3,

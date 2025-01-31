@@ -1,6 +1,12 @@
 import AboutIntro from '@/components/about/AboutIntro';
+import SkillsShowcase from '@/components/about/SkillsShowcase';
 
 const AboutPage = () => {
-  return <AboutIntro />;
+  return (
+    <>
+      <SkillsShowcase />
+      <AboutIntro />
+    </>
+  );
 };
 export default AboutPage;
