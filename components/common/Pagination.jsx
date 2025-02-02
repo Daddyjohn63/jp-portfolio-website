@@ -8,7 +8,11 @@ import {
   PaginationPrevious
 } from '@/components/ui/pagination';
 
-export const PagePagination = ({ currentPage, pageCount }) => {
+export const PagePagination = ({
+  currentPage,
+  pageCount,
+  basePath = '/blog'
+}) => {
   // console.log('currentPage', currentPage);
   // console.log('pageCount', pageCount);
 
@@ -19,7 +23,9 @@ export const PagePagination = ({ currentPage, pageCount }) => {
           {/* Previous button */}
           <PaginationItem>
             <PaginationPrevious
-              href={currentPage > 1 ? `/blog?page=${currentPage - 1}` : null}
+              href={
+                currentPage > 1 ? `${basePath}?page=${currentPage - 1}` : null
+              }
               className={
                 currentPage <= 1 ? 'pointer-events-none opacity-50' : ''
               }
@@ -56,7 +62,9 @@ export const PagePagination = ({ currentPage, pageCount }) => {
           <PaginationItem>
             <PaginationNext
               href={
-                currentPage < pageCount ? `/blog?page=${currentPage + 1}` : null
+                currentPage < pageCount
+                  ? `${basePath}?page=${currentPage + 1}`
+                  : null
               }
               className={
                 currentPage >= pageCount ? 'pointer-events-none opacity-50' : ''

@@ -1,8 +1,10 @@
 import { PortfolioCard } from '@/components/common/Portfolio-card';
-import { CtaButton } from '@/components/common/CtaButton';
-import PortfolioSection from '@/components/home/PortfolioSection';
-
 import { getProjects } from '@/lib/projects';
+import { fetchData } from '@/lib/utils';
+import { Suspense } from 'react';
+import LoadingState from '@/components/common/Loading-state';
+import { PagePagination } from '@/components/common/Pagination';
+import { NotFoundError, CMSError } from '@/lib/errors';
 
 export const metadata = {
   title: 'Portfolio',
@@ -11,35 +13,70 @@ export const metadata = {
 
 const PAGE_SIZE = 6;
 
-const PortfolioPosts = async () => {
-  const { projects, pageCount } = await getProjects(PAGE_SIZE, 1);
-  console.log('projects', projects);
+const PortfolioPosts = async ({ searchParams }) => {
+  try {
+    const page = searchParams.page ? parseInt(searchParams.page) : 1;
+    if (isNaN(page) || page < 1) {
+      throw new CMSError(
+        'Invalid page number',
+        400,
+        'Page number must be a positive integer'
+      );
+    }
 
-  if (!projects?.length) {
-    return <p>No projects found</p>;
-  }
+    const { data, error } = await fetchData(getProjects, PAGE_SIZE, page);
 
-  return (
-    <div className="py-[50px]">
-      <div className="flex container justify-between items-center py-16">
-        <h2 className="text-white text-5xl z-100">Selected Work</h2>
-      </div>
-      <div className="flex pb-[100px] items-center justify-center">
-        <div className="container grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map(project => (
-            <PortfolioCard
-              key={project?.slug}
-              image={project?.image}
-              alt={project?.alternativeText || project?.title}
-              title={project?.title}
-              summary={project?.summary}
-              slug={project?.slug}
+    if (error) {
+      throw error;
+    }
+
+    const { projects, pageCount } = data;
+
+    if (!projects?.length) {
+      throw new NotFoundError('No projects found');
+    }
+
+    if (page > pageCount) {
+      throw new NotFoundError('Page not found');
+    }
+
+    return (
+      <div className="py-[50px]">
+        <div className="flex container justify-between items-center py-16">
+          <h2 className="text-white text-5xl z-100">Selected Work</h2>
+        </div>
+        <div className="flex pb-[100px] items-center justify-center flex-col">
+          <div className="container grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {projects.map(project => (
+              <PortfolioCard
+                key={project?.slug}
+                image={project?.image}
+                alt={project?.alternativeText || project?.title}
+                title={project?.title}
+                summary={project?.summary}
+                slug={project?.slug}
+              />
+            ))}
+          </div>
+          <div className="mt-8">
+            <PagePagination
+              currentPage={page}
+              pageCount={pageCount}
+              basePath="/portfolio"
             />
-          ))}
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  } catch (error) {
+    throw error;
+  }
 };
 
-export default PortfolioPosts;
+export default function Page({ searchParams }) {
+  return (
+    <Suspense fallback={<LoadingState />}>
+      <PortfolioPosts searchParams={searchParams} />
+    </Suspense>
+  );
+}
