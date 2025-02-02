@@ -42,7 +42,7 @@ const PortfolioPosts = async ({ searchParams }) => {
 
     return (
       <div className="py-[50px]">
-        <div className="flex container justify-between items-center py-16">
+        <div className="flex container justify-between items-center pb-16">
           <h2 className="text-white text-5xl z-100">Selected Work</h2>
         </div>
         <div className="flex pb-[100px] items-center justify-center flex-col">

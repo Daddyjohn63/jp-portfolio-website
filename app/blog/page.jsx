@@ -11,6 +11,8 @@ import { PagePagination } from '@/components/common/Pagination';
 import { NotFoundError, CMSError } from '@/lib/errors';
 import { NavSidebar } from '@/components/blog/Nav-sidebar';
 import { Sidebar } from '@/components/common/Sidebar';
+import { InnerHeader } from '@/components/common/InnerHeader';
+import Reveal from '@/components/common/ScrollAnimation';
 
 export const metadata = {
   title: 'Blog',
@@ -113,25 +115,27 @@ const BlogPage = async ({ searchParams }) => {
 
     return (
       <div className="container">
-        <div className="flex items-center justify-center mt-12">
-          <Heading>Blog</Heading>
-        </div>
+        <InnerHeader
+          title="Blog"
+          description="News and articles to get you thinking"
+        />
+        <Reveal from={200}>
+          <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 mt-6">
+            {/* first column */}
+            <div className="flex flex-col gap-6">
+              <Sidebar />
+              <NavSidebar />
+            </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 mt-6">
-          {/* first column */}
-          <div className="flex flex-col gap-6">
-            <Sidebar />
-            <NavSidebar />
+            {/* second column */}
+            <div>
+              <Suspense fallback={<LoadingState />}>
+                <BlogPosts posts={blogPosts} />
+              </Suspense>
+              <PagePagination currentPage={page} pageCount={pageCount} />
+            </div>
           </div>
-
-          {/* second column */}
-          <div>
-            <Suspense fallback={<LoadingState />}>
-              <BlogPosts posts={blogPosts} />
-            </Suspense>
-            <PagePagination currentPage={page} pageCount={pageCount} />
-          </div>
-        </div>
+        </Reveal>
       </div>
     );
   } catch (error) {

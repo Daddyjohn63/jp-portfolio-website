@@ -37,11 +37,13 @@ const AboutIntro = () => {
         {/* Text Section and buttons */}
         <Reveal from={200} className="lg:w-1/3 lg:pr-8 flex-grow">
           <div className="w-full">
-            <h1 className="mt-10 text-4xl font-bold tracking-tight sm:text-6xl">
-              Innovative Web Developer | Problem-Solver | Business Strategist{' '}
-              <span className="text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-purple-600 via-blue-400 to-orange-300 inline-block text-transparent bg-clip-text"></span>
+            <h1 className="mt-10 font-semibold  tracking-tight ">
+              Innovative Web Developer, Problem-Solver, Business thinker
+              {/* <span className=" text-5xl  tracking-tight bg-gradient-to-r from-purple-600 via-blue-400 to-orange-300 inline-block text-transparent bg-clip-text">
+                |
+              </span> */}
             </h1>
-            <p className="mt-6 text-xl leading-8">
+            <p className="mt-6 leading-8">
               I design, build, and optimise powerful web applications that solve
               real business challenges. With expertise in React, Next.js,
               Node.js, and modern databases, I craft tailored digital solutions
