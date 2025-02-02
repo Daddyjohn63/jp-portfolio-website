@@ -25,7 +25,7 @@ const NavBar = ({ pathname }) => {
               {item.subMenuItems && item.subMenuItems.length > 0 ? (
                 <span
                   className={cn(
-                    'flex text-[1.2rem] items-center hover:text-zinc-500 transition-all duration-500',
+                    'flex items-center hover:text-zinc-500 transition-all duration-500',
                     isActive(item.link) &&
                       'text-purple-500 hover:text-purple-700'
                   )}
@@ -37,7 +37,7 @@ const NavBar = ({ pathname }) => {
                 <Link href={item.link}>
                   <span
                     className={cn(
-                      'flex text-[1.2rem] items-center hover:text-zinc-500 transition-all duration-500',
+                      'flex  items-center hover:text-zinc-500 transition-all duration-500',
                       isActive(item.link) &&
                         'text-purple-500 hover:text-purple-700'
                     )}

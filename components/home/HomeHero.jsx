@@ -63,13 +63,13 @@ const HomeHero = () => {
                     Google
                   </p>
                 </Link>
-                <h1 className="mt-10 text-4xl font-bold tracking-tight sm:text-6xl">
+                <h1 className="mt-10 sm:text-5xl !leading-[60px] font-bold tracking-tight  ">
                   Transforming Ideas into Powerful{' '}
-                  <span className="text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-purple-600 via-blue-400 to-orange-300 inline-block text-transparent bg-clip-text">
+                  <span className="sm:text-5xl font-bold  bg-gradient-to-r from-purple-600 via-blue-400 to-orange-300 inline-block text-transparent bg-clip-text">
                     Web Solutions
                   </span>
                 </h1>
-                <p className="mt-6 text-xl leading-8">
+                <p className="mt-6 leading-8">
                   Adapt and stay ahead of the competition with modern, scalable
                   web applications that will deliver new business and
                   productivity.

@@ -133,7 +133,7 @@ module.exports = {
             h1: {
               color: 'hsl(var(--primary))',
               fontWeight: '700',
-              fontSize: '2.25em'
+              fontSize: '2.0em'
             },
             h2: {
               color: 'hsl(var(--primary))',

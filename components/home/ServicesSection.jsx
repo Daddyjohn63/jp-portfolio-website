@@ -85,9 +85,7 @@ const ServicesSection = () => {
                 </div>
                 <CardTitle className="uppercase tracking-wide">
                   <Link href={item.href}>
-                    <h2 className="text-2xl hover:text-accent">
-                      {item.serviceName}
-                    </h2>
+                    <h2 className=" hover:text-accent">{item.serviceName}</h2>
                   </Link>
                 </CardTitle>
               </CardHeader>
