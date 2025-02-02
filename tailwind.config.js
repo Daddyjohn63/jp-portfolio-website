@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 module.exports = {
   darkMode: ['class'],
   content: [
@@ -18,7 +20,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        afacad: ['var(--font-afacad)', 'sans-serif']
+        sans: ['var(--font-poppins)', ...fontFamily.sans]
       },
       aspectRatio: {
         '4/3': '4 / 3',

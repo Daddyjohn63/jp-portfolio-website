@@ -1,10 +1,9 @@
 // import { Inter } from 'next/font/google';
-import { afacad, poppins } from './fonts';
+import { poppins } from './fonts';
 
 import '../custom-styles/custom-styles.css';
 import './globals.css';
 import Header from '@/components/layout/Header';
-import { Poppins } from 'next/font/google';
 import { Toaster } from 'sonner';
 
 // const inter = Inter({ subsets: ['latin'] });
@@ -19,8 +18,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={afacad.variable} suppressHydrationWarning>
-      <body className={`dark ${afacad.className}`}>
+    <html lang="en" className={poppins.variable} suppressHydrationWarning>
+      <body className={`dark ${poppins.className}`}>
         <Header />
         {children}
         <Toaster position="bottom-center" />

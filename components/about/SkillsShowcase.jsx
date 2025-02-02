@@ -93,7 +93,7 @@ const skills = [
 
 export default function SkillsShowcase() {
   return (
-    <div className="p-6 max-w-7xl mx-auto">
+    <div className="max-w-8xl mx-auto section-spacing-lg">
       <h2 className="text-3xl font-bold text-center mb-6">
         My Skills & Expertise
       </h2>

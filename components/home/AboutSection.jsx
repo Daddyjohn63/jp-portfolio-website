@@ -10,7 +10,7 @@ import {
   Trophy
 } from 'lucide-react';
 import Link from 'next/link';
-import { CtaButton } from '../common/Cta-button';
+import { CtaButton } from '../common/CtaButton';
 
 export const AboutSection = () => {
   const containerRef = useRef(null);

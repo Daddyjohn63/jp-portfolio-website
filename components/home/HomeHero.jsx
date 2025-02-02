@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Reveal from '@/components/common/ScrollAnimation';
 import Image from 'next/image';
-import { CtaButton } from '../common/Cta-button';
+import { CtaButton } from '@/components/common/CtaButton';
 
 const HomeHero = () => {
   return (
@@ -71,7 +71,8 @@ const HomeHero = () => {
                 </h1>
                 <p className="mt-6 text-xl leading-8">
                   Adapt and stay ahead of the competition with modern, scalable
-                  web applications that will convert new business.
+                  web applications that will deliver new business and
+                  productivity.
                 </p>
                 <ul className="flex flex-col mt-3 gap-1">
                   <li className="flex items-center gap-1">
@@ -88,20 +89,8 @@ const HomeHero = () => {
                   </li>
                 </ul>
                 <div className="mt-10 flex items-center gap-x-6">
-                  <CtaButton label="Contact me" />
-                  <Link
-                    className="group flex items-center gap-2 bg-transparent rounded-3xl border border-muted-foreground/50 px-3 py-2
-                    transition-all duration-300 hover:scale-105 hover:border-accent hover:shadow-[0_0_10px_rgba(167,139,250,0.3)]"
-                    href="#"
-                  >
-                    <MoveUpRight
-                      className="w-8 h-8 text-primary-foreground bg-accent rounded-full p-2 
-                    transition-transform duration-300 group-hover:rotate-45"
-                    />
-                    <p className="text-white text-xl z-100 pl-2 transition-colors duration-300 group-hover:text-accent">
-                      View my work
-                    </p>
-                  </Link>
+                  <CtaButton label="Contact me" href="/contact" />
+                  <CtaButton label="View my work" href="/portfolio" />
                 </div>
               </div>
             </Reveal>

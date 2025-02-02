@@ -1,4 +1,4 @@
-import { CtaButton } from '../common/Cta-button';
+import { CtaButton } from '../common/CtaButton';
 import { PortfolioCard } from '../common/Portfolio-card';
 import { getFeaturedProjects } from '@/lib/projects';
 
