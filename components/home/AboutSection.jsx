@@ -1,34 +1,16 @@
 'use client';
 import Image from 'next/image';
-import { useScroll, motion, useTransform } from 'framer-motion';
-import { useRef } from 'react';
-import {
-  Bot,
-  MoveRight,
-  MoveUpRight,
-  PoundSterling,
-  Trophy
-} from 'lucide-react';
-import Link from 'next/link';
+import { MoveRight } from 'lucide-react';
 import { CtaButton } from '../common/CtaButton';
 
 export const AboutSection = () => {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start start', 'end end']
-  });
-  // Transform scrollYProgress (0-1) into desired y values
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, 100]); // Image 1 moves up
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, 70]); // Image 2 moves slower
-
   return (
-    <div className="container mb-[100px] mt-[100px]" ref={containerRef}>
-      <div className="flex flex-col md:flex-row items-center gap-8 py-16">
-        {/* Left column - Text content */}
-        <div className="flex-1 w-full ">
-          <h2 className="text-5xl font-bold mb-4">About</h2>
-          <p className=" mb-4">
+    <div className="container mt-4 mx-auto max-w-8xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:items-center lg:gap-12 lg:px-8 lg:py-40">
+      {/* Text Section */}
+      <div className="flex-1 w-full lg:w-1/2">
+        <div className="w-full">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4">About</h2>
+          <p className="mb-4">
             As a seasoned full-stack web developer, I bring your digital visions
             to life. With expertise in both front-end and back-end technologies,
             including AI integration, I create seamless, efficient, and
@@ -37,20 +19,20 @@ export const AboutSection = () => {
           <div className="flex flex-col gap-2 mt-6 mb-10">
             <p className="flex items-center gap-3">
               <span>
-                <MoveRight className="size-5 text-muted-foreground " />
+                <MoveRight className="size-5 text-muted-foreground" />
               </span>
               Proven track record of delivering successful projects
             </p>
             <p className="flex items-center gap-3">
               <span>
-                <MoveRight className="size-5 text-muted-foreground " />
+                <MoveRight className="size-5 text-muted-foreground" />
               </span>
               Expertise in both front-end and back-end technologies, including
               AI integration
             </p>
             <p className="flex items-center gap-3">
               <span>
-                <MoveRight className="size-5 text-muted-foreground " />
+                <MoveRight className="size-5 text-muted-foreground" />
               </span>
               Tailored solutions that drive real business value and enhance user
               experience
@@ -59,18 +41,18 @@ export const AboutSection = () => {
 
           <CtaButton className="mt-10" label="Learn more" />
         </div>
+      </div>
 
-        {/* Right column - Image */}
-        <div className="flex-1 w-full">
-          <div className="relative">
-            <Image
-              src="/images/chameleon-v1-750.jpg"
-              alt="About us"
-              width={448}
-              height={440}
-              className="w-full h-auto rounded-lg shadow-lg"
-            />
-          </div>
+      {/* Image Section */}
+      <div className="flex-1 w-full lg:w-1/2 mt-10 lg:mt-0">
+        <div className="w-full h-full relative">
+          <Image
+            src="/images/chameleon-v1-750.jpg"
+            alt="About us"
+            width={1600}
+            height={900}
+            className="relative w-full h-auto rounded-lg shadow-lg"
+          />
         </div>
       </div>
     </div>

@@ -53,57 +53,57 @@ const HomeHero = () => {
             />
           </div>
 
-          <div className="container mt-4 mx-auto max-w-8xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:items-center lg:px-8 lg:py-40">
+          <div className="container mt-4 mx-auto max-w-8xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:items-center lg:gap-12 lg:px-8 lg:py-40">
             {/* Text Section and buttons */}
-            <Reveal from={200} className="lg:w-1/3 lg:pr-8 flex-grow">
-              <div className="w-full">
-                <Link href="#" className="inline-flex space-x-6">
-                  <p className="flex items-center gap-1 rounded-full bg-muted-foreground/10 px-3 py-1 text-sm font-semibold leading-6 ring-1 ring-inset">
-                    5 <Star className="size-3 fill-yellow-600" /> Rated on
-                    Google
+            <div className="flex-1 w-full lg:w-1/2">
+              <Reveal from={200}>
+                <div className="w-full">
+                  <Link href="#" className="inline-flex space-x-6">
+                    <p className="flex items-center gap-1 rounded-full bg-muted-foreground/10 px-3 py-1 text-sm font-semibold leading-6 ring-1 ring-inset">
+                      5 <Star className="size-3 fill-yellow-600" /> Rated on
+                      Google
+                    </p>
+                  </Link>
+                  <h1 className="mt-10 sm:text-5xl !leading-[60px] font-bold tracking-tight  ">
+                    Transforming Ideas into Powerful{' '}
+                    <span className="sm:text-5xl font-bold  bg-gradient-to-r from-purple-600 via-blue-400 to-orange-300 inline-block text-transparent bg-clip-text">
+                      Web Solutions
+                    </span>
+                  </h1>
+                  <p className="mt-6 leading-8">
+                    Adapt and stay ahead of the competition with modern,
+                    scalable web applications that will deliver more sales, more
+                    productivity and a return on your investment.
                   </p>
-                </Link>
-                <h1 className="mt-10 sm:text-5xl !leading-[60px] font-bold tracking-tight  ">
-                  Transforming Ideas into Powerful{' '}
-                  <span className="sm:text-5xl font-bold  bg-gradient-to-r from-purple-600 via-blue-400 to-orange-300 inline-block text-transparent bg-clip-text">
-                    Web Solutions
-                  </span>
-                </h1>
-                <p className="mt-6 leading-8">
-                  Adapt and stay ahead of the competition with modern, scalable
-                  web applications that will deliver new business and
-                  productivity.
-                </p>
-                <ul className="flex flex-col mt-3 gap-1">
-                  <li className="flex items-center gap-1">
-                    <MoveRight className="size-5 text-muted-foreground mr-2" />
-                    Websites that convert
-                  </li>
-                  <li className="flex items-center gap-1">
-                    <MoveRight className="size-5 text-muted-foreground mr-2" />
-                    Business applications that will increase productivity
-                  </li>
-                  <li className="flex items-center gap-1">
-                    <MoveRight className="size-5 text-muted-foreground mr-2" />
-                    AI and Chatbot solutions
-                  </li>
-                </ul>
-                <div className="mt-10 flex items-center gap-x-6">
-                  <CtaButton label="Contact me" href="/contact" />
-                  <CtaButton label="View my work" href="/portfolio" />
+                  <ul className="flex flex-col mt-3 gap-1">
+                    <li className="flex items-center gap-1">
+                      <MoveRight className="size-5 text-muted-foreground mr-2" />
+                      Websites that convert
+                    </li>
+                    <li className="flex items-center gap-1">
+                      <MoveRight className="size-5 text-muted-foreground mr-2" />
+                      Business applications that will increase productivity
+                    </li>
+                    <li className="flex items-center gap-1">
+                      <MoveRight className="size-5 text-muted-foreground mr-2" />
+                      Projects delivered on time and on budget
+                    </li>
+                  </ul>
+                  <div className="mt-10 flex items-center gap-x-6">
+                    <CtaButton label="Contact me" href="/contact" />
+                    <CtaButton label="View my work" href="/portfolio" />
+                  </div>
                 </div>
-              </div>
-            </Reveal>
+              </Reveal>
+            </div>
 
             {/* Image Section */}
-            <div className="relative w-full flex justify-center lg:ml-10">
-              <div className="aspect-w-16 aspect-h-9 w-full overflow-visible relative">
-                {/* <div className="absolute inset-0 bg-accent rounded-md transform translate-x-8 translate-y-8"></div> */}
-                {/* <div className="absolute inset-0 rounded-lg transform translate-x-8 translate-y-8 bg-transparent bg-[radial-gradient(#b16cf1f8_1px,transparent_1px)] [background-size:8px_8px]"></div> */}
+            <div className="flex-1 w-full lg:w-1/2 mt-10 lg:mt-0">
+              <div className="w-full h-full relative">
                 <motion.div
                   className="absolute inset-0 rounded-lg transform translate-x-8 translate-y-8 bg-transparent bg-[radial-gradient(#b16cf1bc_1px,transparent_1px)] [background-size:8px_8px]"
                   initial={{ opacity: 0, scale: 0.9, x: 0, y: 100 }}
-                  animate={{ opacity: 1, scale: 1, x: 32, y: 32 }} // 32px = translate-x-8 and translate-y-8
+                  animate={{ opacity: 1, scale: 1, x: 32, y: 32 }}
                   transition={{
                     duration: 0.8,
                     delay: 0.5,
@@ -115,7 +115,7 @@ const HomeHero = () => {
                   alt="App screenshot"
                   width={1600}
                   height={900}
-                  className="relative rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+                  className="relative w-full h-auto rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
                 />
               </div>
             </div>

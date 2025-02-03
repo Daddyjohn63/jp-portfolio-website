@@ -47,11 +47,11 @@ const ServicesPage = () => {
             const Icon = service.icon;
             return (
               <div key={index} className="p-6 flex flex-col md:flex-row gap-10">
-                <div className="w-full md:w-1/3 p-4 flex flex-col gap-4 items-center justify-center border border-indigo-900 rounded-lg shadow-sm min-h-[200px]">
+                <div className=" bg-customShades-shade2 w-full md:w-1/3 p-4 flex flex-col gap-4 items-center justify-center border border-indigo-900 rounded-lg shadow-sm min-h-[200px]">
                   <div className="flex items-center">
-                    <Icon className="text-6xl text-indigo-600" />
+                    <Icon className="text-6xl text-indigo-500" />
                   </div>
-                  <h2 className="text-2xl font-semibold text-center">
+                  <h2 className="text-2xl  font-semibold text-center">
                     {service.title}
                   </h2>
                 </div>
