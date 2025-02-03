@@ -119,23 +119,25 @@ const BlogPage = async ({ searchParams }) => {
           title="Blog"
           description="News and articles to get you thinking"
         />
-        <Reveal from={200}>
-          <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 mt-6">
-            {/* first column */}
-            <div className="flex flex-col gap-6">
-              <Sidebar />
-              <NavSidebar />
-            </div>
+        <div className="overflow-hidden">
+          <Reveal from={200}>
+            <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 mt-6">
+              {/* first column */}
+              <div className="flex flex-col gap-6">
+                <Sidebar />
+                <NavSidebar />
+              </div>
 
-            {/* second column */}
-            <div>
-              <Suspense fallback={<LoadingState />}>
-                <BlogPosts posts={blogPosts} />
-              </Suspense>
-              <PagePagination currentPage={page} pageCount={pageCount} />
+              {/* second column */}
+              <div>
+                <Suspense fallback={<LoadingState />}>
+                  <BlogPosts posts={blogPosts} />
+                </Suspense>
+                <PagePagination currentPage={page} pageCount={pageCount} />
+              </div>
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
       </div>
     );
   } catch (error) {

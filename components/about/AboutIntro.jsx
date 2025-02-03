@@ -16,7 +16,7 @@ const AboutIntro = () => {
               <Reveal from={100} key={index}>
                 <div className="image">
                   <Image
-                    src={img}
+                    src="/images/about-test-v2.jpg"
                     alt="About Image"
                     className={twMerge(
                       'w-full h-full sm:min-h-[550px] min-h-[450px] object-cover rounded-lg',
@@ -38,7 +38,7 @@ const AboutIntro = () => {
         <Reveal from={200} className="lg:w-1/3 lg:pr-8 flex-grow">
           <div className="w-full">
             <h1 className="mt-10 font-semibold  tracking-tight ">
-              Innovative Web Developer, Problem-Solver, Business thinker
+              Innovative Web Developer, Problem-Solver, Business thinker...
               {/* <span className=" text-5xl  tracking-tight bg-gradient-to-r from-purple-600 via-blue-400 to-orange-300 inline-block text-transparent bg-clip-text">
                 |
               </span> */}

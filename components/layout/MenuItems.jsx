@@ -26,15 +26,15 @@ export const headerMenuItems = [
     id: 3,
     label: 'services',
     link: '/services',
-    submenu: true,
-    subMenuItems: [
-      {
-        id: 30,
-        label: 'Development',
-        link: '/services/development'
-      },
-      { id: 31, label: 'Hosting', link: 'services/hosting' }
-    ]
+    submenu: false
+    // subMenuItems: [
+    //   {
+    //     id: 30,
+    //     label: 'Development',
+    //     link: '/services/development'
+    //   },
+    //   { id: 31, label: 'Hosting', link: 'services/hosting' }
+    // ]
   },
   {
     id: 4,
