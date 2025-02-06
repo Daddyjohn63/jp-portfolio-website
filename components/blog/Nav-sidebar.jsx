@@ -45,7 +45,7 @@ export const NavSidebar = () => {
     <Card className="border-2 border-customShades-shade3">
       <CardHeader>
         <CardTitle>
-          <h2 className="text-3xl font-bold">Categories</h2>
+          <h2 className="text-3xl font-semi-bold">Categories</h2>
         </CardTitle>
         <CardDescription>View posts by category.</CardDescription>
       </CardHeader>

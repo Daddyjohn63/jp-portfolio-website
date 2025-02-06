@@ -93,6 +93,10 @@ module.exports = {
           shade7: 'hsl(var(--shade-7))',
           shade8: 'hsl(var(--shade-8))',
           shade9: 'hsl(var(--shade-9))'
+        },
+        heading: {
+          gradient:
+            'linear-gradient(to right, hsl(var(--shade-8)) 0%, hsl(var(--primary)) 50%, hsl(var(--shade-7)) 100%)'
         }
       },
       borderRadius: {
@@ -131,22 +135,22 @@ module.exports = {
 
             // Customize headings
             h1: {
-              color: 'hsl(var(--primary))',
+              color: '#ffe4c4',
               fontWeight: '700',
               fontSize: '2.0em'
             },
             h2: {
-              color: 'hsl(var(--primary))',
+              color: '#ffe4c4',
               fontWeight: '600',
               fontSize: '1.875em'
             },
             h3: {
-              color: 'hsl(var(--primary))',
+              color: '#ffe4c4',
               fontWeight: '600',
               fontSize: '1.5em'
             },
             h4: {
-              color: 'hsl(var(--primary))',
+              color: '#ffe4c4',
               fontWeight: '600',
               fontSize: '1.25em'
             },
@@ -199,7 +203,7 @@ module.exports = {
 
             // Customize strong tags
             strong: {
-              color: 'hsl(var(--primary))',
+              color: 'hsl(var(--foreground))',
               fontWeight: '600'
             }
           }

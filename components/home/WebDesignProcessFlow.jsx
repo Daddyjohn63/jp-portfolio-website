@@ -13,11 +13,11 @@ export const WebDesignProcessFlow = ({ processFlow }) => {
     <div className="py-[50px]">
       <div className="container ">
         <div className="flex flex-col items-center justify-center mb-12 gap-2">
-          <h2 className="text-5xl text-customBiege font-semi-bold text-center mb-2">
+          <h2 className="text-5xl font-semi-bold text-center mb-2">
             Customer Solution Process
           </h2>
 
-          <h3 className="text-2xl text-customBiege font-semi-bold text-center mb-1">
+          <h3 className="text-2xl font-semi-bold text-center mb-1">
             A typical process for delivering a website or web application.
           </h3>
           <p className="text-muted-foreground text-center">

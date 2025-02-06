@@ -55,7 +55,7 @@ const BlogPost = async ({ slug }) => {
         {previousPost ? (
           <Link
             href={`/blog/${previousPost.slug}`}
-            className="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-700"
+            className="px-4 py-2 bg-primary text-white rounded-full hover:bg-primary/80"
           >
             <span className="flex gap-2 items-center">
               <MoveLeft />
@@ -63,7 +63,7 @@ const BlogPost = async ({ slug }) => {
             </span>
           </Link>
         ) : (
-          <span className="px-4 py-2 bg-gray-300 text-gray-500 rounded-full cursor-not-allowed flex gap-2 items-center">
+          <span className="px-4 py-2 bg-primary text-white rounded-full cursor-not-allowed flex gap-2 items-center">
             <MoveLeft />
             Previous Post
           </span>
@@ -71,7 +71,7 @@ const BlogPost = async ({ slug }) => {
         {nextPost ? (
           <Link
             href={`/blog/${nextPost.slug}`}
-            className="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-700"
+            className="px-4 py-2 bg-primary text-white rounded-full hover:bg-primary/80"
           >
             <span className="flex gap-2 items-center">
               Next Post
@@ -79,7 +79,7 @@ const BlogPost = async ({ slug }) => {
             </span>
           </Link>
         ) : (
-          <span className="px-4 py-2 bg-gray-300 text-gray-500 rounded-full cursor-not-allowed flex gap-2 items-center">
+          <span className="px-4 py-2 bg-primary text-white rounded-full cursor-not-allowed flex gap-2 items-center">
             Next Post
             <MoveRight />
           </span>
