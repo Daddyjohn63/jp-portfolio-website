@@ -5,6 +5,7 @@ import '../custom-styles/custom-styles.css';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import { Toaster } from 'sonner';
+import { Footer } from '@/components/common/Footer';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Toaster position="bottom-center" />
+        <Footer />
       </body>
     </html>
   );

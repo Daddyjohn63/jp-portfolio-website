@@ -11,20 +11,24 @@ export const WebDesignProcessFlow = ({ processFlow }) => {
 
   return (
     <div className="py-[50px]">
-      <div className="container py-12 ">
-        <h2 className="text-5xl text-customBiege font-bold text-center mb-2">
-          Customer Solution Process
-        </h2>
-        <h3 className="text-2xl text-customBiege font-bold text-center mb-1">
-          A typical process for delivering a website or web application.
-        </h3>
-        <p className="text-customShades-shade8 text-center mb-12">
-          * Timescales are provide for simple to moderately complex
-          applications.
-        </p>
+      <div className="container ">
+        <div className="flex flex-col items-center justify-center mb-12 gap-2">
+          <h2 className="text-5xl text-customBiege font-bold text-center mb-2">
+            Customer Solution Process
+          </h2>
+
+          <h3 className="text-2xl text-customBiege font-bold text-center mb-1">
+            A typical process for delivering a website or web application.
+          </h3>
+          <p className="text-muted-foreground text-center">
+            * Timescales are provide for simple to moderately complex
+            applications.
+          </p>
+        </div>
 
         <div className="relative">
           {/* Vertical Line - left aligned on mobile, centered on larger screens */}
+
           <div className="absolute md:left-1/2 left-4 transform md:-translate-x-1/2 h-full w-[1px] bg-customShades-shade8" />
 
           <div className="relative">
