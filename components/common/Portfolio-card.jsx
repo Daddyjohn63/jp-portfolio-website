@@ -23,10 +23,10 @@ export const PortfolioCard = ({ image, alt, title, summary, slug }) => {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70" />
         </div>
       </CardHeader>
-      <CardContent className="absolute inset-0 flex translate-y-[55%] flex-col items-center  text-center transition-all duration-500 group-hover:translate-y-0">
+      <CardContent className="absolute inset-2 flex translate-y-[55%] flex-col items-center  text-center transition-all duration-500 group-hover:translate-y-0">
         <div className="flex h-full flex-col items-center justify-center">
-          <h3 className="pb-3 text-2xl font-bold text-white">{title}</h3>
-          <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <h4 className="pb-0  font-semi-bold">{title}</h4>
+          <p className="mb-0  italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
             {summary}
           </p>
         </div>

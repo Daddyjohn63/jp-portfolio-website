@@ -8,6 +8,7 @@ import Image from 'next/image';
 
 import MobileSideBar from './MobileSideBar';
 import Logo from './Logo';
+import { SocialLinks } from '../common/SocialLinks';
 
 const Header = () => {
   const { sticky } = useSticky(150);
@@ -50,7 +51,7 @@ const Header = () => {
           {/* LOGO START */}
           <Link
             href="/"
-            className=" font-bold tracking-tight sm:text-4xl bg-gradient-to-r from-purple-300 via-purple-300 to-purple-300 inline-block text-transparent bg-clip-text"
+            className=" font-semi-bold tracking-tight sm:text-3xl bg-gradient-to-r from-purple-300 via-purple-300 to-purple-300 inline-block text-transparent bg-clip-text"
           >
             Web and Prosper
           </Link>
@@ -62,14 +63,13 @@ const Header = () => {
           {/* NAVBAR END */}
 
           {/* SOCIAL MEDIA START */}
-          <div>
-            <p className={textColorClass}>Social Media</p>
-          </div>
+
           {/* SOCIAL MEDIA END */}
           {/* ADD SIDEBAR MOBILE HERE */}
           <div className="md:hidden">
             <MobileSideBar pathname={pathname} />
           </div>
+          <SocialLinks className="hidden md:flex" iconClassName="w-4 h-4" />
         </div>
       </header>
     </>

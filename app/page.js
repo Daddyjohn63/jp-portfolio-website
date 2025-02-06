@@ -31,12 +31,12 @@ export default async function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="section-spacing-md">
+        <section className="section-spacing-lg">
           <FeedBack />
         </section>
 
         {/* Portfolio Section */}
-        <section className="section-spacing-md">
+        <section className="section-spacing-lg">
           <PortfolioSection />
         </section>
 

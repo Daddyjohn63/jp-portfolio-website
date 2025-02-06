@@ -78,11 +78,12 @@ const ServicesSection = () => {
                 >
                   <CardHeader className="p-6">
                     <div className="flex justify-between items-center mb-3">
-                      <span className="text-sm text-gray-500">
+                      <span className="text-sm text-muted-foreground">
                         {item.serviceNumber}
                       </span>
                     </div>
-                    <CardTitle className="uppercase tracking-wide text-lg sm:text-xl">
+
+                    <CardTitle className=" tracking-wide text-lg sm:text-xl">
                       <Link href={item.href}>
                         <h2 className="hover:text-accent transition-colors duration-300">
                           {item.serviceName}

@@ -7,15 +7,15 @@ const PortfolioSection = async () => {
 
   //TODO: Add a loading state AND validation checks
   return (
-    <div className="py-[50px]">
-      <div className="flex container justify-between items-center py-16">
+    <div className="flex container flex-col gap-10">
+      <div className="flex w-full  items-center justify-center flex-col gap-2">
         <h2 className="text-white text-5xl z-100">Selected Work</h2>
-        <div className="flex items-center gap-2">
-          <CtaButton label="See More" />
-        </div>
+        <p className="text-muted-foreground">
+          Here are some of the projects I've worked on.
+        </p>
       </div>
-      <div className="flex pb-[100px] items-center justify-center">
-        <div className="container grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <div className="flex w-full pb-[100px] items-center justify-center">
+        <div className=" grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {projects.map(project => (
             <PortfolioCard
               key={project?.slug}
@@ -27,6 +27,9 @@ const PortfolioSection = async () => {
             />
           ))}
         </div>
+      </div>
+      <div className="flex w-full items-center justify-center">
+        <CtaButton label="See More" />
       </div>
     </div>
   );
