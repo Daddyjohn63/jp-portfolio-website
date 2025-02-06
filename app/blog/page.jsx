@@ -36,9 +36,9 @@ const BlogPosts = ({ posts }) => {
         return (
           <li
             key={post.slug}
-            className="bg-customShades-shade2 border rounded-md shadow hover:shadow-xl"
+            className="flex flex-col bg-customShades-shade2 border rounded-md shadow hover:shadow-xl relative min-h-[400px]"
           >
-            <div>
+            <div className="h-full flex flex-col">
               <Link href={`/blog/${post.slug}`}>
                 {post?.image && (
                   <Image
@@ -50,21 +50,21 @@ const BlogPosts = ({ posts }) => {
                   />
                 )}
               </Link>
-              <div className="p-3">
+              <div className="p-3 flex flex-col flex-grow">
                 <div className="flex flex-col">
                   {post?.date && (
-                    <span className="text-muted-foreground">
+                    <span className="text-muted-foreground text-sm">
                       {formatDateString(post?.date)}
                     </span>
                   )}
                   {post?.categories?.length > 0 && (
-                    <span className="mt-1 block">
+                    <span className="mt-1 block text-muted-foreground text-sm">
                       {post.categories.map((cat, index) => (
                         <span key={cat?.slug || index}>
                           {cat?.slug && cat?.title && (
                             <Link
                               href={`/category/${cat.slug}`}
-                              className="hover:underline capitalize"
+                              className="hover:underline capitalize text-sm"
                             >
                               {cat.title}
                             </Link>
@@ -76,15 +76,17 @@ const BlogPosts = ({ posts }) => {
                   )}
                 </div>
 
-                <Link href={`/blog/${post.slug}`}>
-                  <h2 className="font-semibold py-1">{post.title}</h2>
-                  {post?.excerpt && <p>{post.excerpt}</p>}
-                  <div className="flex justify-start mt-4">
-                    <Button className="bg-primary text-white w-full">
-                      Read More
-                    </Button>
+                <div className="flex flex-col h-full">
+                  <h4 className="font-semibold py-1">{post.title}</h4>
+                  {post?.excerpt && <p className="text-sm">{post.excerpt}</p>}
+                  <div className="mt-auto pb-2 pt-2">
+                    <Link href={`/blog/${post.slug}`}>
+                      <Button className="bg-primary text-white w-full">
+                        Read More
+                      </Button>
+                    </Link>
                   </div>
-                </Link>
+                </div>
               </div>
             </div>
           </li>
@@ -114,15 +116,16 @@ const BlogPage = async ({ searchParams }) => {
     }
 
     return (
-      <div className="container">
+      <div className="container ">
         <InnerHeader
           title="Blog"
           description="News and articles to get you thinking"
         />
-        <div className="overflow-hidden">
+        <div className="overflow-hidden pb-12">
           <Reveal from={200}>
             <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 mt-6">
               {/* first column */}
+
               <div className="flex flex-col gap-6">
                 <Sidebar />
                 <NavSidebar />

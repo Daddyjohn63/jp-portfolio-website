@@ -31,19 +31,19 @@ const BlogPost = async ({ slug }) => {
   const formattedDate = formatDateString(currentPost.date);
 
   return (
-    <div className="container mt-[1rem]">
+    <div className="container mt-[1rem] pb-12">
       <div>
         <Heading>{currentPost.title}</Heading>
         <h3>{currentPost.subtitle}</h3>
         <span>{formattedDate}</span>
       </div>
-      <Image
+      {/* <Image
         src={currentPost.image}
         alt={currentPost.title || 'Blog post image'}
         width={1000}
         height={753}
         className="w-full rounded-lg"
-      />
+      /> */}
       <div className="w-full mt-[2rem] pb-[2rem]">
         <article
           dangerouslySetInnerHTML={{ __html: currentPost.body }}
