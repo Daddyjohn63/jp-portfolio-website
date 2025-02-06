@@ -12,6 +12,7 @@ import LoadingState from '@/components/common/Loading-state';
 
 const Categories = async () => {
   const categories = await getBlogCategories();
+  console.log('Fetched categories:', categories);
 
   if (!categories?.length) {
     return <p>No categories found</p>;
@@ -22,6 +23,7 @@ const Categories = async () => {
       {categories.map(category => {
         // Skip invalid category entries
         if (!category?.slug || !category?.title) {
+          console.log('Invalid category:', category);
           return null;
         }
 

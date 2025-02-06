@@ -36,7 +36,7 @@ const BlogPosts = ({ posts }) => {
         return (
           <li
             key={post.slug}
-            className="flex flex-col bg-customShades-shade2 border rounded-md shadow hover:shadow-xl relative min-h-[400px]"
+            className="flex flex-col bg-[#0c0338] border rounded-md shadow hover:shadow-xl relative min-h-[400px]"
           >
             <div className="h-full flex flex-col">
               <Link href={`/blog/${post.slug}`}>
