@@ -53,7 +53,7 @@ const HomeHero = () => {
             />
           </div>
 
-          <div className="container mt-4 mx-auto max-w-8xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:items-center lg:gap-12 lg:px-8 lg:py-40">
+          <div className="container mt-4 mx-auto max-w-8xl px-6 pt-[200px]   lg:flex lg:items-center lg:gap-12 lg:px-8">
             {/* Text Section and buttons */}
             <div className="flex-1 w-full lg:w-1/2">
               <Reveal from={200}>

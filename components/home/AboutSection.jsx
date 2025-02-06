@@ -1,7 +1,35 @@
 'use client';
 import Image from 'next/image';
+import { Card, CardContent } from '@/components/ui/card';
+import { motion } from 'framer-motion';
 import { MoveRight } from 'lucide-react';
 import { CtaButton } from '../common/CtaButton';
+import { FaGlasses, FaGrinTongueWink, FaRegHandshake } from 'react-icons/fa';
+import { BsGraphUpArrow } from 'react-icons/bs';
+
+const aboutMessages = [
+  {
+    title: 'Investment',
+    description: 'I want to help you grow your business',
+    icon: <BsGraphUpArrow className="text-blue-500" size={38} />
+  },
+
+  {
+    title: 'Collaboration',
+    description: 'I work with you as part of your team',
+    icon: <FaRegHandshake className="text-indigo-500" size={38} />
+  },
+  {
+    title: 'Custom Solutions',
+    description: 'All my work is tailored to your needs',
+    icon: <FaGlasses className="text-green-500" size={38} />
+  },
+  {
+    title: 'User-Friendly Design',
+    description: 'clean layouts, intuitive navigation, performance',
+    icon: <FaGrinTongueWink className="text-yellow-500" size={38} />
+  }
+];
 
 export const AboutSection = () => {
   return (
@@ -46,13 +74,17 @@ export const AboutSection = () => {
       {/* Image Section */}
       <div className="flex-1 w-full lg:w-1/2 mt-10 lg:mt-0">
         <div className="w-full h-full relative">
-          <Image
-            src="/images/chameleon-v1-750.jpg"
-            alt="About us"
-            width={1600}
-            height={900}
-            className="relative w-full h-auto rounded-lg shadow-lg"
-          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
+            {aboutMessages.map((message, index) => (
+              <Card className="p-4 border border-gray-500 rounded-2xl shadow-md hover:shadow-lg h-32 sm:h-36 md:h-40 lg:h-44 w-full">
+                <CardContent className="flex flex-col items-center justify-center text-center h-full space-y-2 shrink-0">
+                  <div className="shrink-0">{message.icon}</div>
+                  <h3 className="text-lg font-semibold">{message.title}</h3>
+                  <p className="text-sm text-gray-400">{message.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </div>

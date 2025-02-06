@@ -13,7 +13,9 @@ export default async function Home() {
     <article>
       {/* Hero Section */}
       <header>
-        <HomeHero />
+        <section className="min-h-[calc(100vh-100px)]  ">
+          <HomeHero />
+        </section>
       </header>
 
       {/* Main Content */}

@@ -46,10 +46,10 @@ export const WebDesignProcessFlow = ({ processFlow }) => {
                   <Card className="flex flex-col h-full bg-customShades-shade1">
                     <CardHeader>
                       <div className="flex justify-between items-center mb-2">
-                        <span className="text-sm text-gray-500">
+                        <span className="text-sm text-muted-foreground">
                           {process.subheading.toUpperCase()}
                         </span>
-                        <span className="text-sm text-indigo-600 uppercase">
+                        <span className="text-sm text-indigo-400 uppercase">
                           {process.time.toUpperCase()}
                         </span>
                       </div>
@@ -59,39 +59,50 @@ export const WebDesignProcessFlow = ({ processFlow }) => {
                     </CardHeader>
 
                     <CardContent className="flex-grow">
-                      <CardDescription className="mb-4 text-secondary-foreground ">
+                      <CardDescription className="mb-4 text-secondary-foreground text-sm  ">
                         {process.description}
                       </CardDescription>
 
                       <ul className="space-y-2 ">
                         {process.bullet_one && (
                           <li className="flex items-center">
-                            <span className="mr-2">•</span>
-                            {process.bullet_one}
+                            <span className="mr-2 ">•</span>
+                            <span className="text-sm">
+                              {process.bullet_one}
+                            </span>
                           </li>
                         )}
                         {process.bullet_two && (
                           <li className="flex items-center">
-                            <span className="mr-2">•</span>
-                            {process.bullet_two}
+                            <span className="mr-2 ">•</span>
+                            <span className="text-sm">
+                              {process.bullet_two}
+                            </span>
                           </li>
                         )}
                         {process.bullet_three && (
                           <li className="flex items-center">
                             <span className="mr-2">•</span>
-                            {process.bullet_three}
+                            <span className="text-sm">
+                              {process.bullet_three}
+                            </span>
                           </li>
                         )}
+
                         {process.bullet_four && (
                           <li className="flex items-center">
                             <span className="mr-2">•</span>
-                            {process.bullet_four}
+                            <span className="text-sm">
+                              {process.bullet_four}
+                            </span>
                           </li>
                         )}
                         {process.bullet_five && (
                           <li className="flex items-center">
-                            <span className="mr-2">•</span>
-                            {process.bullet_five}
+                            <span className="mr-2 ">•</span>
+                            <span className="text-sm">
+                              {process.bullet_five}
+                            </span>
                           </li>
                         )}
                       </ul>
