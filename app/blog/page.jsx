@@ -23,7 +23,7 @@ const PAGE_SIZE = 6;
 
 const BlogPosts = ({ posts }) => {
   if (!posts?.length) {
-    return <p className="text-center text-gray-600">No blog posts found.</p>;
+    return <p className="text-center">No blog posts found.</p>;
   }
 
   return (
@@ -124,19 +124,24 @@ const BlogPage = async ({ searchParams }) => {
         <div className="overflow-hidden pb-12">
           <Reveal from={200}>
             <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 mt-6">
-              {/* first column */}
-
-              <div className="flex flex-col gap-6">
+              {/* Sidebar - hidden on mobile, shown first on desktop */}
+              <div className="hidden md:flex flex-col gap-6">
                 <Sidebar />
                 <NavSidebar />
               </div>
 
-              {/* second column */}
-              <div>
+              {/* Content area */}
+              <div className="flex flex-col gap-6">
                 <Suspense fallback={<LoadingState />}>
                   <BlogPosts posts={blogPosts} />
                 </Suspense>
                 <PagePagination currentPage={page} pageCount={pageCount} />
+
+                {/* Sidebar - shown on mobile only, after posts */}
+                <div className="md:hidden flex flex-col gap-6">
+                  <Sidebar />
+                  <NavSidebar />
+                </div>
               </div>
             </div>
           </Reveal>

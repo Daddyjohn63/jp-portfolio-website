@@ -89,7 +89,7 @@ const ProjectSinglePage = async ({ slug }) => {
       </header>
 
       {/* Main content wrapper with consistent spacing */}
-      <main className="section-padding-md">
+      <main>
         <div className="container">
           {/* First section - Image left, Text right */}
           <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center section-spacing-md">
@@ -143,7 +143,7 @@ const ProjectSinglePage = async ({ slug }) => {
             {previousProject ? (
               <Link
                 href={`/portfolio/${previousProject.slug}`}
-                className="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-700"
+                className="px-4 py-2 bg-primary text-white rounded-full hover:bg-primary/80"
               >
                 <span className="flex gap-2 items-center">
                   <MoveLeft />
@@ -159,7 +159,7 @@ const ProjectSinglePage = async ({ slug }) => {
             {nextProject ? (
               <Link
                 href={`/portfolio/${nextProject.slug}`}
-                className="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-700"
+                className="px-4 py-2 bg-primary text-white rounded-full hover:bg-primary/80"
               >
                 <span className="flex gap-2 items-center">
                   Next Project
@@ -167,7 +167,7 @@ const ProjectSinglePage = async ({ slug }) => {
                 </span>
               </Link>
             ) : (
-              <span className="px-4 py-2 bg-gray-300 text-gray-500 rounded-full cursor-not-allowed flex gap-2 items-center">
+              <span className="px-4 py-2 bg-primary hover:bg-primary/80 rounded-full cursor-not-allowed flex gap-2 items-center">
                 Next Project
                 <MoveRight />
               </span>

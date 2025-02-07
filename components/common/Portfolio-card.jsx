@@ -33,7 +33,9 @@ export const PortfolioCard = ({ image, alt, title, summary, slug }) => {
       </CardContent>
       <CardFooter className="absolute bottom-4 left-0 right-0 flex justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
         <Link href={`/portfolio/${slug}`}>
-          <Button variant="secondary">See More</Button>
+          <Button className="bg-primary text-white py-3 px-6 rounded-full shadow-md hover:bg-primary/80 transition-colours">
+            See More
+          </Button>
         </Link>
       </CardFooter>
     </Card>

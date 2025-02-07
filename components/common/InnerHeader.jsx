@@ -48,9 +48,7 @@ export const InnerHeader = ({ title, description }) => {
 
       {/* Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-        <h1 className="text-5xl font-bold text-white text-center px-4">
-          {title}
-        </h1>
+        <h1 className="text-5xl font-bold text-center px-4">{title}</h1>
         <p className="text-muted-foreground text-xl text-center px-4 md:w-1/3">
           {description}
         </p>

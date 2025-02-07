@@ -1,8 +1,7 @@
 'use client';
-import { ChevronRight, MoveRight, MoveUpRight, Star } from 'lucide-react';
+import { MoveRight, Star } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Reveal from '@/components/common/ScrollAnimation';
 import Image from 'next/image';
 import { CtaButton } from '@/components/common/CtaButton';
 
@@ -78,6 +77,7 @@ const HomeHero = () => {
                   web applications that will deliver more sales, more
                   productivity and a return on your investment.
                 </p>
+
                 <ul className="flex flex-col mt-3 gap-1">
                   <li className="flex items-center gap-1">
                     <MoveRight className="size-5 text-muted-foreground mr-2" />
@@ -92,6 +92,7 @@ const HomeHero = () => {
                     Projects delivered on time and on budget
                   </li>
                 </ul>
+
                 <div className="mt-10 flex flex-col md:flex-row justify-start gap-4 md:gap-x-6 w-full mb-4">
                   <CtaButton
                     label="Contact me"

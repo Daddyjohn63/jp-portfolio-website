@@ -58,7 +58,9 @@ export const WebDesignProcessFlow = ({ processFlow }) => {
                         </span>
                       </div>
                       <CardTitle className="text-xl">
-                        {process.mainheading.toUpperCase()}
+                        <h4 className="text-2xl font-semi-bold">
+                          {process.mainheading.toUpperCase()}
+                        </h4>
                       </CardTitle>
                     </CardHeader>
 

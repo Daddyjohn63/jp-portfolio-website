@@ -1,3 +1,4 @@
+import { CtaButton } from '@/components/common/CtaButton';
 import { InnerHeader } from '@/components/common/InnerHeader';
 import { FaLaptopCode, FaCogs, FaHandshake } from 'react-icons/fa';
 
@@ -64,13 +65,12 @@ const ServicesPage = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="text-center mt-12">
-          <a
+        <section className="flex justify-center mt-12">
+          <CtaButton
+            label="Get in Touch"
             href="/contact"
             className="inline-block bg-indigo-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-indigo-700 transition-colours"
-          >
-            Get in Touch
-          </a>
+          />
         </section>
       </main>
     </>
