@@ -33,11 +33,11 @@ const aboutMessages = [
 
 export const AboutSection = () => {
   return (
-    <div className="container mt-4 mx-auto max-w-8xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:items-center lg:gap-12 lg:px-8 lg:py-40">
+    <div className="container mt-4 mx-auto max-w-8xl px-6  pb-0 md:pb-24  lg:flex lg:items-center lg:gap-12 lg:px-8 lg:py-40">
       {/* Text Section */}
       <div className="flex-1 w-full lg:w-1/2">
         <div className="w-full">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">About</h2>
+          <h2 className=" font-bold mb-4">About</h2>
           <p className="mb-4">
             As a seasoned full-stack web developer, I bring your digital visions
             to life. With expertise in both front-end and back-end technologies,
@@ -71,13 +71,16 @@ export const AboutSection = () => {
         </div>
       </div>
 
-      {/* Image Section */}
+      {/* key messages */}
       <div className="flex-1 w-full lg:w-1/2 mt-10 lg:mt-0">
         <div className="w-full h-full relative">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
             {aboutMessages.map((message, index) => (
-              <Card className="p-4 border border-gray-500 rounded-2xl shadow-md hover:shadow-lg h-32 sm:h-36 md:h-40 lg:h-44 w-full">
-                <CardContent className="flex flex-col items-center justify-center text-center h-full space-y-2 shrink-0">
+              <Card
+                key={index}
+                className="border border-gray-500 rounded-2xl shadow-md hover:shadow-lg w-full"
+              >
+                <CardContent className="flex flex-col items-center justify-center text-center p-3 sm:p-6 min-h-[160px] sm:min-h-0 space-y-2 sm:space-y-3">
                   <div className="shrink-0">{message.icon}</div>
                   <h3 className="text-lg font-semibold">{message.title}</h3>
                   <p className="text-sm text-gray-400">{message.description}</p>

@@ -13,7 +13,7 @@ export default async function Home() {
     <article>
       {/* Hero Section */}
       <header>
-        <section className="min-h-[calc(100vh-100px)]  ">
+        <section className="min-h-[calc(100vh-100px)]">
           <HomeHero />
         </section>
       </header>
@@ -21,12 +21,12 @@ export default async function Home() {
       {/* Main Content */}
       <main className="section-padding-lg">
         {/* Services Section */}
-        <section className="section-spacing-md">
+        <section className="section-spacing-responsive">
           <ServicesSection />
         </section>
 
         {/* About Section */}
-        <section className="section-spacing-md">
+        <section className="section-spacing-responsive">
           <AboutSection />
         </section>
 
@@ -41,7 +41,7 @@ export default async function Home() {
         </section>
 
         {/* Process Flow Section */}
-        <section className="section-spacing-md">
+        <section className="section-spacing-responsive">
           <WebDesignProcessFlow processFlow={processFlow} />
         </section>
       </main>

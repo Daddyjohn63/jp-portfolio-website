@@ -61,9 +61,7 @@ const ServicesSection = () => {
     <>
       <Reveal from={200}>
         <div className="flex flex-col items-center justify-center gap-4">
-          <h1 className="text-5xl font-bold text-white text-center px-4">
-            Services
-          </h1>
+          <h2 className=" font-bold  text-center px-4">Services</h2>
           <p className="text-muted-foreground text-xl text-center px-4 md:w-1/3">
             I offer a range of services to help you grow your business.
           </p>
@@ -85,9 +83,9 @@ const ServicesSection = () => {
 
                     <CardTitle className=" tracking-wide text-lg sm:text-xl">
                       <Link href={item.href}>
-                        <h2 className="hover:text-accent transition-colors duration-300">
+                        <h3 className="hover:text-accent transition-colors duration-300">
                           {item.serviceName}
-                        </h2>
+                        </h3>
                       </Link>
                     </CardTitle>
                   </CardHeader>

@@ -53,48 +53,58 @@ const HomeHero = () => {
             />
           </div>
 
-          <div className="container mt-4 mx-auto max-w-8xl px-6 pt-[200px]   lg:flex lg:items-center lg:gap-12 lg:px-8">
+          <div className="container mx-auto max-w-8xl px-6 pt-[80px] md:pt-[150px] lg:pt-[200px] lg:flex lg:items-center lg:gap-12 lg:px-8">
             {/* Text Section and buttons */}
             <div className="flex-1 w-full lg:w-1/2">
-              <Reveal from={200}>
-                <div className="w-full">
+              <div className="w-full">
+                <div className="mt-4 md:mt-0">
                   <Link href="#" className="inline-flex space-x-6">
                     <p className="flex items-center gap-1 rounded-full bg-muted-foreground/10 px-3 py-1 text-sm font-semibold leading-6 ring-1 ring-inset">
                       5 <Star className="size-3 fill-yellow-600" /> Rated on
                       Google
                     </p>
                   </Link>
-                  <h1 className="mt-10 sm:text-5xl !leading-[60px] font-bold tracking-tight  ">
-                    Transforming Ideas into Powerful{' '}
-                    <span className="sm:text-5xl font-bold  bg-gradient-to-r from-purple-600 via-blue-400 to-orange-300 inline-block text-transparent bg-clip-text">
-                      Web Solutions
-                    </span>
-                  </h1>
-                  <p className="mt-6 leading-8">
-                    Adapt and stay ahead of the competition with modern,
-                    scalable web applications that will deliver more sales, more
-                    productivity and a return on your investment.
-                  </p>
-                  <ul className="flex flex-col mt-3 gap-1">
-                    <li className="flex items-center gap-1">
-                      <MoveRight className="size-5 text-muted-foreground mr-2" />
-                      Websites that convert
-                    </li>
-                    <li className="flex items-center gap-1">
-                      <MoveRight className="size-5 text-muted-foreground mr-2" />
-                      Business applications that will increase productivity
-                    </li>
-                    <li className="flex items-center gap-1">
-                      <MoveRight className="size-5 text-muted-foreground mr-2" />
-                      Projects delivered on time and on budget
-                    </li>
-                  </ul>
-                  <div className="mt-10 flex items-center gap-x-6">
-                    <CtaButton label="Contact me" href="/contact" />
-                    <CtaButton label="View my work" href="/portfolio" />
-                  </div>
                 </div>
-              </Reveal>
+
+                <h1 className="mt-6 md:mt-10 text-3xl md:text-5xl !leading-[1.2] md:!leading-[60px] font-bold tracking-tight">
+                  Transforming Ideas into Powerful{' '}
+                  <span className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 via-blue-400 to-orange-300 inline-block text-transparent bg-clip-text">
+                    Web Solutions
+                  </span>
+                </h1>
+
+                <p className="mt-6 leading-8">
+                  Adapt and stay ahead of the competition with modern, scalable
+                  web applications that will deliver more sales, more
+                  productivity and a return on your investment.
+                </p>
+                <ul className="flex flex-col mt-3 gap-1">
+                  <li className="flex items-center gap-1">
+                    <MoveRight className="size-5 text-muted-foreground mr-2" />
+                    Websites that convert
+                  </li>
+                  <li className="flex items-center gap-1">
+                    <MoveRight className="size-5 text-muted-foreground mr-2" />
+                    Business applications that will increase productivity
+                  </li>
+                  <li className="flex items-center gap-1">
+                    <MoveRight className="size-5 text-muted-foreground mr-2" />
+                    Projects delivered on time and on budget
+                  </li>
+                </ul>
+                <div className="mt-10 flex flex-col md:flex-row justify-start gap-4 md:gap-x-6 w-full mb-4">
+                  <CtaButton
+                    label="Contact me"
+                    href="/contact"
+                    className="w-full md:w-auto"
+                  />
+                  <CtaButton
+                    label="View my work"
+                    href="/portfolio"
+                    className="w-full md:w-auto"
+                  />
+                </div>
+              </div>
             </div>
 
             {/* Image Section */}
@@ -125,4 +135,5 @@ const HomeHero = () => {
     </>
   );
 };
+
 export default HomeHero;

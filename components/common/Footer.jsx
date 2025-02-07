@@ -6,11 +6,13 @@ export const Footer = () => {
 
   return (
     <footer className="bg-customShades-shade1 border-t border-customShades-shade8">
-      <div className="container py-12 px-4">
+      <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-customBiege">Company Name</h3>
+            <h3 className="text-xl font-bold text-customBiege">
+              Web and Prosper
+            </h3>
             <p className="text-sm text-muted-foreground">
               Creating beautiful, functional websites and web applications
               tailored to your needs.

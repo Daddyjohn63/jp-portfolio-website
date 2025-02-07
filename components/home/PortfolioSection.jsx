@@ -7,14 +7,14 @@ const PortfolioSection = async () => {
 
   //TODO: Add a loading state AND validation checks
   return (
-    <div className="flex container flex-col gap-10">
+    <div className="flex container flex-col gap-6 md:gap-10">
       <div className="flex w-full  items-center justify-center flex-col gap-2">
-        <h2 className="text-white text-5xl z-100">Selected Work</h2>
+        <h2 className="  z-100">Selected Work</h2>
         <p className="text-muted-foreground">
           Here are some of the projects I've worked on.
         </p>
       </div>
-      <div className="flex w-full pb-[100px] items-center justify-center">
+      <div className="flex w-full pb-4 items-center justify-center">
         <div className=" grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {projects.map(project => (
             <PortfolioCard
@@ -29,7 +29,7 @@ const PortfolioSection = async () => {
         </div>
       </div>
       <div className="flex w-full items-center justify-center">
-        <CtaButton label="See More" />
+        <CtaButton label="See more of my work" />
       </div>
     </div>
   );

@@ -10,10 +10,10 @@ export const WebDesignProcessFlow = ({ processFlow }) => {
   if (!processFlow?.length) return null;
 
   return (
-    <div className="py-[50px]">
+    <div className="">
       <div className="container ">
         <div className="flex flex-col items-center justify-center mb-12 gap-2">
-          <h2 className="text-5xl font-semi-bold text-center mb-2">
+          <h2 className=" font-semi-bold text-center mb-2">
             Customer Solution Process
           </h2>
 
