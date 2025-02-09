@@ -53,7 +53,9 @@ const Header = () => {
             href="/"
             className=" font-semi-bold tracking-tight sm:text-3xl bg-gradient-to-r from-purple-300 via-purple-300 to-purple-300 inline-block text-transparent bg-clip-text"
           >
-            Web and Prosper
+            <p className=" text-3xl md:text-3xl font-semi-bold bg-gradient-to-r from-purple-600 via-blue-400 to-orange-300 inline-block text-transparent bg-clip-text">
+              Web and Prosper
+            </p>
           </Link>
           {/* LOGO END */}
 

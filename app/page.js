@@ -5,6 +5,8 @@ import { AboutSection } from '@/components/home/AboutSection';
 import FeedBack from '@/components/FeedbackTestimonial';
 import PortfolioSection from '@/components/home/PortfolioSection';
 import { WebDesignProcessFlow } from '@/components/home/WebDesignProcessFlow';
+import { CallToAction } from '@/components/common/CallToAction';
+import { Mail, Phone } from 'lucide-react';
 
 export default async function Home() {
   const processFlow = await getWebDesignProcessFlow();
@@ -43,6 +45,20 @@ export default async function Home() {
         {/* Process Flow Section */}
         <section className="section-spacing-responsive">
           <WebDesignProcessFlow processFlow={processFlow} />
+        </section>
+        <section className="section-spacing-responsive">
+          <CallToAction
+            title="Let's talk about you!"
+            description="I'm here to help you with your project."
+            buttonLabel="Contact me"
+            buttonLink="/contact"
+            buttonColor="bg-primary"
+            buttonTextColor="text-white"
+            email="john@webandprosper.com"
+            phone="+44 7739 875445"
+            emailIcon={<Mail />}
+            phoneIcon={<Phone />}
+          />
         </section>
       </main>
     </article>

@@ -32,7 +32,7 @@ const FeedBackSwiper = () => {
             {testimonialData.map(testimonial => (
               <SwiperSlide
                 key={testimonial.id}
-                className="p-10 border rounded-xl bg-white shadow"
+                className="p-10 border rounded-xl bg-white shadow min-h-[600px]  md:min-h-[300px]"
               >
                 <FaQuoteLeft className="text-primary text-5xl" />
                 <p className="mt-4 text-gray-500 ">{testimonial.quote}</p>

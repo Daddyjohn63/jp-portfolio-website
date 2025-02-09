@@ -28,7 +28,7 @@ const PortfolioSection = async () => {
           ))}
         </div>
       </div>
-      <div className="flex w-full items-center justify-center">
+      <div className="flex w-full items-center justify-center md:pb-12">
         <CtaButton label="See more of my work" />
       </div>
     </div>
