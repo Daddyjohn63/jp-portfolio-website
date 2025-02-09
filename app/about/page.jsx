@@ -1,5 +1,6 @@
 import AboutIntro from '@/components/about/AboutIntro';
 import SkillsShowcase from '@/components/about/SkillsShowcase';
+import { CallToAction } from '@/components/common/CallToAction';
 import { InnerHeader } from '@/components/common/InnerHeader';
 
 const AboutPage = () => {
@@ -23,6 +24,17 @@ const AboutPage = () => {
           {/* Skills Showcase Section */}
           <section className="section-spacing-md">
             <SkillsShowcase />
+          </section>
+
+          {/* Call to Action Section */}
+          <section className="section-spacing-lg">
+            <CallToAction
+              title="Let's Work Together"
+              description="I'm always looking for new and exciting projects."
+              buttonLabel="Get in Touch"
+              buttonLink="/contact"
+              buttonColor="bg-primary"
+            />
           </section>
         </div>
       </main>

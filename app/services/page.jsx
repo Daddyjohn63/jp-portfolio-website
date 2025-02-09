@@ -1,3 +1,4 @@
+import { CallToAction } from '@/components/common/CallToAction';
 import { CtaButton } from '@/components/common/CtaButton';
 import { InnerHeader } from '@/components/common/InnerHeader';
 import { FaLaptopCode, FaCogs, FaHandshake } from 'react-icons/fa';
@@ -65,11 +66,14 @@ const ServicesPage = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="flex justify-center mt-12">
-          <CtaButton
-            label="Get in Touch"
-            href="/contact"
-            className="inline-block bg-indigo-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-indigo-700 transition-colours"
+        <section className="flex justify-center section-spacing-responsive ">
+          <CallToAction
+            title="Let's talk about you!"
+            description="I'm always looking for new and exciting projects."
+            buttonLabel="Get in Touch"
+            buttonLink="/contact"
+            buttonColor="bg-indigo-600"
+            buttonTextColor="text-white"
           />
         </section>
       </main>
