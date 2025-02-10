@@ -1,0 +1,612 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "This is post one",
+      "slug": "this-is-post-one",
+      "subtitle": "A very good post about stuff!",
+      "body": "**Vivamus** elementum semper nisi. Aenean ut eros et nisl sagittis vestibulum. Suspendisse feugiat. Pellentesque posuere. Duis lobortis massa imperdiet quam.\n\nProin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Phasellus nec sem in justo pellentesque facilisis. Vivamus elementum semper nisi.\n\nMauris sollicitudin fermentum libero. Morbi ac felis. Nullam dictum felis eu pede mollis pretium. Nullam sagittis. Praesent vestibulum dapibus nibh.\n\nPraesent nec nisl a purus blandit viverra. Nullam quis ante. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Aenean imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia.\n\nSuspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Ut tincidunt tincidunt erat. Nullam cursus lacinia erat. Maecenas malesuada. Curabitur at lacus ac velit ornare lobortis.",
+      "excerpt": "Vivamus elementum semper nisi. Aenean ut eros et nisl sagittis vestibulum. Suspendisse feugiat. Pellentesque posuere.",
+      "createdAt": "2024-11-20T09:03:28.342Z",
+      "updatedAt": "2025-01-01T15:44:53.603Z",
+      "publishedAt": "2024-11-20T09:05:04.220Z",
+      "documentId": "sqmwomtjbolbajawcz73h0nc",
+      "image": {
+        "id": 1,
+        "name": "johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and__c174c8cf-4aac-4c79-bf41-131f774e52d4_0.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 1232,
+        "height": 928,
+        "formats": {
+          "large": {
+            "ext": ".png",
+            "url": "/uploads/large_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png",
+            "hash": "large_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6",
+            "mime": "image/png",
+            "name": "large_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and__c174c8cf-4aac-4c79-bf41-131f774e52d4_0.png",
+            "path": null,
+            "size": 1368.71,
+            "width": 1000,
+            "height": 753,
+            "sizeInBytes": 1368709
+          },
+          "small": {
+            "ext": ".png",
+            "url": "/uploads/small_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png",
+            "hash": "small_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6",
+            "mime": "image/png",
+            "name": "small_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and__c174c8cf-4aac-4c79-bf41-131f774e52d4_0.png",
+            "path": null,
+            "size": 347.52,
+            "width": 500,
+            "height": 377,
+            "sizeInBytes": 347519
+          },
+          "medium": {
+            "ext": ".png",
+            "url": "/uploads/medium_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png",
+            "hash": "medium_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6",
+            "mime": "image/png",
+            "name": "medium_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and__c174c8cf-4aac-4c79-bf41-131f774e52d4_0.png",
+            "path": null,
+            "size": 776.19,
+            "width": 750,
+            "height": 565,
+            "sizeInBytes": 776186
+          },
+          "thumbnail": {
+            "ext": ".png",
+            "url": "/uploads/thumbnail_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png",
+            "hash": "thumbnail_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6",
+            "mime": "image/png",
+            "name": "thumbnail_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and__c174c8cf-4aac-4c79-bf41-131f774e52d4_0.png",
+            "path": null,
+            "size": 64.74,
+            "width": 207,
+            "height": 156,
+            "sizeInBytes": 64738
+          }
+        },
+        "hash": "johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 663.83,
+        "url": "/uploads/johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2024-11-20T09:03:10.513Z",
+        "updatedAt": "2024-11-20T09:03:10.513Z",
+        "documentId": "tk8dl6buya7llqmkixz9knvk",
+        "publishedAt": "2025-02-10T12:43:47.311Z"
+      },
+      "categories": [
+        {
+          "id": 1,
+          "title": "Next JS",
+          "slug": "next-js",
+          "createdAt": "2024-11-20T09:04:15.360Z",
+          "updatedAt": "2024-11-20T09:04:19.150Z",
+          "publishedAt": "2024-11-20T09:04:19.108Z",
+          "documentId": "o6xr5pgwq59r6tbg5sjcrv5c"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Static vs Dynamic Websites",
+      "slug": "static-vs-dynamic-websites",
+      "subtitle": "Understanding the Basics and Choosing the Right Approach",
+      "body": "When you’re planning a new website, you’ll see a host of labels like “static,” “dynamic,” “e-commerce,” “portfolio,” and more. It can get a bit muddled if you’re not sure which terms refer to the *type* of site versus the *purpose* of the site. Let’s clear the air:\n\n- **Static vs Dynamic**: This is about *how* your website is built and served.  \n- **E-commerce, Portfolio, Blog, etc.**: These are *purposes* or *categories* of websites.\n\nIn other words, you could have a **static portfolio** or a **dynamic portfolio**, just as you could have a **static e-commerce site** or a **dynamic e-commerce site**. Let’s break it all down.\n\n---\n\n## **1. The Fundamentals: Static vs Dynamic**\n\n### **What is a Static Website?**\nA static website delivers pre-built web pages to the browser, meaning the pages are created ahead of time and remain the same until someone manually changes the underlying code. You might see this approach in:\n\n- **Simple brochure sites**  \n- **Landing pages**  \n- **Lightweight portfolios**  \n\n**Why Go Static?**  \n- **Speed and Security**: No heavy backend or database to slow things down or introduce vulnerabilities.  \n- **Simplicity**: Easier for small sites that don’t change content frequently.  \n- **Hosting**: Typically cheaper to host.\n\n**Potential Drawbacks**  \n- **Updates**: If you’re not comfortable with code, updating content can be a chore.  \n- **Limited Interactivity**: Advanced features like user logins or live feeds are harder to implement in purely static setups.\n\n---\n\n### **What is a Dynamic Website?**\nA dynamic website uses server-side code and often a database to build or update pages in real time. This makes it far easier for non-technical users to add content, handle user interactions, and scale as needed. Think of:\n\n- **Blogs or news sites where content changes daily**  \n- **E-commerce sites with product listings**  \n- **Membership sites with user accounts**  \n\n**Why Go Dynamic?**  \n- **Easy Updates**: Content can be added or edited through an admin panel or content management system.  \n- **User Interactivity**: User comments, logins, personalised dashboards, and so on.  \n- **Scalability**: Ideal for sites expecting growth or heavy traffic.\n\n**Potential Drawbacks**  \n- **Complexity**: Tends to be more complex to build and maintain, especially for customised features.  \n- **Cost**: Hosting and ongoing development can be pricier than for static sites.\n\n---\n\n## **2. Aligning Website Purpose with Static or Dynamic Approaches**\n\n### **E-commerce Websites**\n**Purpose**: Sell products or services online, manage orders, and process payments.\n\n- **Static E-commerce?**  \n  Technically possible through static site generators that handle product listings, but *much* more challenging if you have a large inventory or frequently changing stock. You might lean on third-party services (like Snipcart) integrated into a static site to manage carts and payments.\n  \n- **Dynamic E-commerce?**  \n  This is the most common route. You might use WooCommerce (WordPress), Magento, or a headless setup with Next.js, React, or Vue on the front-end, paired with a headless CMS or e-commerce solution like BigCommerce or Shopify’s headless API.  \n  **Ideal When**: You want easy product management, multiple payment gateways, user accounts, reviews, stock tracking, and advanced analytics.\n\n---\n\n### **Portfolio Websites**\n**Purpose**: Showcase creative work, services, or achievements—often used by designers, agencies, photographers, or writers.\n\n- **Static Portfolio**  \n  A very popular choice, as you might only update your portfolio occasionally. Static tools or frameworks (like Gatsby or Next.js in static export mode) can make it sleek, fast, and visually appealing.\n\n- **Dynamic Portfolio**  \n  If you regularly post new case studies or feature integrated blogging, a dynamic approach might be easier. You can use a traditional CMS (WordPress) or a headless CMS (Strapi, Sanity, Contentful) with a front-end framework like Next.js.  \n  **Ideal When**: You want a straightforward way to update content without editing code directly or if you plan to add interactive elements.\n\n---\n\n### **Blog or News Websites**\n**Purpose**: Share written updates, news articles, thought leadership pieces, or personal musings.\n\n- **Static Blog**  \n  Possible via static site generators like Jekyll, Hugo, or Next.js’s static export. You’d write posts in Markdown, and when you’re ready, you build the site and deploy. It’s blazing fast and simple, though you’ll need a bit of technical know-how to publish new posts.\n\n- **Dynamic Blog**  \n  If you want a familiar text editor, user comments, or advanced features, a dynamic system is likely the best route. WordPress powers many dynamic blogs, but you can also use Next.js or similar with a headless CMS.  \n  **Ideal When**: You want non-technical authors to update content frequently or add interactive features for users.\n\n---\n\n### **Other Common Website Purposes**\n\n- **Membership or Community Sites**: Typically dynamic to allow logins, subscriptions, and personalisation. A headless CMS or a platform like WordPress with a membership plugin might be the easiest approach.  \n- **Booking or Reservation Sites**: Usually dynamic to handle real-time bookings and cancellations.  \n- **Single-Page Applications**: Built with frameworks like React, Vue, or Angular for a fluid user experience. They can be *mostly* static under the hood if you’re generating the pages at build time but also can tap into dynamic data sources.\n\n---\n\n## **3. Modern Tools and Approaches: Next.js, Strapi, and Headless E-commerce**\n\nAs web technologies evolve, many developers are moving towards **headless** solutions. This means separating the front-end (what users see) from the back-end (where content is stored) so you can use whichever combination suits your needs:\n\n- **Next.js**: A popular React framework that lets you build either static or dynamic websites, or even a hybrid of both. You can pre-render certain pages at build time and serve others dynamically.  \n- **Strapi**: A headless CMS that pairs nicely with Next.js, offering an easy-to-use admin panel to manage content. It’s fully customisable for everything from blogs to e-commerce product catalogues.  \n- **Headless E-commerce**: Platforms like BigCommerce, Shopify (via the Storefront API), and Commerce.js can integrate with React front-ends. This allows you to build a high-performance, custom user experience while still taking advantage of robust e-commerce back-ends.\n\nBy mixing these tools, you can create a **dynamic site with static capabilities**—for instance, pre-render your core pages for speed and SEO, then fetch dynamic data for product listings or blog posts as needed.\n\n---\n\n## **4. Choosing the Right Approach**\n\n1. **Assess Your Content Strategy**  \n   - Are you updating content or products daily?  \n   - Do you need an admin panel for non-technical staff?  \n2. **Consider Growth Plans**  \n   - Start small with a static or simple dynamic site if you’re unsure.  \n   - Go with a headless or dynamic approach if you expect to scale rapidly.  \n3. **Evaluate Technical Resources**  \n   - Comfortable editing code? Static might be easy enough.  \n   - Prefer a user-friendly interface? Look at dynamic platforms or a headless CMS.  \n4. **Think About Budget & Timeline**  \n   - Static: simpler setup, often cheaper, but less flexible.  \n   - Dynamic: more expensive but offers long-term convenience and added features.\n\n---\n\n## **5. Conclusion**\n\nThe key is understanding that **static vs dynamic** simply describes *how* a site is delivered, whereas **e-commerce, portfolio, blog, membership sites, or anything else** describes *why* it exists. Nearly any site purpose can be achieved with either a static or dynamic setup—or a combination of both.\n\nIf you’re not sure which approach suits your project, it’s wise to consult with a developer who can pinpoint what will help you achieve your goals. I personally specialise in modern frameworks like **Next.js** along with **headless CMS** solutions such as **Strapi**, and have experience integrating React with headless e-commerce platforms for flexible, high-performing sites. If you need guidance or a custom build, feel free to get in touch—I’d be happy to explore your ideas and propose a tailor-made solution that ticks all the boxes.",
+      "excerpt": "When you’re planning a new website, you’ll see a host of labels like “static,” “dynamic,” “e-commerce,” “portfolio\"...",
+      "createdAt": "2025-02-06T12:28:21.393Z",
+      "updatedAt": "2025-02-06T17:57:00.836Z",
+      "publishedAt": "2025-02-06T12:28:27.848Z",
+      "documentId": "hmjnb96aivqxkjnu7kfdv6qp",
+      "image": {
+        "id": 4,
+        "name": "1000-solve-mockup.jpg",
+        "alternativeText": null,
+        "caption": null,
+        "width": 1000,
+        "height": 667,
+        "formats": {
+          "small": {
+            "ext": ".jpg",
+            "url": "/uploads/small_1000_solve_mockup_95324f2ded.jpg",
+            "hash": "small_1000_solve_mockup_95324f2ded",
+            "mime": "image/jpeg",
+            "name": "small_1000-solve-mockup.jpg",
+            "path": null,
+            "size": 19.46,
+            "width": 500,
+            "height": 334,
+            "sizeInBytes": 19463
+          },
+          "medium": {
+            "ext": ".jpg",
+            "url": "/uploads/medium_1000_solve_mockup_95324f2ded.jpg",
+            "hash": "medium_1000_solve_mockup_95324f2ded",
+            "mime": "image/jpeg",
+            "name": "medium_1000-solve-mockup.jpg",
+            "path": null,
+            "size": 36.73,
+            "width": 750,
+            "height": 500,
+            "sizeInBytes": 36731
+          },
+          "thumbnail": {
+            "ext": ".jpg",
+            "url": "/uploads/thumbnail_1000_solve_mockup_95324f2ded.jpg",
+            "hash": "thumbnail_1000_solve_mockup_95324f2ded",
+            "mime": "image/jpeg",
+            "name": "thumbnail_1000-solve-mockup.jpg",
+            "path": null,
+            "size": 5.85,
+            "width": 234,
+            "height": 156,
+            "sizeInBytes": 5852
+          }
+        },
+        "hash": "1000_solve_mockup_95324f2ded",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 39,
+        "url": "/uploads/1000_solve_mockup_95324f2ded.jpg",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-02-03T11:18:13.479Z",
+        "updatedAt": "2025-02-06T12:24:55.772Z",
+        "documentId": "parb9ol5swh7sfcm1qi7wuva",
+        "publishedAt": "2025-02-10T12:43:47.311Z"
+      },
+      "categories": [
+        {
+          "id": 2,
+          "title": "Website Design",
+          "slug": "website-design",
+          "createdAt": "2024-11-20T10:52:16.436Z",
+          "updatedAt": "2024-11-20T14:00:04.297Z",
+          "publishedAt": "2024-11-20T10:52:25.646Z",
+          "documentId": "j3qshfdyszxndam9qw3hs950"
+        },
+        {
+          "id": 1,
+          "title": "Next JS",
+          "slug": "next-js",
+          "createdAt": "2024-11-20T09:04:15.360Z",
+          "updatedAt": "2024-11-20T09:04:19.150Z",
+          "publishedAt": "2024-11-20T09:04:19.108Z",
+          "documentId": "o6xr5pgwq59r6tbg5sjcrv5c"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "NextJS vs WordPress",
+      "slug": "nextjs-vs-wordpress",
+      "subtitle": "Choosing the Right Platform for Your Website",
+      "body": "When it comes to building a website, selecting the right platform can be the difference between a smooth launch and months of frustration. Two popular choices are NextJS and WordPress. Both have their strengths and weaknesses, and the “best” option depends on your specific requirements and technical know-how. Below is an overview of each platform’s advantages and disadvantages to help you make an informed decision.\n\n---\n\n## What is NextJS?\nNextJS is a React-based framework that focuses on performance and ease of development. It supports server-side rendering, static site generation, and has a strong community of developers who contribute to its steady improvement. If you’re aiming for a modern, blazing-fast website that you can tailor precisely to your needs, NextJS might be the perfect choice.\n\n### Pros of NextJS\n1. **Performance**  \n   NextJS offers a powerful approach to page rendering that minimises loading times, making it ideal for websites where speed is paramount. Its static site generation and server-side rendering ensure pages load swiftly and efficiently.\n\n2. **Developer-Centric**  \n   Being part of the React ecosystem, NextJS benefits from a robust community that consistently develops new libraries and tools. The framework also allows for clean, maintainable code, reducing technical debt over time.\n\n3. **Flexibility**  \n   With NextJS, you have near-limitless freedom to customise your site’s architecture. You’re not bound by any particular themes or plugins, allowing for unique designs and functionalities.\n\n4. **Scalability**  \n   NextJS is highly scalable, especially when combined with platforms like Vercel. As your site grows, the platform’s efficient rendering methods help manage increased traffic without sacrificing performance.\n\n### Cons of NextJS\n1. **Learning Curve**  \n   NextJS requires knowledge of React, JavaScript, and modern development practices. If you’re a newcomer to coding, expect to invest time in learning before you can build anything substantial.\n\n2. **No Default CMS**  \n   NextJS does not include a built-in content management system. If you need a CMS, you’ll have to integrate a headless solution like Contentful or Sanity, which adds complexity to your workflow.\n\n3. **Setup and Maintenance**  \n   Unlike plug-and-play solutions, NextJS necessitates ongoing management of dependencies, hosting, and deployments. You’ll need to be comfortable working within the command line and debugging code.\n\n---\n\n## What is WordPress?\nWordPress is a well-established content management system powering a significant portion of the internet. Its user-friendly interface and extensive plugin library make it popular among content creators and business owners who want to get online quickly.\n\n### Pros of WordPress\n1. **Ease of Use**  \n   WordPress’s dashboard makes content creation straightforward. Even those without a background in coding can manage pages, blog posts, and media with minimal fuss.\n\n2. **Huge Plugin Ecosystem**  \n   There’s a plugin for nearly every functionality you could imagine—from SEO optimisation to ecommerce. These plugins simplify adding complex features without needing to write code.\n\n3. **Community and Support**  \n   WordPress’s long history means there’s a wealth of tutorials, forums, and guides available. If you encounter an issue, chances are someone else has faced (and solved) it.\n\n4. **Flexible Hosting Options**  \n   WordPress can be hosted on a vast array of services. Many web hosts offer specialised WordPress plans that simplify updates and security.\n\n### Cons of WordPress\n1. **Security Vulnerabilities**  \n   WordPress’s popularity makes it a frequent target for hackers. Poorly maintained sites, outdated themes, or insecure plugins can pose significant security risks.\n\n2. **Potential for Bloat**  \n   Over-reliance on plugins can slow your site down. Each plugin adds code and functionality, which might become cumbersome if you install too many.\n\n3. **Performance Challenges**  \n   Whilst WordPress can be optimised, it often requires additional work through caching plugins, content delivery networks, or upgraded hosting to achieve the same speed as a custom-built solution like NextJS.\n\n4. **Theme Limitations**  \n   Customising certain themes can be challenging, especially if you have unique design ideas in mind. Diving into theme files might demand more coding knowledge than you initially expected.\n\n---\n\n## Which One Should You Choose?\nDeciding between NextJS and WordPress ultimately hinges on your priorities and resources:\n\n- **Go with NextJS if:**  \n  - You place a high premium on performance.  \n  - You have the development skills (or a skilled team) to create and maintain your site.  \n  - You want total creative control over layout, functionality, and user experience.  \n  - You’re looking to build a website or application that can scale effortlessly.\n\n- **Go with WordPress if:**  \n  - You prefer a user-friendly dashboard for content publishing.  \n  - You need a quick, straightforward setup and are comfortable using ready-made themes.  \n  - You’re not looking to write much code or hire a dedicated developer.  \n  - You want easy access to a vast ecosystem of plugins and community support.\n\nWhichever option you choose, it’s important to consider the full spectrum of your project’s requirements—from your budget and timeline to the type of content you’ll publish and how much traffic you anticipate. If you’re still unsure, you could potentially experiment with both platforms on a small scale and see which one feels more intuitive and suited to your needs.\n\nIn the end, a successful website is one that balances functionality, user experience, and maintainability. Make sure you choose a solution that serves not only your current objectives but can adapt as your site evolves. Good luck on your journey towards building a site that stands out in both performance and creativity!\n\nBe sure to read this [further Post](/blog/meeting-more-complex-requirement) which deals with when you have more complex requirements.",
+      "excerpt": "Selecting the right platform can be the difference between a smooth launch and months of frustration...",
+      "createdAt": "2025-02-06T17:49:32.003Z",
+      "updatedAt": "2025-02-06T18:02:37.752Z",
+      "publishedAt": "2025-02-06T17:51:04.879Z",
+      "documentId": "dtmgmwt7er1ug62nyfq4ji80",
+      "image": {
+        "id": 1,
+        "name": "johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and__c174c8cf-4aac-4c79-bf41-131f774e52d4_0.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 1232,
+        "height": 928,
+        "formats": {
+          "large": {
+            "ext": ".png",
+            "url": "/uploads/large_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png",
+            "hash": "large_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6",
+            "mime": "image/png",
+            "name": "large_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and__c174c8cf-4aac-4c79-bf41-131f774e52d4_0.png",
+            "path": null,
+            "size": 1368.71,
+            "width": 1000,
+            "height": 753,
+            "sizeInBytes": 1368709
+          },
+          "small": {
+            "ext": ".png",
+            "url": "/uploads/small_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png",
+            "hash": "small_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6",
+            "mime": "image/png",
+            "name": "small_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and__c174c8cf-4aac-4c79-bf41-131f774e52d4_0.png",
+            "path": null,
+            "size": 347.52,
+            "width": 500,
+            "height": 377,
+            "sizeInBytes": 347519
+          },
+          "medium": {
+            "ext": ".png",
+            "url": "/uploads/medium_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png",
+            "hash": "medium_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6",
+            "mime": "image/png",
+            "name": "medium_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and__c174c8cf-4aac-4c79-bf41-131f774e52d4_0.png",
+            "path": null,
+            "size": 776.19,
+            "width": 750,
+            "height": 565,
+            "sizeInBytes": 776186
+          },
+          "thumbnail": {
+            "ext": ".png",
+            "url": "/uploads/thumbnail_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png",
+            "hash": "thumbnail_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6",
+            "mime": "image/png",
+            "name": "thumbnail_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and__c174c8cf-4aac-4c79-bf41-131f774e52d4_0.png",
+            "path": null,
+            "size": 64.74,
+            "width": 207,
+            "height": 156,
+            "sizeInBytes": 64738
+          }
+        },
+        "hash": "johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 663.83,
+        "url": "/uploads/johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2024-11-20T09:03:10.513Z",
+        "updatedAt": "2024-11-20T09:03:10.513Z",
+        "documentId": "tk8dl6buya7llqmkixz9knvk",
+        "publishedAt": "2025-02-10T12:43:47.311Z"
+      },
+      "categories": [
+        {
+          "id": 1,
+          "title": "Next JS",
+          "slug": "next-js",
+          "createdAt": "2024-11-20T09:04:15.360Z",
+          "updatedAt": "2024-11-20T09:04:19.150Z",
+          "publishedAt": "2024-11-20T09:04:19.108Z",
+          "documentId": "o6xr5pgwq59r6tbg5sjcrv5c"
+        },
+        {
+          "id": 2,
+          "title": "Website Design",
+          "slug": "website-design",
+          "createdAt": "2024-11-20T10:52:16.436Z",
+          "updatedAt": "2024-11-20T14:00:04.297Z",
+          "publishedAt": "2024-11-20T10:52:25.646Z",
+          "documentId": "j3qshfdyszxndam9qw3hs950"
+        },
+        {
+          "id": 3,
+          "title": "WordPress",
+          "slug": "word-press",
+          "createdAt": "2025-02-06T17:50:04.975Z",
+          "updatedAt": "2025-02-06T17:50:49.460Z",
+          "publishedAt": "2025-02-06T17:50:49.424Z",
+          "documentId": "kx24xcdrhakznurhu013d03v"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Meeting complex requirements",
+      "slug": "meeting-more-complex-requirement",
+      "subtitle": "Handling Complex Requirements Beyond Simple Content",
+      "body": "As your website’s needs grow beyond basic content, the platform you choose must accommodate more intricate demands—from custom ecommerce to CRM integrations and project management tools. Whilst WordPress has long been a go-to option for rapid deployment, many developers find themselves battling plugin overload, security risks, and time-consuming updates. By contrast, NextJS offers a modern development environment that, with the right expertise, can be finely tuned to accommodate advanced features without excessive maintenance. Below is a closer look at how each platform stands up to the challenge of complex functionality.\n\n---\n\n### WordPress\nWordPress’s ecosystem is both its greatest strength and, at times, its biggest weakness. \n\n1. **Complex Ecommerce**  \n   WordPress can handle ecommerce through plugins like WooCommerce, which provides a foundation for product listings, payment gateways, and order management. However, tailoring these plugins to meet specific workflows can mean delving deep into custom code or relying on third-party add-ons that may conflict with each other.\n\n2. **CRM and Project Management Systems**  \n   Whilst there are numerous plugins for CRM and project management, truly bespoke functionality often requires building from scratch or heavily modifying existing solutions. This can be cumbersome, especially if you’re not keen on wrangling PHP, custom post types, or plugin hooks.\n\n3. **Plugin Bloat and Conflicts**  \n   As your site grows in complexity, you might install multiple plugins to achieve every nuance of your workflow. This approach can cause compatibility issues and degrade performance.\n\n4. **Maintenance Overheads**  \n   Constant updates to WordPress core, themes, and plugins can be exhausting. Overlooked updates invite security vulnerabilities, and the update process itself sometimes introduces errors that require swift fixes.  \n\n### NextJS\nNextJS is built for modern web development, making it a strong contender for anyone who wants speed, security, and full control over their codebase.\n\n1. **Custom Ecommerce**  \n   With NextJS, you can integrate any payment processor or build a solution from the ground up. Developers have the freedom to design a checkout flow exactly as required. While this demands a higher skill level, the payoff is a streamlined, bespoke ecommerce system.\n\n2. **CRM and Project Management Integrations**  \n   Whether you’re linking a headless CRM or building a project management feature into your site, NextJS offers the flexibility to seamlessly incorporate any REST or GraphQL API. The framework isn’t tied down by a rigid plugin structure, allowing for optimal performance.\n\n3. **Granular Control**  \n   Unlike WordPress, NextJS doesn’t force a particular architecture. You can scale up or down, integrate microservices, or include additional services as needed. This control minimises the risk of plugin conflicts and simplifies performance optimisations.\n\n4. **Simplified Maintenance**  \n   NextJS itself is updated regularly, but managing these updates tends to be less of a headache than juggling the myriad parts that make up a WordPress site. When changes do occur, you’re usually dealing with a single codebase rather than an entire ecosystem of plugins.\n\n---\n\n## Performance and Security\n\n### WordPress\n- **Performance**: Achieving top-notch performance typically involves caching plugins, content delivery networks, and streamlined hosting. Even then, poorly coded plugins or an outdated theme can slow everything down.  \n- **Security**: As a popular target for attackers, WordPress relies on frequent updates and careful plugin vetting to stay secure. Regular site backups, firewall measures, and security plugins help, but they also add to the administrative burden.\n\n### NextJS\n- **Performance**: Server-side rendering and static site generation are core features of NextJS, ensuring lightning-fast page loads. The ability to incorporate code splitting and lazy loading gives developers even finer control over performance.  \n- **Security**: NextJS projects aren’t inherently immune to vulnerabilities, but the framework’s architecture minimises many common threats. Access to the server environment is more contained, and you’re not reliant on numerous third-party plugins. Regular code reviews and best practices still apply, but there’s generally less surface area for attacks compared to a heavily extended WordPress site.\n\n---\n\n## Developer Experience\n\n### WordPress\n- **Coding Environment**: Typically PHP-focused, though front-end developers will also deal with HTML, CSS, and JavaScript. Greater mastery of the WordPress API is needed to achieve truly bespoke features.  \n- **Customisation**: Themes and plugins can be extended via hooks and filters. However, deep customisation often requires wrestling with legacy code, which can slow down development.  \n\n### NextJS\n- **Coding Environment**: Built on JavaScript, which many developers find more modern and flexible. It pairs naturally with libraries for state management, testing, and deployment.  \n- **Customisation**: You have complete freedom to design your site architecture. This means more upfront coding but fewer constraints down the line. If you’re accustomed to modern frameworks, this approach often feels less restrictive and more future-proof.\n\n---\n\n## Cost Implications\n\n### WordPress\n- **Initial Setup**: Themes and plugins allow for a quick start at minimal cost, making WordPress tempting for low-budget projects.  \n- **Long-Term Costs**: Over time, expenses can pile up if you need premium plugins or regular developer support to handle updates, bug fixes, and security patches.\n\n### NextJS\n- **Initial Setup**: Requires a developer skilled in modern JavaScript. You won’t benefit from the “click-and-go” approach of WordPress, so the up-front development cost can be higher.  \n- **Long-Term Costs**: If built correctly, maintenance can be straightforward—regular updates to dependencies, but fewer unexpected clashes from third-party code. Hosting providers like Vercel can simplify deployments, often at a lower ongoing cost.\n\n---\n\n## Conclusion\n\nWhen your clients demand more than a brochure-style site, it’s crucial to pick a platform that aligns with your development approach and long-term vision:\n\n- **Choose WordPress if** you’re comfortable navigating PHP, themes, and plugins, and you need a rapid launch without too much custom functionality. Be prepared to spend time on updates, security scans, and plugin maintenance.\n\n- **Choose NextJS if** your site or application demands complex integrations, high performance, and a fully tailored experience. You’ll need a team that understands modern JavaScript, but you’ll gain the benefits of speed, security, and fewer plugin woes.\n\nUltimately, both WordPress and NextJS have their places in the web development landscape. Assess the complexity of your project, your willingness to maintain the codebase, and how quickly you need to adapt to future demands. If you’ve found yourself wrestling with WordPress to deliver intricate features and remain secure, it might be time to consider NextJS for a more flexible, developer-friendly path forward.",
+      "excerpt": "Beyond basic content, the platform you choose must accommodate more intricate demands",
+      "createdAt": "2025-02-06T17:55:56.367Z",
+      "updatedAt": "2025-02-06T18:03:42.034Z",
+      "publishedAt": "2025-02-06T17:56:00.031Z",
+      "documentId": "qorhi41u4iew2lc8d9phan5x",
+      "image": {
+        "id": 1,
+        "name": "johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and__c174c8cf-4aac-4c79-bf41-131f774e52d4_0.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 1232,
+        "height": 928,
+        "formats": {
+          "large": {
+            "ext": ".png",
+            "url": "/uploads/large_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png",
+            "hash": "large_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6",
+            "mime": "image/png",
+            "name": "large_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and__c174c8cf-4aac-4c79-bf41-131f774e52d4_0.png",
+            "path": null,
+            "size": 1368.71,
+            "width": 1000,
+            "height": 753,
+            "sizeInBytes": 1368709
+          },
+          "small": {
+            "ext": ".png",
+            "url": "/uploads/small_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png",
+            "hash": "small_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6",
+            "mime": "image/png",
+            "name": "small_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and__c174c8cf-4aac-4c79-bf41-131f774e52d4_0.png",
+            "path": null,
+            "size": 347.52,
+            "width": 500,
+            "height": 377,
+            "sizeInBytes": 347519
+          },
+          "medium": {
+            "ext": ".png",
+            "url": "/uploads/medium_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png",
+            "hash": "medium_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6",
+            "mime": "image/png",
+            "name": "medium_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and__c174c8cf-4aac-4c79-bf41-131f774e52d4_0.png",
+            "path": null,
+            "size": 776.19,
+            "width": 750,
+            "height": 565,
+            "sizeInBytes": 776186
+          },
+          "thumbnail": {
+            "ext": ".png",
+            "url": "/uploads/thumbnail_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png",
+            "hash": "thumbnail_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6",
+            "mime": "image/png",
+            "name": "thumbnail_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and__c174c8cf-4aac-4c79-bf41-131f774e52d4_0.png",
+            "path": null,
+            "size": 64.74,
+            "width": 207,
+            "height": 156,
+            "sizeInBytes": 64738
+          }
+        },
+        "hash": "johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 663.83,
+        "url": "/uploads/johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2024-11-20T09:03:10.513Z",
+        "updatedAt": "2024-11-20T09:03:10.513Z",
+        "documentId": "tk8dl6buya7llqmkixz9knvk",
+        "publishedAt": "2025-02-10T12:43:47.311Z"
+      },
+      "categories": [
+        {
+          "id": 1,
+          "title": "Next JS",
+          "slug": "next-js",
+          "createdAt": "2024-11-20T09:04:15.360Z",
+          "updatedAt": "2024-11-20T09:04:19.150Z",
+          "publishedAt": "2024-11-20T09:04:19.108Z",
+          "documentId": "o6xr5pgwq59r6tbg5sjcrv5c"
+        },
+        {
+          "id": 2,
+          "title": "Website Design",
+          "slug": "website-design",
+          "createdAt": "2024-11-20T10:52:16.436Z",
+          "updatedAt": "2024-11-20T14:00:04.297Z",
+          "publishedAt": "2024-11-20T10:52:25.646Z",
+          "documentId": "j3qshfdyszxndam9qw3hs950"
+        },
+        {
+          "id": 3,
+          "title": "WordPress",
+          "slug": "word-press",
+          "createdAt": "2025-02-06T17:50:04.975Z",
+          "updatedAt": "2025-02-06T17:50:49.460Z",
+          "publishedAt": "2025-02-06T17:50:49.424Z",
+          "documentId": "kx24xcdrhakznurhu013d03v"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "This is post two",
+      "slug": "this-is-post-two",
+      "subtitle": "A very good post about stuff",
+      "body": "Vivamus elementum semper nisi. Aenean ut eros et nisl sagittis vestibulum. Suspendisse feugiat. Pellentesque posuere. Duis lobortis massa imperdiet quam.\n\nProin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Phasellus nec sem in justo pellentesque facilisis. Vivamus elementum semper nisi.\n\nMauris sollicitudin fermentum libero. Morbi ac felis. Nullam dictum felis eu pede mollis pretium. Nullam sagittis. Praesent vestibulum dapibus nibh.\n\nPraesent nec nisl a purus blandit viverra. Nullam quis ante. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Aenean imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia.\n\nSuspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Ut tincidunt tincidunt erat. Nullam cursus lacinia erat. Maecenas malesuada. Curabitur at lacus ac velit ornare lobortis.",
+      "excerpt": "Vivamus elementum semper nisi. Aenean ut eros et nisl sagittis vestibulum. Suspendisse feugiat. Pellentesque posuere.",
+      "createdAt": "2024-11-20T09:03:28.342Z",
+      "updatedAt": "2024-11-20T10:22:53.902Z",
+      "publishedAt": "2024-11-20T10:22:53.598Z",
+      "documentId": "nc5dbd8bfrjm4a4q5fem0l7h",
+      "image": {
+        "id": 1,
+        "name": "johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and__c174c8cf-4aac-4c79-bf41-131f774e52d4_0.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 1232,
+        "height": 928,
+        "formats": {
+          "large": {
+            "ext": ".png",
+            "url": "/uploads/large_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png",
+            "hash": "large_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6",
+            "mime": "image/png",
+            "name": "large_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and__c174c8cf-4aac-4c79-bf41-131f774e52d4_0.png",
+            "path": null,
+            "size": 1368.71,
+            "width": 1000,
+            "height": 753,
+            "sizeInBytes": 1368709
+          },
+          "small": {
+            "ext": ".png",
+            "url": "/uploads/small_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png",
+            "hash": "small_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6",
+            "mime": "image/png",
+            "name": "small_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and__c174c8cf-4aac-4c79-bf41-131f774e52d4_0.png",
+            "path": null,
+            "size": 347.52,
+            "width": 500,
+            "height": 377,
+            "sizeInBytes": 347519
+          },
+          "medium": {
+            "ext": ".png",
+            "url": "/uploads/medium_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png",
+            "hash": "medium_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6",
+            "mime": "image/png",
+            "name": "medium_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and__c174c8cf-4aac-4c79-bf41-131f774e52d4_0.png",
+            "path": null,
+            "size": 776.19,
+            "width": 750,
+            "height": 565,
+            "sizeInBytes": 776186
+          },
+          "thumbnail": {
+            "ext": ".png",
+            "url": "/uploads/thumbnail_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png",
+            "hash": "thumbnail_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6",
+            "mime": "image/png",
+            "name": "thumbnail_johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and__c174c8cf-4aac-4c79-bf41-131f774e52d4_0.png",
+            "path": null,
+            "size": 64.74,
+            "width": 207,
+            "height": 156,
+            "sizeInBytes": 64738
+          }
+        },
+        "hash": "johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 663.83,
+        "url": "/uploads/johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2024-11-20T09:03:10.513Z",
+        "updatedAt": "2024-11-20T09:03:10.513Z",
+        "documentId": "tk8dl6buya7llqmkixz9knvk",
+        "publishedAt": "2025-02-10T12:43:47.311Z"
+      },
+      "categories": [
+        {
+          "id": 1,
+          "title": "Next JS",
+          "slug": "next-js",
+          "createdAt": "2024-11-20T09:04:15.360Z",
+          "updatedAt": "2024-11-20T09:04:19.150Z",
+          "publishedAt": "2024-11-20T09:04:19.108Z",
+          "documentId": "o6xr5pgwq59r6tbg5sjcrv5c"
+        },
+        {
+          "id": 2,
+          "title": "Website Design",
+          "slug": "website-design",
+          "createdAt": "2024-11-20T10:52:16.436Z",
+          "updatedAt": "2024-11-20T14:00:04.297Z",
+          "publishedAt": "2024-11-20T10:52:25.646Z",
+          "documentId": "j3qshfdyszxndam9qw3hs950"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "This is post three",
+      "slug": "post-3",
+      "subtitle": "The best post 3",
+      "body": "Vivamus elementum semper nisi. Aenean ut eros et nisl sagittis vestibulum. Suspendisse feugiat. Pellentesque posuere. Duis lobortis massa imperdiet quam.\n\nProin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Phasellus nec sem in justo pellentesque facilisis. Vivamus elementum semper nisi.\n\nMauris sollicitudin fermentum libero. Morbi ac felis. Nullam dictum felis eu pede mollis pretium. Nullam sagittis. Praesent vestibulum dapibus nibh.\n\nPraesent nec nisl a purus blandit viverra. Nullam quis ante. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Aenean imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia.\n\nSuspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Ut tincidunt tincidunt erat. Nullam cursus lacinia erat. Maecenas malesuada. Curabitur at lacus ac velit ornare lobortis.",
+      "excerpt": "Vivamus elementum semper nisi. Aenean ut eros et nisl sagittis vestibulum. Suspendisse feugiat.",
+      "createdAt": "2025-01-02T17:07:04.805Z",
+      "updatedAt": "2025-01-02T17:07:12.280Z",
+      "publishedAt": "2025-01-02T17:07:12.246Z",
+      "documentId": "wp9pg12zpy9i0x4g0omd7afq",
+      "image": {
+        "id": 2,
+        "name": "Ashdown-Manna-Cookery-School-Mockup.jpg",
+        "alternativeText": "ashdown manna cookery school",
+        "caption": null,
+        "width": 1500,
+        "height": 1000,
+        "formats": {
+          "large": {
+            "ext": ".jpg",
+            "url": "/uploads/large_Ashdown_Manna_Cookery_School_Mockup_37573f622c.jpg",
+            "hash": "large_Ashdown_Manna_Cookery_School_Mockup_37573f622c",
+            "mime": "image/jpeg",
+            "name": "large_Ashdown-Manna-Cookery-School-Mockup.jpg",
+            "path": null,
+            "size": 86.35,
+            "width": 1000,
+            "height": 667,
+            "sizeInBytes": 86352
+          },
+          "small": {
+            "ext": ".jpg",
+            "url": "/uploads/small_Ashdown_Manna_Cookery_School_Mockup_37573f622c.jpg",
+            "hash": "small_Ashdown_Manna_Cookery_School_Mockup_37573f622c",
+            "mime": "image/jpeg",
+            "name": "small_Ashdown-Manna-Cookery-School-Mockup.jpg",
+            "path": null,
+            "size": 26.81,
+            "width": 500,
+            "height": 333,
+            "sizeInBytes": 26814
+          },
+          "medium": {
+            "ext": ".jpg",
+            "url": "/uploads/medium_Ashdown_Manna_Cookery_School_Mockup_37573f622c.jpg",
+            "hash": "medium_Ashdown_Manna_Cookery_School_Mockup_37573f622c",
+            "mime": "image/jpeg",
+            "name": "medium_Ashdown-Manna-Cookery-School-Mockup.jpg",
+            "path": null,
+            "size": 53.14,
+            "width": 750,
+            "height": 500,
+            "sizeInBytes": 53144
+          },
+          "thumbnail": {
+            "ext": ".jpg",
+            "url": "/uploads/thumbnail_Ashdown_Manna_Cookery_School_Mockup_37573f622c.jpg",
+            "hash": "thumbnail_Ashdown_Manna_Cookery_School_Mockup_37573f622c",
+            "mime": "image/jpeg",
+            "name": "thumbnail_Ashdown-Manna-Cookery-School-Mockup.jpg",
+            "path": null,
+            "size": 7.65,
+            "width": 234,
+            "height": 156,
+            "sizeInBytes": 7649
+          }
+        },
+        "hash": "Ashdown_Manna_Cookery_School_Mockup_37573f622c",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 115.69,
+        "url": "/uploads/Ashdown_Manna_Cookery_School_Mockup_37573f622c.jpg",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2024-12-30T18:54:34.073Z",
+        "updatedAt": "2025-01-02T17:06:44.746Z",
+        "documentId": "entc5spftkv3kd67en8j3crl",
+        "publishedAt": "2025-02-10T12:43:47.311Z"
+      },
+      "categories": [
+        {
+          "id": 2,
+          "title": "Website Design",
+          "slug": "website-design",
+          "createdAt": "2024-11-20T10:52:16.436Z",
+          "updatedAt": "2024-11-20T14:00:04.297Z",
+          "publishedAt": "2024-11-20T10:52:25.646Z",
+          "documentId": "j3qshfdyszxndam9qw3hs950"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pageSize": 25,
+      "pageCount": 1,
+      "total": 6
+    }
+  }
+}

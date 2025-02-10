@@ -79,12 +79,10 @@ const ProjectSinglePage = async ({ slug }) => {
 
         {/* Content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-          <h1 className="text-5xl font-bold text-white text-center px-4">
+          <h1 className="text-5xl font-bold  text-center px-4">
             {currentProject.title}
           </h1>
-          <p className="text-white text-center px-4 w-1/3">
-            {currentProject.summary}
-          </p>
+          <p className="text-center px-4 w-1/3">{currentProject.summary}</p>
         </div>
       </header>
 

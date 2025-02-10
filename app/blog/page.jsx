@@ -106,8 +106,19 @@ const BlogPage = async ({ searchParams }) => {
         'Page number must be a positive integer'
       );
     }
-    const { data } = await fetchData(getBlogPosts, PAGE_SIZE, page);
+
+    // fetchData wraps our response in { data: { posts, pageCount } }
+    const { data, error } = await fetchData(getBlogPosts, PAGE_SIZE, page);
+
+    if (error) {
+      throw error;
+    }
+
     const { posts: blogPosts, pageCount } = data;
+
+    // console.log('blogPosts', blogPosts);
+    // console.log('pageCount', pageCount);
+
     if (!blogPosts?.length) {
       throw new NotFoundError('No blog posts found');
     }

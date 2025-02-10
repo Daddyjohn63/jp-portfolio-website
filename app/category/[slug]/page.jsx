@@ -20,8 +20,8 @@ const CategoryPosts = async ({ slug }) => {
     const { data: categoryPosts } = await fetchData(getCategoryPosts, slug);
 
     // Add error logging
-    console.log('Category title:', categoryTitle);
-    console.log('Category posts:', categoryPosts);
+    // console.log('Category title:', categoryTitle);
+    // console.log('Category posts:', categoryPosts);
 
     if (!categoryPosts?.length) {
       return (
