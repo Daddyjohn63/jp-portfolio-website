@@ -14,7 +14,7 @@ export const CallToAction = ({
   phoneIcon
 }) => {
   return (
-    <header className="relative h-[500px] w-full">
+    <header className="relative h-[300px] md:h-[500px] w-full">
       {/* Decorative pattern overlay */}
       <svg
         className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -61,7 +61,7 @@ export const CallToAction = ({
       </div>
 
       {/* Content */}
-      <div className="absolute inset-0 my-auto h-[250px] flex flex-col items-center justify-center gap-6 border-2 border-muted-foreground rounded-lg md:rounded-full shadow-[0_0_35px_rgba(90,74,74,0.5)] z-10">
+      <div className="container absolute inset-0 my-auto h-[250px] flex flex-col items-center justify-center gap-6 border-2 border-muted-foreground rounded-lg md:rounded-full shadow-[0_0_35px_rgba(90,74,74,0.5)] z-10">
         <h2 className="font-bold text-center px-4">{title}</h2>
 
         <p className="text-muted-foreground text-center px-4 md:w-2/3">
