@@ -8,10 +8,10 @@ import { Suspense } from 'react';
 import LoadingState from '@/components/common/Loading-state';
 import { fetchData } from '@/lib/utils';
 
-// export async function generateStaticParams() {
-//   const slugs = await getSlugs();
-//   return slugs.map(slug => ({ slug }));
-// }
+export async function generateStaticParams() {
+  const slugs = await getSlugs();
+  return slugs.map(slug => ({ slug }));
+}
 
 export async function generateMetadata({ params: { slug } }) {
   const post = await getBlogPost(slug);
