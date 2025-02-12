@@ -33,7 +33,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={poppins.variable} suppressHydrationWarning>
-      <body className={`dark ${poppins.className}`}>
+      <body className={`dark ${poppins.className} overflow-x-hidden`}>
         <Header />
         {children}
         <Toaster position="bottom-center" />
