@@ -7,11 +7,11 @@ import Link from 'next/link';
 import { Suspense } from 'react';
 import LoadingState from '@/components/common/Loading-state';
 import { fetchData } from '@/lib/utils';
-
-export async function generateStaticParams() {
-  const slugs = await getProjectSlugs();
-  return slugs.map(slug => ({ slug }));
-}
+//TODO: Add this back in when we have a CMS
+// export async function generateStaticParams() {
+//   const slugs = await getProjectSlugs();
+//   return slugs.map(slug => ({ slug }));
+// }
 
 export async function generateMetadata({ params: { slug } }) {
   const project = await getProject(slug);
