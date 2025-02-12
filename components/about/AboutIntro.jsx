@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { twMerge } from 'tailwind-merge';
 import Reveal from '@/components/common/ScrollAnimation';
-import { aboutUsData } from './AboutUsData';
 
 import { CtaButton } from '@/components/common/CtaButton';
 
@@ -12,23 +11,16 @@ const AboutIntro = () => {
         {/* ABOUT IMAGE SIDE */}
         <Reveal from={200}>
           <div className="grid grid-cols-1 gap-5 w-full relative h-fit">
-            {aboutUsData?.aboutImage?.map((img, index) => (
-              <Reveal from={100} key={index}>
-                <div className="image">
-                  <Image
-                    src="/images/about-test-v2.jpg"
-                    alt="About Image"
-                    className={twMerge(
-                      'w-full h-full sm:min-h-[550px] min-h-[450px] object-cover rounded-lg',
-                      index === 1 && 'mt-20'
-                    )}
-                    width={550}
-                    height={550}
-                    priority
-                  />
-                </div>
-              </Reveal>
-            ))}
+            <div className="image">
+              <Image
+                src="/images/about-test-v2.jpg"
+                alt="About Image"
+                className="w-full h-full sm:min-h-[550px] min-h-[450px] object-cover rounded-lg"
+                width={550}
+                height={550}
+                priority
+              />
+            </div>
           </div>
         </Reveal>
         {/* ABOUT IMAGE SIDE */}
