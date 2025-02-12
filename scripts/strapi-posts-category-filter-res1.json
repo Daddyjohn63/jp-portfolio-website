@@ -1,66 +1,144 @@
 {
   "data": [
     {
-      "id": 2,
-      "attributes": {
-        "publishedAt": "2024-11-20T10:22:53.598Z",
-        "slug": "this-is-post-two",
-        "title": "This is post two",
-        "subtitle": "A very good post about stuff",
-        "categories": {
-          "data": [
-            {
-              "id": 1,
-              "attributes": {
-                "title": "Next JS",
-                "slug": "next-js"
-              }
-            },
-            {
-              "id": 2,
-              "attributes": {
-                "title": "Website Design",
-                "slug": "website-design"
-              }
-            }
-          ]
+      "publishedAt": "2025-02-06T17:56:00.031Z",
+      "id": 6,
+      "documentId": "qorhi41u4iew2lc8d9phan5x",
+      "slug": "meeting-more-complex-requirement",
+      "title": "Meeting complex requirements",
+      "subtitle": "Handling Complex Requirements Beyond Simple Content",
+      "categories": [
+        {
+          "id": 1,
+          "documentId": "o6xr5pgwq59r6tbg5sjcrv5c",
+          "title": "Next JS",
+          "slug": "next-js"
         },
-        "image": {
-          "data": {
-            "id": 1,
-            "attributes": {
-              "url": "/uploads/johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png"
-            }
-          }
+        {
+          "id": 2,
+          "documentId": "j3qshfdyszxndam9qw3hs950",
+          "title": "Website Design",
+          "slug": "website-design"
+        },
+        {
+          "id": 3,
+          "documentId": "kx24xcdrhakznurhu013d03v",
+          "title": "WordPress",
+          "slug": "word-press"
         }
+      ],
+      "image": {
+        "id": 1,
+        "documentId": "tk8dl6buya7llqmkixz9knvk",
+        "url": "/uploads/johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png"
       }
     },
     {
-      "id": 1,
-      "attributes": {
-        "publishedAt": "2024-11-20T09:05:04.220Z",
-        "slug": "this-is-post-one",
-        "title": "This is post 1",
-        "subtitle": "A very good post about stuff!",
-        "categories": {
-          "data": [
-            {
-              "id": 1,
-              "attributes": {
-                "title": "Next JS",
-                "slug": "next-js"
-              }
-            }
-          ]
+      "publishedAt": "2025-02-06T17:51:04.879Z",
+      "id": 5,
+      "documentId": "dtmgmwt7er1ug62nyfq4ji80",
+      "slug": "nextjs-vs-wordpress",
+      "title": "NextJS vs WordPress",
+      "subtitle": "Choosing the Right Platform for Your Website",
+      "categories": [
+        {
+          "id": 1,
+          "documentId": "o6xr5pgwq59r6tbg5sjcrv5c",
+          "title": "Next JS",
+          "slug": "next-js"
         },
-        "image": {
-          "data": {
-            "id": 1,
-            "attributes": {
-              "url": "/uploads/johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png"
-            }
-          }
+        {
+          "id": 2,
+          "documentId": "j3qshfdyszxndam9qw3hs950",
+          "title": "Website Design",
+          "slug": "website-design"
+        },
+        {
+          "id": 3,
+          "documentId": "kx24xcdrhakznurhu013d03v",
+          "title": "WordPress",
+          "slug": "word-press"
         }
+      ],
+      "image": {
+        "id": 1,
+        "documentId": "tk8dl6buya7llqmkixz9knvk",
+        "url": "/uploads/johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png"
+      }
+    },
+    {
+      "publishedAt": "2025-02-06T12:28:27.848Z",
+      "id": 4,
+      "documentId": "hmjnb96aivqxkjnu7kfdv6qp",
+      "slug": "static-vs-dynamic-websites",
+      "title": "Static vs Dynamic Websites",
+      "subtitle": "Understanding the Basics and Choosing the Right Approach",
+      "categories": [
+        {
+          "id": 2,
+          "documentId": "j3qshfdyszxndam9qw3hs950",
+          "title": "Website Design",
+          "slug": "website-design"
+        },
+        {
+          "id": 1,
+          "documentId": "o6xr5pgwq59r6tbg5sjcrv5c",
+          "title": "Next JS",
+          "slug": "next-js"
+        }
+      ],
+      "image": {
+        "id": 4,
+        "documentId": "parb9ol5swh7sfcm1qi7wuva",
+        "url": "/uploads/1000_solve_mockup_95324f2ded.jpg"
+      }
+    },
+    {
+      "publishedAt": "2024-11-20T10:22:53.598Z",
+      "id": 2,
+      "documentId": "nc5dbd8bfrjm4a4q5fem0l7h",
+      "slug": "this-is-post-two",
+      "title": "This is post two",
+      "subtitle": "A very good post about stuff",
+      "categories": [
+        {
+          "id": 1,
+          "documentId": "o6xr5pgwq59r6tbg5sjcrv5c",
+          "title": "Next JS",
+          "slug": "next-js"
+        },
+        {
+          "id": 2,
+          "documentId": "j3qshfdyszxndam9qw3hs950",
+          "title": "Website Design",
+          "slug": "website-design"
+        }
+      ],
+      "image": {
+        "id": 1,
+        "documentId": "tk8dl6buya7llqmkixz9knvk",
+        "url": "/uploads/johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png"
+      }
+    },
+    {
+      "publishedAt": "2024-11-20T09:05:04.220Z",
+      "id": 1,
+      "documentId": "sqmwomtjbolbajawcz73h0nc",
+      "slug": "this-is-post-one",
+      "title": "This is post one",
+      "subtitle": "A very good post about stuff!",
+      "categories": [
+        {
+          "id": 1,
+          "documentId": "o6xr5pgwq59r6tbg5sjcrv5c",
+          "title": "Next JS",
+          "slug": "next-js"
+        }
+      ],
+      "image": {
+        "id": 1,
+        "documentId": "tk8dl6buya7llqmkixz9knvk",
+        "url": "/uploads/johnpaul6342_a_large_butterfly_with_wings_that_have_blue_and_c174c8cf_4aac_4c79_bf41_131f774e52d4_0_830d898bf6.png"
       }
     }
   ],
@@ -69,7 +147,7 @@
       "page": 1,
       "pageSize": 6,
       "pageCount": 1,
-      "total": 2
+      "total": 5
     }
   }
 }

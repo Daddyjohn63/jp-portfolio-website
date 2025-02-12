@@ -17,7 +17,10 @@ const CategoryPosts = async ({ slug }) => {
       getCategoryTitleBySlug,
       slug
     );
-    const { data: categoryPosts } = await fetchData(getCategoryPosts, slug);
+    const { data } = await fetchData(getCategoryPosts, slug);
+    const { posts: categoryPosts, pageCount } = data;
+    //console.log('PAGE COUNT from page', pageCount);
+    //console.log('CATEGORY POSTS from page', categoryPosts);
 
     // Add error logging
     // console.log('Category title:', categoryTitle);
