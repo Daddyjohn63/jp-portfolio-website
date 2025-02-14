@@ -67,10 +67,10 @@ const Header = () => {
 
           {/* SOCIAL MEDIA END */}
           {/* ADD SIDEBAR MOBILE HERE */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <MobileSideBar pathname={pathname} />
           </div>
-          <SocialLinks className="hidden md:flex" iconClassName="w-4 h-4" />
+          <SocialLinks className="hidden lg:flex" iconClassName="w-4 h-4" />
         </div>
       </header>
     </>
