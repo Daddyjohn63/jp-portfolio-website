@@ -10,6 +10,7 @@ import { NavSidebar } from '@/components/blog/Nav-sidebar';
 import { Sidebar } from '@/components/common/Sidebar';
 import { InnerHeader } from '@/components/common/InnerHeader';
 import Reveal from '@/components/common/ScrollAnimation';
+import { ScrollToTop } from '@/components/common/ScrollToTop';
 
 const CategoryPosts = async ({ slug }) => {
   try {
@@ -129,9 +130,11 @@ const CategoryPosts = async ({ slug }) => {
 
 const CategoryPostsPage = ({ params: { slug } }) => {
   return (
-    <Suspense fallback={<LoadingState />}>
-      <CategoryPosts slug={slug} />
-    </Suspense>
+    <ScrollToTop>
+      <Suspense fallback={<LoadingState />}>
+        <CategoryPosts slug={slug} />
+      </Suspense>
+    </ScrollToTop>
   );
 };
 
