@@ -31,7 +31,7 @@ const BlogPost = async ({ slug }) => {
   const formattedDate = formatDateString(currentPost.date);
 
   return (
-    <div className="container mt-[1rem] pb-12">
+    <div className=" max-w-[800px] p-6 mx-auto mt-[1rem] pb-12">
       <div>
         <Heading>{currentPost.title}</Heading>
         <h3 className="mb-3">{currentPost.subtitle}</h3>
@@ -47,7 +47,7 @@ const BlogPost = async ({ slug }) => {
       <div className="w-full mt-[2rem] pb-[2rem]">
         <article
           dangerouslySetInnerHTML={{ __html: currentPost.body }}
-          className="prose min-w-full"
+          className="prose"
         />
       </div>
       {/* navigation */}

@@ -21,6 +21,20 @@ module.exports = {
         '2xl': '1400px'
       }
     },
+    containerBlog: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem'
+      },
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '800px',
+        xl: '800px',
+        '2xl': '800px'
+      }
+    },
     extend: {
       fontFamily: {
         sans: ['var(--font-poppins)', ...fontFamily.sans]
@@ -132,9 +146,8 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
-            // Customize default prose styles
+            maxWidth: 'none',
             color: 'hsl(var(--foreground))', // Use your design system color
-            maxWidth: '100%', // Override max-width
 
             // Customize headings
             h1: {
