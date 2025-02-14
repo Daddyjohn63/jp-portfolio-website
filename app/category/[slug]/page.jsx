@@ -42,7 +42,7 @@ const CategoryPosts = async ({ slug }) => {
         />
         <div className="overflow-hidden pb-12">
           <Reveal from={200}>
-            <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 mt-6">
+            <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 ">
               {/* Sidebar - hidden on mobile, shown first on desktop */}
               <div className="hidden md:flex flex-col gap-6">
                 <Sidebar />

@@ -65,7 +65,7 @@ const HomeHero = () => {
                   </Link>
                 </div>
 
-                <h1 className="mt-6 md:mt-10 text-3xl md:text-5xl !leading-[1.2] md:!leading-[60px] font-bold tracking-tight">
+                <h1 className="mt-6 md:mt-10 text-3xl md:text-5xl !leading-[1.3] md:!leading-[60px] font-bold tracking-tight">
                   Transforming Ideas into Powerful{' '}
                   <span className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 via-blue-400 to-orange-300 inline-block text-transparent bg-clip-text">
                     Web Solutions
@@ -78,7 +78,7 @@ const HomeHero = () => {
                   productivity and a return on your investment.
                 </p>
 
-                <ul className="flex flex-col mt-3 gap-1">
+                <ul className="flex flex-col mt-3 gap-2">
                   <li className="flex items-center gap-1">
                     <MoveRight className="size-5 text-muted-foreground mr-2" />
                     Websites that convert
@@ -93,14 +93,14 @@ const HomeHero = () => {
                   </li>
                 </ul>
 
-                <div className="mt-10 flex flex-col md:flex-row justify-start gap-4 md:gap-x-6 w-full mb-4">
+                <div className="mt-10 flex flex-row justify-start gap-4 md:gap-x-6 w-full mb-4">
                   <CtaButton
                     label="Contact me"
                     href="/contact"
                     className="w-full md:w-auto"
                   />
                   <CtaButton
-                    label="View my work"
+                    label="My work"
                     href="/portfolio"
                     className="w-full md:w-auto"
                   />
@@ -121,13 +121,22 @@ const HomeHero = () => {
                     ease: 'easeOut'
                   }}
                 />
-                <Image
-                  src="/images/chameleon-v1-r-1-5.jpg"
-                  alt="App screenshot"
-                  width={1600}
-                  height={900}
-                  className="relative w-full h-auto rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
-                />
+                <picture>
+                  {/* Mobile image */}
+                  <source
+                    media="(max-width: 768px)"
+                    srcSet="/images/chameleon-mob-portrait.jpg"
+                  />
+                  {/* Desktop image */}
+                  <Image
+                    src="/images/chameleon-v1-r-1-5.jpg"
+                    alt="Chameleon sitting at a desk coding"
+                    width={1500}
+                    height={1000}
+                    className="relative w-full h-auto rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+                    priority
+                  />
+                </picture>
               </div>
             </div>
           </div>

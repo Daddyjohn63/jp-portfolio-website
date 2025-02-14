@@ -1,13 +1,17 @@
+import { Home, User, Settings, Briefcase, BookOpen, Mail } from 'lucide-react';
+
 export const headerMenuItems = [
   {
     id: 1,
     label: 'home',
-    link: '/'
+    link: '/',
+    icon: 'Home'
   },
   {
     id: 2,
     label: 'about',
-    link: '/about'
+    link: '/about',
+    icon: 'User'
     // submenu: false,
     // subMenuItems: [
     //   {
@@ -26,6 +30,7 @@ export const headerMenuItems = [
     id: 3,
     label: 'services',
     link: '/services',
+    icon: 'Settings',
     submenu: false
     // subMenuItems: [
     //   {
@@ -39,17 +44,19 @@ export const headerMenuItems = [
   {
     id: 4,
     label: 'portfolio',
-    link: '/portfolio'
+    link: '/portfolio',
+    icon: 'Briefcase'
   },
-
   {
     id: 5,
     label: 'blog',
-    link: '/blog'
+    link: '/blog',
+    icon: 'BookOpen'
   },
   {
     id: 6,
     label: 'contact',
-    link: '/contact'
+    link: '/contact',
+    icon: 'Mail'
   }
 ];

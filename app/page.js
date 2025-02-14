@@ -21,7 +21,7 @@ export default async function Home() {
       </header>
 
       {/* Main Content */}
-      <main className="section-padding-lg">
+      <main className="">
         {/* Services Section */}
         <section className="section-spacing-responsive">
           <ServicesSection />

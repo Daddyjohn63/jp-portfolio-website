@@ -46,7 +46,7 @@ const Header = () => {
       {/* Actual header */}
       <header className={headerClass}>
         <div
-          className={`flex h-[80px] container  items-center justify-between px-9 ${textColorClass}`}
+          className={`flex h-[80px] container  items-center justify-between px-6 ${textColorClass}`}
         >
           {/* LOGO START */}
           <Link

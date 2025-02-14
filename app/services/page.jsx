@@ -1,5 +1,4 @@
 import { CallToAction } from '@/components/common/CallToAction';
-import { CtaButton } from '@/components/common/CtaButton';
 import { InnerHeader } from '@/components/common/InnerHeader';
 import { FaLaptopCode, FaCogs, FaHandshake } from 'react-icons/fa';
 
@@ -66,7 +65,7 @@ const ServicesPage = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="flex justify-center section-spacing-responsive ">
+        <section className="flex justify-center section-spacing-lg ">
           <CallToAction
             title="Let's talk about you!"
             description="I'm always looking for new and exciting projects."

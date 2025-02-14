@@ -34,8 +34,8 @@ const BlogPost = async ({ slug }) => {
     <div className="container mt-[1rem] pb-12">
       <div>
         <Heading>{currentPost.title}</Heading>
-        <h3>{currentPost.subtitle}</h3>
-        <span>{formattedDate}</span>
+        <h3 className="mb-3">{currentPost.subtitle}</h3>
+        <span className="text-sm text-gray-300">{formattedDate}</span>
       </div>
       {/* <Image
         src={currentPost.image}
