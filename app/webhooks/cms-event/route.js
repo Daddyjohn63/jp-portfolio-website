@@ -30,11 +30,17 @@ export async function POST(request) {
 
     // Handle media changes
     if (payload.event.includes('media')) {
-      // Revalidate all content types that might use media
-      await revalidateTag(CACHE_TAG_BLOG_POSTS);
-      await revalidateTag(CACHE_TAG_PROCESS_FLOW);
-      await revalidateTag(CACHE_TAG_PROJECTS);
-      console.log('Revalidated all tags due to media change');
+      // For work-related media changes
+      if (payload.model === 'work') {
+        await revalidateTag(CACHE_TAG_PROJECTS);
+        console.log('Revalidated projects tag due to work media change');
+      } else {
+        // For other media changes, revalidate all
+        await revalidateTag(CACHE_TAG_BLOG_POSTS);
+        await revalidateTag(CACHE_TAG_PROCESS_FLOW);
+        await revalidateTag(CACHE_TAG_PROJECTS);
+        console.log('Revalidated all tags due to media change');
+      }
     }
 
     return new Response(null, { status: 204 });
