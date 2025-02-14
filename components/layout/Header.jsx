@@ -4,10 +4,9 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import NavBar from './NavBar';
 import { cn } from '@/lib/utils';
-import Image from 'next/image';
 
 import MobileSideBar from './MobileSideBar';
-import Logo from './Logo';
+
 import { SocialLinks } from '../common/SocialLinks';
 
 const Header = () => {

@@ -36,6 +36,7 @@ const MobileSideBar = () => {
         className="block md:hidden"
         variant="ghost"
         size="sm"
+        aria-label="Open mobile menu"
       >
         <Menu className="!h-6 !w-6" />
       </Button>
