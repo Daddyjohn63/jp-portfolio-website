@@ -65,7 +65,7 @@ export const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/services/web-design"
+                  href="/services/"
                   className="text-sm text-muted-foreground hover:text-customBiege transition-colors"
                 >
                   Web Design
@@ -73,7 +73,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services/web-development"
+                  href="/services/"
                   className="text-sm text-muted-foreground hover:text-customBiege transition-colors"
                 >
                   Web Development
@@ -81,7 +81,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services/ecommerce"
+                  href="/services/"
                   className="text-sm text-muted-foreground hover:text-customBiege transition-colors"
                 >
                   E-Commerce Solutions
@@ -89,10 +89,10 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services/maintenance"
+                  href="/services/"
                   className="text-sm text-muted-foreground hover:text-customBiege transition-colors"
                 >
-                  Maintenance & Support
+                  Contract Services
                 </Link>
               </li>
             </ul>
@@ -103,23 +103,25 @@ export const Footer = () => {
             <h3 className="text-xl font-bold text-customBiege">Contact</h3>
             <ul className="space-y-2">
               <li className="text-sm text-muted-foreground">
-                <span className="block">123 Business Street</span>
-                <span className="block">City, State 12345</span>
+                <span className="block">Monks Meadow</span>
+                <span className="block">Ardingly, Haywards Heath</span>
+                <span className="block">West Sussex, RH17 6DZ, UK</span>
               </li>
               <li>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+447739875445"
                   className="text-sm text-muted-foreground hover:text-customBiege transition-colors"
                 >
-                  (123) 456-7890
+                  +44 7739 875445
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@company.com"
+                  href="mailto:john@webandprosper.co.uk"
+                  target="_blank"
                   className="text-sm text-muted-foreground hover:text-customBiege transition-colors"
                 >
-                  info@company.com
+                  john@webandprosper.co.uk
                 </a>
               </li>
             </ul>
@@ -130,7 +132,7 @@ export const Footer = () => {
         <div className="border-t border-customShades-shade8 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Company Name. All rights reserved.
+              © {currentYear} Web and Prosper. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link

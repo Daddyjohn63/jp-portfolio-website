@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { rateLimitByIp } from '@/lib/ratelimiting/limiter';
+import { sanitizeUserInput } from '@/util/sanitize';
 
 export async function POST(request) {
   try {
@@ -11,6 +12,29 @@ export async function POST(request) {
     });
 
     const values = await request.json();
+
+    // Check honeypot field
+    if (values.username) {
+      return NextResponse.json(
+        { error: 'Form submission rejected' },
+        { status: 400 }
+      );
+    }
+
+    // Remove honeypot field before sending to Strapi
+    const { username, ...sanitizedValues } = {
+      name: sanitizeUserInput(values.name),
+      email: sanitizeUserInput(values.email),
+      message: sanitizeUserInput(values.message),
+      companyName: values.companyName
+        ? sanitizeUserInput(values.companyName)
+        : undefined,
+      phoneNumber: values.phoneNumber
+        ? sanitizeUserInput(values.phoneNumber)
+        : undefined,
+      agreeToTerms: values.agreeToTerms
+    };
+
     const response = await fetch(`${process.env.STRAPI_API_URL}/api/contacts`, {
       method: 'POST',
       headers: {
@@ -19,7 +43,7 @@ export async function POST(request) {
         Authorization: `Bearer ${process.env.STRAPI_API_TOKEN}`
       },
       body: JSON.stringify({
-        data: values
+        data: sanitizedValues
       })
     });
     if (!response.ok) {

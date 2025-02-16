@@ -1,79 +1,65 @@
 'use client';
 import { Button } from '@/components/ui/button';
-// import { Calendar } from '@/components/ui/calendar';
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle
 } from '@/components/ui/card';
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger
-} from '@/components/ui/popover';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue
-} from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
 import { zodResolver } from '@hookform/resolvers/zod';
-// import { format } from 'date-fns';
-import {
-  CalendarIcon,
-  PersonStandingIcon,
-  ShieldCloseIcon,
-  SidebarCloseIcon,
-  X
-} from 'lucide-react';
-import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
-import { useRouter } from 'next/navigation';
-import { Close, PopoverClose } from '@radix-ui/react-popover';
 import { toast } from 'sonner';
 import { useState } from 'react';
-import Image from 'next/image';
-import { Separator } from '../ui/separator';
+import { sanitizeUserInput } from '@/util/sanitize';
+import { cn } from '@/lib/utils';
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
-  companyName: z.string().optional(),
-  phoneNumber: z.string().optional(),
-  email: z.string().email({ message: 'Invalid email address.' }),
+  name: z
+    .string()
+    .min(2, { message: 'Name must be at least 2 characters.' })
+    .transform(val => sanitizeUserInput(val)),
+  username: z.string().length(0, { message: 'Nice try, bot!' }),
+  companyName: z
+    .string()
+    .optional()
+    .transform(val => (val ? sanitizeUserInput(val) : val)),
+  phoneNumber: z
+    .string()
+    .optional()
+    .transform(val => (val ? sanitizeUserInput(val) : val)),
+  email: z
+    .string()
+    .email({ message: 'Invalid email address.' })
+    .transform(val => sanitizeUserInput(val)),
   message: z
     .string()
-    .min(10, { message: 'Message must be at least 10 characters.' }),
+    .min(10, { message: 'Message must be at least 10 characters.' })
+    .transform(val => sanitizeUserInput(val)),
   agreeToTerms: z.boolean().refine(data => data === true, {
     message: 'You must agree to the terms and conditions.'
   })
 });
 
 export default function ContactForm() {
-  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [isError, setIsError] = useState(false);
 
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: '',
+      username: '',
       companyName: '',
       phoneNumber: '',
       email: '',
@@ -108,6 +94,7 @@ export default function ContactForm() {
       form.reset(
         {
           name: '',
+          username: '',
           companyName: '',
           phoneNumber: '',
           email: '',
@@ -145,9 +132,9 @@ export default function ContactForm() {
       <div>
         <Card className="container mt-6 max-w-md ">
           <CardHeader>
-            <CardTitle>Contact Us</CardTitle>
+            <CardTitle>Contact Me</CardTitle>
             <CardDescription>
-              Contact us for a free consultation
+              Contact me for a free consultation
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -158,12 +145,28 @@ export default function ContactForm() {
               >
                 <FormField
                   control={form.control}
+                  name="username"
+                  render={({ field }) => (
+                    <FormItem className={cn('!hidden', 'sr-only')}>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          tabIndex={-1}
+                          autoComplete="off"
+                          aria-hidden="true"
+                        />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
                   name="name"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="John Doe" {...field} />
+                        <Input placeholder="John Smith" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -206,7 +209,7 @@ export default function ContactForm() {
                     <FormItem>
                       <FormLabel>Phone Number</FormLabel>
                       <FormControl>
-                        <Input placeholder="123-456-7890" {...field} />
+                        <Input placeholder="020 1234 5678" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

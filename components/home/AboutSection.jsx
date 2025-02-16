@@ -67,7 +67,7 @@ export const AboutSection = () => {
             </p>
           </div>
 
-          <CtaButton className="mt-10" label="Learn more" />
+          <CtaButton className="mt-10" href="/about" label="Learn more" />
         </div>
       </div>
 

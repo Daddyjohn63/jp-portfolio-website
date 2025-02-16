@@ -65,10 +65,10 @@ const HomeHero = () => {
                   </Link>
                 </div>
 
-                <h1 className="mt-6 md:mt-10 text-3xl md:text-5xl !leading-[1.3] md:!leading-[60px] font-bold tracking-tight">
-                  Transforming Ideas into Powerful{' '}
-                  <span className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 via-blue-400 to-orange-300 inline-block text-transparent bg-clip-text">
-                    Web Solutions
+                <h1 className="mt-6 md:mt-10 text-3xl md:text-6xl !leading-10 md:!leading-[70px] font-bold">
+                  Transforming ideas into powerful{' '}
+                  <span className="text-3xl md:text-6xl font-bold bg-gradient-to-r from-purple-600 via-blue-400 to-orange-300 inline-block text-transparent bg-clip-text">
+                    Web Applications
                   </span>
                 </h1>
 

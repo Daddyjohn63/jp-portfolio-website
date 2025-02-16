@@ -1,0 +1,23 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "documentId": "ylu3nix6xypjk1jype24ccwj",
+      "slug": "ashdown-cookery-school",
+      "title": "eCommerce",
+      "publishedAt": "2024-12-30T18:59:25.060Z",
+      "body": "### Ashdown Cookery School\n\nBased in Kent, Ashdown Cookery School had run a successful operation for many years. However, its website was not responsive and was in need of a large makeover. In addition, the client wanted a more interactive website that displayed their courses and products in multiple ways to suit different user preferences.\nThe new website produced results immediately leading to more sold out courses and significant increase in sales of Gift Vouchers.",
+      "image": {
+        "id": 2,
+        "documentId": "entc5spftkv3kd67en8j3crl",
+        "url": "/uploads/Ashdown_Manna_Cookery_School_Mockup_37573f622c.jpg"
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pageSize": 1
+    }
+  }
+}

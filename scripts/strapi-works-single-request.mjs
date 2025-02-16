@@ -17,8 +17,10 @@ const url =
     { encodeValuesOnly: true }
   );
 
+console.log(url);
+
 const response = await fetch(url);
 const body = await response.json();
 const formatted = JSON.stringify(body, null, 2);
-const file = 'scripts/strapi-works-single-response.json';
+const file = 'scripts/strapi-works-single-responsev5.json';
 writeFileSync(file, formatted, 'utf8');
