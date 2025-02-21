@@ -13,11 +13,11 @@ const AboutIntro = () => {
           <div className="grid grid-cols-1 gap-5 w-full relative h-fit">
             <div className="image">
               <Image
-                src="/images/about-test-v2.jpg"
+                src="/images/john-paul-v1.jpg"
                 alt="About Image"
                 className="w-full h-full sm:min-h-[550px] min-h-[450px] object-cover rounded-lg"
-                width={550}
-                height={550}
+                width={800}
+                height={600}
                 priority
               />
             </div>
