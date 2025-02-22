@@ -54,6 +54,8 @@ const formSchema = z.object({
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -71,6 +73,8 @@ export default function ContactForm() {
   const handleSubmit = async values => {
     try {
       setIsLoading(true);
+      setIsError(false);
+      setIsSuccess(false);
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -130,7 +134,7 @@ export default function ContactForm() {
   return (
     <>
       <div>
-        <Card className="container mt-6 max-w-md ">
+        <Card className="container mt-6 max-w-md border-gray-700">
           <CardHeader>
             <CardTitle>Contact Me</CardTitle>
             <CardDescription>
@@ -146,6 +150,7 @@ export default function ContactForm() {
                 <FormField
                   control={form.control}
                   name="username"
+                  className="border-gray-500"
                   render={({ field }) => (
                     <FormItem className={cn('!hidden', 'sr-only')}>
                       <FormControl>
@@ -154,6 +159,7 @@ export default function ContactForm() {
                           tabIndex={-1}
                           autoComplete="off"
                           aria-hidden="true"
+                          className="!border-gray-500"
                         />
                       </FormControl>
                     </FormItem>
@@ -166,7 +172,11 @@ export default function ContactForm() {
                     <FormItem>
                       <FormLabel>Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="John Smith" {...field} />
+                        <Input
+                          placeholder="John Smith"
+                          {...field}
+                          className="border-gray-500"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -179,7 +189,11 @@ export default function ContactForm() {
                     <FormItem>
                       <FormLabel>Company Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Company Name" {...field} />
+                        <Input
+                          placeholder="Company Name"
+                          {...field}
+                          className="border-gray-500"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -196,6 +210,7 @@ export default function ContactForm() {
                           placeholder="email@example.com"
                           type="email"
                           {...field}
+                          className="border-gray-500"
                         />
                       </FormControl>
                       <FormMessage />
@@ -209,7 +224,11 @@ export default function ContactForm() {
                     <FormItem>
                       <FormLabel>Phone Number</FormLabel>
                       <FormControl>
-                        <Input placeholder="020 1234 5678" {...field} />
+                        <Input
+                          placeholder="020 1234 5678"
+                          {...field}
+                          className="border-gray-500"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -222,7 +241,11 @@ export default function ContactForm() {
                     <FormItem>
                       <FormLabel>Message</FormLabel>
                       <FormControl>
-                        <Input placeholder="Message" {...field} />
+                        <Input
+                          placeholder="Message"
+                          {...field}
+                          className="border-gray-500"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

@@ -33,7 +33,7 @@ const MobileSideBar = () => {
     <>
       <Button
         onClick={onOpen}
-        className="block md:hidden"
+        className="block"
         variant="ghost"
         size="sm"
         aria-label="Open mobile menu"

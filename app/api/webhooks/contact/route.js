@@ -79,13 +79,25 @@ export async function POST(request) {
         to: contactData.email,
         subject: 'Thank you for contacting Web and Prosper',
         html: `
-         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-           <h2>Thank you for your message</h2>
-           <p>Dear ${contactData.name},</p>
-           <p>We have received your message and will get back to you shortly.</p>
-           <p>Best regards,<br>${process.env.SMTP_FROM_NAME}</p>
-         </div>
-       `
+          <div style="background-color: #f6f6f6; padding: 20px;">
+            <div style="background-color: white; padding: 30px; border-radius: 10px; max-width: 600px; margin: 0 auto; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+              <h1 style=" color: #fff; padding: 5px; font-size: 28px; font-weight: 600; margin-bottom: 25px; background: linear-gradient(to right, #9333ea, #60a5fa, #fb923c); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Web and Prosper</h1>
+              <h2 style="color: #333; font-family: Arial, sans-serif; margin-bottom: 20px;">Thank You for Reaching Out!</h2>
+              <p style="color: #666; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5; margin-bottom: 15px;">Dear ${contactData.name},</p>
+              <p style="color: #666; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5; margin-bottom: 15px;">Thank you for contacting Web and Prosper. I have received your message and I will get back to you within 24-48 hours.</p>
+              <p style="color: #666; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5; margin-bottom: 15px;">In the meantime, feel free to:</p>
+              <ul style="color: #666; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5; margin-bottom: 25px;">
+                <li>Visit my <a href="${process.env.WEBSITE_URL}" style="color: #9333ea; text-decoration: none;">website</a></li>
+                <li>Follow me on <a href="${process.env.LINKEDIN_URL}" style="color: #9333ea; text-decoration: none;">LinkedIn</a></li>
+             
+              </ul>
+              <div style="border-top: 1px solid #eee; padding-top: 20px; margin-top: 20px;">
+                <p style="color: #666; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5; margin-bottom: 5px;">Best regards,</p>
+                <p style="color: #333; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; margin-bottom: 5px;">${process.env.SMTP_FROM_NAME}</p>
+              </div>
+            </div>
+          </div>
+        `
       }),
       // Admin notification
       transporter.sendMail({

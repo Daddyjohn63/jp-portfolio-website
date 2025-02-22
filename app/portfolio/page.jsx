@@ -5,6 +5,7 @@ import { Suspense } from 'react';
 import LoadingState from '@/components/common/Loading-state';
 import { PagePagination } from '@/components/common/Pagination';
 import { NotFoundError, CMSError } from '@/lib/errors';
+import { InnerHeader } from '@/components/common/InnerHeader';
 
 export const metadata = {
   title: 'Portfolio',
@@ -41,9 +42,13 @@ const PortfolioPosts = async ({ searchParams }) => {
     }
 
     return (
-      <div className="py-[50px]">
-        <div className="flex container justify-between items-center pb-16">
-          <h1 className=" text-5xl z-100">Selected Work</h1>
+      <div>
+        <div className="flex container justify-between items-center">
+          {/* <h1 className=" text-5xl z-100">Selected Work</h1> */}
+          <InnerHeader
+            title="Selected Work"
+            description="Here are some of my projects"
+          />
         </div>
         <div className="flex pb-[100px] items-center justify-center flex-col">
           <div className="container grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">

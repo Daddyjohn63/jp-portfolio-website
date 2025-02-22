@@ -14,7 +14,7 @@ const AboutPage = () => {
       />
 
       {/* Main content wrapper with consistent spacing */}
-      <main className="">
+      <main>
         <div className="container">
           {/* About Intro Section */}
           <section className="section-spacing-sm">

@@ -14,7 +14,7 @@ const NavBar = ({ pathname }) => {
   };
   //console.log('nav menu', headerMenuItems);
   return (
-    <nav className="hidden md:flex">
+    <nav className="hidden lg:flex">
       <div>
         {/* NAV LIST START */}
         <ul className="flex gap-6 capitalize text-xl">
