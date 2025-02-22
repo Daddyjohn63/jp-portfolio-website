@@ -68,6 +68,12 @@ export async function POST(request) {
       data: sanitizedValues
     });
 
+    // Add this right before the Strapi submission
+    console.log('Environment check:', {
+      STRAPI_API_URL: process.env.STRAPI_API_URL,
+      hasToken: !!process.env.STRAPI_API_TOKEN
+    });
+
     // Submit to Strapi
     const response = await fetch(`${process.env.STRAPI_API_URL}/api/contacts`, {
       method: 'POST',
@@ -82,11 +88,16 @@ export async function POST(request) {
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error('Strapi error response:', {
+      const errorDetails = {
         status: response.status,
         statusText: response.statusText,
-        body: errorText
-      });
+        body: errorText,
+        url: `${process.env.STRAPI_API_URL}/api/contacts`,
+        requestBody: JSON.stringify({
+          data: sanitizedValues
+        })
+      };
+      console.error('Strapi error response:', errorDetails);
       throw new Error(`Strapi error: ${response.status} - ${errorText}`);
     }
 

@@ -83,12 +83,15 @@ export default function ContactForm() {
         body: JSON.stringify(values)
       });
 
+      // Get the error response data
+      const data = await response.json();
+
       if (response.status === 429) {
         throw new Error('Too many requests. Please wait before trying again.');
       }
 
       if (!response.ok) {
-        throw new Error('Failed to submit form');
+        throw new Error(data.error || data.details || 'Failed to submit form');
       }
 
       setIsSuccess(true);
@@ -123,7 +126,11 @@ export default function ContactForm() {
         form.unregister(key);
       });
     } catch (error) {
-      console.error('Submission error:', error);
+      console.error('Submission error details:', {
+        message: error.message,
+        stack: error.stack,
+        name: error.name
+      });
       setIsError(true);
       toast.error(error.message || 'Failed to submit form');
     } finally {
