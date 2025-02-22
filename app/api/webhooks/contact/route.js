@@ -84,7 +84,7 @@ export async function POST(request) {
               <h1 style=" color: #fff; padding: 5px; font-size: 28px; font-weight: 600; margin-bottom: 25px; background: linear-gradient(to right, #9333ea, #60a5fa, #fb923c); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Web and Prosper</h1>
               <h2 style="color: #333; font-family: Arial, sans-serif; margin-bottom: 20px;">Thank You for Reaching Out!</h2>
               <p style="color: #666; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5; margin-bottom: 15px;">Dear ${contactData.name},</p>
-              <p style="color: #666; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5; margin-bottom: 15px;">Thank you for contacting Web and Prosper. I have received your message and I will get back to you within 24-48 hours.</p>
+              <p style="color: #666; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5; margin-bottom: 15px;">Thank you for contacting Web and Prosper. I have received your message and I will get back to you within 24-48 hours!p>
               <p style="color: #666; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5; margin-bottom: 15px;">In the meantime, feel free to:</p>
               <ul style="color: #666; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5; margin-bottom: 25px;">
                 <li>Visit my <a href="${process.env.WEBSITE_URL}" style="color: #9333ea; text-decoration: none;">website</a></li>
