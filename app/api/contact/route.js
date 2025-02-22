@@ -4,24 +4,51 @@ import { sanitizeUserInput } from '@/util/sanitize';
 
 export async function POST(request) {
   try {
-    // Rate limit to 5 submissions per 60 seconds
-    await rateLimitByIp({
-      key: 'contact-form',
-      limit: 5,
-      window: 60 * 1000 // 60 seconds
-    });
+    // Rate limit check
+    try {
+      await rateLimitByIp({
+        key: 'contact-form',
+        limit: 5,
+        window: 60 * 1000
+      });
+    } catch (error) {
+      console.error('Rate limit error:', error);
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        { status: 429 }
+      );
+    }
 
-    const values = await request.json();
+    // Parse request body
+    let values;
+    try {
+      values = await request.json();
+    } catch (error) {
+      console.error('JSON parsing error:', error);
+      return NextResponse.json(
+        { error: 'Invalid request format' },
+        { status: 400 }
+      );
+    }
 
-    // Check honeypot field
+    // Validate required fields
+    if (!values.name || !values.email || !values.message) {
+      return NextResponse.json(
+        { error: 'Missing required fields' },
+        { status: 400 }
+      );
+    }
+
+    // Check honeypot
     if (values.username) {
+      console.warn('Honeypot triggered - potential spam');
       return NextResponse.json(
         { error: 'Form submission rejected' },
         { status: 400 }
       );
     }
 
-    // Remove honeypot field before sending to Strapi
+    // Prepare sanitized data
     const { username, ...sanitizedValues } = {
       name: sanitizeUserInput(values.name),
       email: sanitizeUserInput(values.email),
@@ -35,31 +62,46 @@ export async function POST(request) {
       agreeToTerms: values.agreeToTerms
     };
 
+    // Log the request to Strapi for debugging
+    console.log('Sending to Strapi:', {
+      url: `${process.env.STRAPI_API_URL}/api/contacts`,
+      data: sanitizedValues
+    });
+
+    // Submit to Strapi
     const response = await fetch(`${process.env.STRAPI_API_URL}/api/contacts`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        //'Strapi-Response-Format': 'v4',
         Authorization: `Bearer ${process.env.STRAPI_API_TOKEN}`
       },
       body: JSON.stringify({
         data: sanitizedValues
       })
     });
+
     if (!response.ok) {
-      throw new Error('Failed to submit to Strapi');
+      const errorText = await response.text();
+      console.error('Strapi error response:', {
+        status: response.status,
+        statusText: response.statusText,
+        body: errorText
+      });
+      throw new Error(`Strapi error: ${response.status} - ${errorText}`);
     }
+
     return NextResponse.json({ success: true });
   } catch (error) {
-    if (error.name === 'RateLimitError') {
-      return NextResponse.json(
-        { error: 'Too many requests. Please try again later.' },
-        { status: 429 }
-      );
-    }
-    console.error('Contact submission error:', error);
+    console.error('Contact submission error:', {
+      message: error.message,
+      stack: error.stack
+    });
     return NextResponse.json(
-      { error: 'Failed to submit contact form' },
+      {
+        error: 'Failed to submit contact form',
+        details:
+          process.env.NODE_ENV === 'development' ? error.message : undefined
+      },
       { status: 500 }
     );
   }
