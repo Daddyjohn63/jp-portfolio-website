@@ -64,10 +64,10 @@ export default async function ContactPage() {
       />
 
       <main className="container mt-4 mx-auto max-w-8xl px-6  pb-0  lg:flex lg:items-center lg:gap-12 lg:px-8 section-spacing-responsive">
-        <div className="flex-1 w-full lg:w-1/2">
+        {/* <div className="flex-1 w-full lg:w-1/2">
           <ContactForm />
-        </div>
-        <div className="flex-1 w-full lg:w-1/2 mt-10 lg:mt-0">
+        </div> */}
+        <div className="flex-1 w-full lg:w-full mt-10 lg:mt-0">
           <div className="w-full h-full relative">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
               {contactMessages.map((message, index) => (
