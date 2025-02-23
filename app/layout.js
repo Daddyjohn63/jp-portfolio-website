@@ -6,6 +6,7 @@ import { Toaster } from 'sonner';
 import { Footer } from '@/components/common/Footer';
 import Script from 'next/script';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import CookieBotTrigger from '@/components/common/CookieBotTrigger';
 
 export const metadata = {
   title: {
@@ -52,6 +53,8 @@ export default function RootLayout({ children }) {
           type="text/javascript"
           strategy="beforeInteractive"
         />
+        <CookieBotTrigger />
+        {/* <CookieBotLoader /> */}
       </head>
       <body className={`dark ${poppins.className} overflow-x-hidden`}>
         <Header />
