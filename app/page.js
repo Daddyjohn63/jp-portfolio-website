@@ -33,9 +33,9 @@ export default async function Home() {
         </section>
 
         {/* Testimonials Section */}
-        {/* <section className="section-spacing-lg">
+        <section className="section-spacing-lg">
           <FeedBack />
-        </section> */}
+        </section>
 
         {/* Portfolio Section */}
         <section className="section-spacing-lg">
