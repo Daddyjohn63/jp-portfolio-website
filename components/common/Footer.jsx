@@ -56,6 +56,14 @@ export const Footer = () => {
                   Portfolio
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="text-sm text-muted-foreground hover:text-customBiege transition-colors"
+                >
+                  Blog
+                </Link>
+              </li>
             </ul>
           </div>
 
