@@ -8,7 +8,7 @@ export default function NotFound() {
       <p className="mb-8 text-lg text-gray-600 dark:text-gray-400">
         Oops! The page you're looking for doesn't exist.
       </p>
-      <CtaButton href="/">Return Home</CtaButton>
+      <CtaButton label="Return Home" href="/" className="w-full md:w-auto" />
     </main>
   );
 }

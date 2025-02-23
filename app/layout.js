@@ -1,13 +1,11 @@
-// import { Inter } from 'next/font/google';
 import { poppins } from './fonts';
-
 import '../custom-styles/custom-styles.css';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import { Toaster } from 'sonner';
 import { Footer } from '@/components/common/Footer';
-
-// const inter = Inter({ subsets: ['latin'] });
+import Script from 'next/script';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata = {
   title: {
@@ -41,27 +39,25 @@ export const metadata = {
   }
 };
 
-// export const metadata = {
-//   robots: {
-//     index: false,
-//     follow: false,
-//     nocache: true,
-//     googleBot: {
-//       index: false,
-//       follow: false,
-//       noimageindex: true
-//     }
-//   }
-// };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={poppins.variable} suppressHydrationWarning>
+      <head>
+        {/* <CookieBotScript /> */}
+        {/* <Script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="008bf995-0224-4cfa-b2ff-4961832b2d91"
+          data-blockingmode="auto"
+          strategy="beforeInteractive"
+        /> */}
+      </head>
       <body className={`dark ${poppins.className} overflow-x-hidden`}>
         <Header />
         {children}
         <Toaster position="bottom-center" />
         <Footer />
+        <GoogleAnalytics gaId="G-1FLT2HXTTX" />
       </body>
     </html>
   );
