@@ -7,6 +7,7 @@ import Header from '@/components/layout/Header';
 import { Toaster } from 'sonner';
 import { Footer } from '@/components/common/Footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import CookieConsent from '@/components/common/CookieConsent';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -55,6 +56,20 @@ export const metadata = {
 //   }
 // };
 
+// Create a client component for conditional GA loading
+const Analytics = () => {
+  'use client';
+
+  const isGADisabled =
+    typeof window !== 'undefined'
+      ? localStorage.getItem('ga-disabled') === 'true'
+      : false;
+
+  if (isGADisabled) return null;
+
+  return <GoogleAnalytics gaId="G-1FLT2HXTTX" />;
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={poppins.variable} suppressHydrationWarning>
@@ -63,7 +78,8 @@ export default function RootLayout({ children }) {
         {children}
         <Toaster position="bottom-center" />
         <Footer />
-        <GoogleAnalytics gaId="G-1FLT2HXTTX" />
+        <CookieConsent />
+        <Analytics />
       </body>
     </html>
   );

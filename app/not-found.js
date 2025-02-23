@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import CTAButton from '@/components/CTAButton';
+import CtaButton from '@/components/common/CtaButton';
 
 export default function NotFound() {
   return (
@@ -8,7 +8,7 @@ export default function NotFound() {
       <p className="mb-8 text-lg text-gray-600 dark:text-gray-400">
         Oops! The page you're looking for doesn't exist.
       </p>
-      <CTAButton href="/">Return Home</CTAButton>
+      <CtaButton href="/">Return Home</CtaButton>
     </main>
   );
 }
