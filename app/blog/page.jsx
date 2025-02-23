@@ -15,8 +15,9 @@ import { InnerHeader } from '@/components/common/InnerHeader';
 import Reveal from '@/components/common/ScrollAnimation';
 
 export const metadata = {
-  title: 'Blog',
-  description: 'News and articles to get you thinking'
+  title: 'Blog | Web and Prosper',
+  description:
+    'Insights and articles about web development, technology trends, and business growth strategies.'
 };
 
 const PAGE_SIZE = 6;

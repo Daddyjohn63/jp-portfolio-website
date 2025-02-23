@@ -9,6 +9,12 @@ import {
   FaWhatsapp
 } from 'react-icons/fa';
 
+export const metadata = {
+  title: 'Contact | Web and Prosper',
+  description:
+    'Get in touch to discuss your web development project. Available for consultations and project inquiries.'
+};
+
 const contactMessages = [
   {
     title: 'Email',

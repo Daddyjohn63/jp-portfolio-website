@@ -8,8 +8,9 @@ import { NotFoundError, CMSError } from '@/lib/errors';
 import { InnerHeader } from '@/components/common/InnerHeader';
 
 export const metadata = {
-  title: 'Portfolio',
-  description: 'My portfolio of projects'
+  title: 'Portfolio | Web and Prosper',
+  description:
+    'Explore my portfolio of web development projects, showcasing modern designs and powerful functionality.'
 };
 
 const PAGE_SIZE = 6;

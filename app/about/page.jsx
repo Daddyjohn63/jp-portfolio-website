@@ -3,6 +3,12 @@ import SkillsShowcase from '@/components/about/SkillsShowcase';
 import { CallToAction } from '@/components/common/CallToAction';
 import { InnerHeader } from '@/components/common/InnerHeader';
 
+export const metadata = {
+  title: 'About | Web and Prosper',
+  description:
+    'Full-stack developer specialising in modern web solutions and AI integration. Learn about my experience and approach to web development.'
+};
+
 const AboutPage = () => {
   return (
     <article>

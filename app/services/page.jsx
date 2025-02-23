@@ -2,6 +2,12 @@ import { CallToAction } from '@/components/common/CallToAction';
 import { InnerHeader } from '@/components/common/InnerHeader';
 import { FaLaptopCode, FaCogs, FaHandshake } from 'react-icons/fa';
 
+export const metadata = {
+  title: 'Services | Web and Prosper',
+  description:
+    'Professional web development services including website design, full-stack application development, and AI integration solutions.'
+};
+
 const servicesData = [
   {
     icon: FaLaptopCode,

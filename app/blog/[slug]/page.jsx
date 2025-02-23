@@ -13,10 +13,52 @@ export async function generateStaticParams() {
   return slugs.map(slug => ({ slug }));
 }
 
+// export async function generateMetadata({ params: { slug } }) {
+//   const post = await getBlogPost(slug);
+//   return {
+//     title: post.currentPost?.title
+//   };
+// }
+
 export async function generateMetadata({ params: { slug } }) {
   const post = await getBlogPost(slug);
+  const { currentPost } = post;
+
+  if (!currentPost) {
+    return {
+      title: 'Post Not Found | Web and Prosper',
+      description: 'The requested blog post could not be found.'
+    };
+  }
+
   return {
-    title: post.currentPost?.title
+    title: `${currentPost.title} | Web and Prosper Blog`,
+    description:
+      currentPost.excerpt ||
+      currentPost.subtitle ||
+      'Read this article on Web and Prosper',
+    openGraph: {
+      title: currentPost.title,
+      description: currentPost.excerpt || currentPost.subtitle,
+      type: 'article',
+      publishedTime: currentPost.date,
+      images: currentPost.image
+        ? [
+            {
+              url: currentPost.image,
+              width: 1500,
+              height: 1000,
+              alt: currentPost.title
+            }
+          ]
+        : []
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: currentPost.title,
+      description: currentPost.excerpt || currentPost.subtitle,
+      images: currentPost.image ? [currentPost.image] : []
+    }
   };
 }
 
