@@ -6,6 +6,7 @@ import './globals.css';
 import Header from '@/components/layout/Header';
 import { Toaster } from 'sonner';
 import { Footer } from '@/components/common/Footer';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -62,6 +63,7 @@ export default function RootLayout({ children }) {
         {children}
         <Toaster position="bottom-center" />
         <Footer />
+        <GoogleAnalytics gaId="G-1FLT2HXTTX" />
       </body>
     </html>
   );
