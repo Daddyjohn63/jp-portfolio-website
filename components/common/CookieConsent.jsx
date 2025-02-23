@@ -4,15 +4,20 @@ import { useState, useEffect } from 'react';
 import { CtaButton } from '@/components/common/CtaButton'; // Fixed: Using named import and correct casing
 
 export default function CookieConsent() {
+  const [mounted, setMounted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     // Check if user has already made a choice
     const consent = localStorage.getItem('cookieConsent');
     if (consent === null) {
       setIsVisible(true);
     }
   }, []);
+
+  // Don't render anything until after mounting to prevent hydration mismatch
+  if (!mounted) return null;
 
   const handleConsent = accepted => {
     // Store the user's choice (true/false)

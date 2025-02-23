@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import CtaButton from '@/components/common/CtaButton';
+import { CtaButton } from '@/components/common/CtaButton';
 
 export default function NotFound() {
   return (
