@@ -56,7 +56,7 @@ const HomeHero = () => {
             {/* Text Section and buttons */}
             <div className="flex-1 w-full lg:w-1/2">
               <div className="w-full">
-                <div className="mt-4 md:mt-0">
+                {/* <div className="mt-4 md:mt-0">
                   <Link
                     href="https://g.co/kgs/mSSCttg"
                     target="_blank"
@@ -67,7 +67,7 @@ const HomeHero = () => {
                       Google
                     </p>
                   </Link>
-                </div>
+                </div> */}
 
                 <h1 className="mt-6 md:mt-10 text-3xl md:text-3xl xl:text-6xl !leading-10 md:!leading-[70px] font-bold">
                   Transforming ideas into powerful{' '}
