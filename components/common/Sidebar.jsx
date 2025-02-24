@@ -26,9 +26,9 @@ export const Sidebar = () => {
         <p className="font-bold">Email:</p>
         <p>john@webandprosper.co.uk</p>
       </CardContent>
-      <CardFooter>
+      {/* <CardFooter>
         <Button>Use The Contact Form</Button>
-      </CardFooter>
+      </CardFooter> */}
     </Card>
   );
 };
