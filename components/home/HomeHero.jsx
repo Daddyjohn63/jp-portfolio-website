@@ -111,16 +111,20 @@ const HomeHero = () => {
             {/* Image Section */}
             <div className="flex-1 w-full lg:w-1/2 mt-10 lg:mt-0">
               <div className="w-full h-full relative">
-                <motion.div
-                  className="absolute inset-0 rounded-lg transform translate-x-8 translate-y-8 bg-transparent bg-[radial-gradient(#b16cf1bc_1px,transparent_1px)] [background-size:8px_8px]"
-                  initial={{ opacity: 0, scale: 0.9, x: 0, y: 100 }}
-                  animate={{ opacity: 1, scale: 1, x: 32, y: 32 }}
-                  transition={{
-                    duration: 0.8,
-                    delay: 0.5,
-                    ease: 'easeOut'
-                  }}
-                />
+                {/* Motion effect - desktop only */}
+                <div className="hidden md:block">
+                  <motion.div
+                    className="absolute inset-0 rounded-lg transform translate-x-8 translate-y-8 bg-transparent bg-[radial-gradient(#b16cf1bc_1px,transparent_1px)] [background-size:8px_8px]"
+                    initial={{ opacity: 0, scale: 0.9, x: 0, y: 100 }}
+                    animate={{ opacity: 1, scale: 1, x: 32, y: 32 }}
+                    transition={{
+                      duration: 0.8,
+                      delay: 0.5,
+                      ease: 'easeOut'
+                    }}
+                  />
+                </div>
+
                 {/* Mobile Image */}
                 <div className="md:hidden">
                   <Image
@@ -133,6 +137,7 @@ const HomeHero = () => {
                     sizes="100vw"
                   />
                 </div>
+
                 {/* Desktop Image */}
                 <div className="hidden md:block">
                   <Image
