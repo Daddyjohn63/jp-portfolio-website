@@ -1,5 +1,6 @@
 User-agent: *
 Allow: / 
-
+Disallow: /.env
+Disallow: /.env.local
 Disallow: /api/
 Disallow: /jptestcontact/

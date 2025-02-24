@@ -42,83 +42,81 @@ const CategoryPosts = async ({ slug }) => {
           description="Posts in this category"
         />
         <div className="overflow-hidden pb-12">
-          <Reveal from={200}>
-            <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 ">
-              {/* Sidebar - hidden on mobile, shown first on desktop */}
-              <div className="hidden md:flex flex-col gap-6">
-                <Sidebar />
-                <NavSidebar />
-              </div>
+          {/* <Reveal from={200}> */}
+          <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 ">
+            {/* Sidebar - hidden on mobile, shown first on desktop */}
+            <div className="hidden md:flex flex-col gap-6">
+              <Sidebar />
+              <NavSidebar />
+            </div>
 
-              {/* Content area */}
-              <div className="flex flex-col gap-6">
-                <ul className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-                  {categoryPosts.map(post => (
-                    <li
-                      key={post.slug}
-                      className="flex flex-col bg-[#0c0338] border rounded-md shadow hover:shadow-xl relative min-h-[400px]"
-                    >
-                      <div className="h-full flex flex-col">
-                        <Link href={`/blog/${post.slug}`}>
-                          {post?.image && (
-                            <Image
-                              src={post?.image}
-                              width="400"
-                              height="225"
-                              alt={post?.title || ''}
-                              className="rounded-t aspect-[16/9] object-cover w-full"
-                            />
+            {/* Content area */}
+            <div className="flex flex-col gap-6">
+              <ul className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+                {categoryPosts.map(post => (
+                  <li
+                    key={post.slug}
+                    className="flex flex-col bg-[#0c0338] border rounded-md shadow hover:shadow-xl relative min-h-[400px]"
+                  >
+                    <div className="h-full flex flex-col">
+                      <Link href={`/blog/${post.slug}`}>
+                        {post?.image && (
+                          <Image
+                            src={post?.image}
+                            width="400"
+                            height="225"
+                            alt={post?.title || ''}
+                            className="rounded-t aspect-[16/9] object-cover w-full"
+                          />
+                        )}
+                      </Link>
+                      <div className="p-3 flex flex-col flex-grow">
+                        <div className="flex flex-col">
+                          <span className="text-muted-foreground text-sm">
+                            {formatDateString(post?.date)}
+                          </span>
+                          <span className="mt-1 block text-muted-foreground text-sm">
+                            {post.categories.map((cat, index) => (
+                              <span key={cat.slug}>
+                                <Link
+                                  href={`/category/${cat.slug}`}
+                                  className="hover:underline capitalize text-sm"
+                                >
+                                  {cat.title}
+                                </Link>
+                                {index < post.categories.length - 1 && ', '}
+                              </span>
+                            ))}
+                          </span>
+                        </div>
+
+                        <div className="flex flex-col h-full">
+                          <h4 className="font-semibold py-1">{post?.title}</h4>
+                          {post?.excerpt && (
+                            <p className="text-sm">{post.excerpt}</p>
                           )}
-                        </Link>
-                        <div className="p-3 flex flex-col flex-grow">
-                          <div className="flex flex-col">
-                            <span className="text-muted-foreground text-sm">
-                              {formatDateString(post?.date)}
-                            </span>
-                            <span className="mt-1 block text-muted-foreground text-sm">
-                              {post.categories.map((cat, index) => (
-                                <span key={cat.slug}>
-                                  <Link
-                                    href={`/category/${cat.slug}`}
-                                    className="hover:underline capitalize text-sm"
-                                  >
-                                    {cat.title}
-                                  </Link>
-                                  {index < post.categories.length - 1 && ', '}
-                                </span>
-                              ))}
-                            </span>
-                          </div>
-
-                          <div className="flex flex-col h-full">
-                            <h4 className="font-semibold py-1">
-                              {post?.title}
-                            </h4>
-                            {post?.excerpt && (
-                              <p className="text-sm">{post.excerpt}</p>
-                            )}
-                            <div className="mt-auto pb-2 pt-2">
-                              <Link href={`/blog/${post.slug}`}>
-                                <Button className="bg-primary text-white w-full">
-                                  Read More
-                                </Button>
-                              </Link>
-                            </div>
+                          <div className="mt-auto pb-2 pt-2">
+                            <Link href={`/blog/${post.slug}`}>
+                              <Button className="bg-primary text-white w-full">
+                                Read More
+                              </Button>
+                            </Link>
                           </div>
                         </div>
                       </div>
-                    </li>
-                  ))}
-                </ul>
+                    </div>
+                  </li>
+                ))}
+              </ul>
 
-                {/* Sidebar - shown on mobile only, after posts */}
-                <div className="md:hidden flex flex-col gap-6">
-                  <Sidebar />
-                  <NavSidebar />
-                </div>
+              {/* Sidebar - shown on mobile only, after posts */}
+              <div className="md:hidden flex flex-col gap-6">
+                <Sidebar />
+                <NavSidebar />
               </div>
             </div>
-          </Reveal>
+          </div>
+          {/* </Reveal> */}
         </div>
       </div>
     );
