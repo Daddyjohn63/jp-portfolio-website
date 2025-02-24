@@ -72,7 +72,7 @@ export const AboutSection = () => {
       </div>
 
       {/* key messages */}
-      <div className="flex-1 w-full lg:w-1/2 mt-10 lg:mt-0">
+      <div className="flex-1 w-full lg:w-1/2 mt-20 md:mt-0 lg:mt-0">
         <div className="w-full h-full relative">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
             {aboutMessages.map((message, index) => (

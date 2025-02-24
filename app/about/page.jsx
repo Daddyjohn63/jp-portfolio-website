@@ -23,7 +23,7 @@ const AboutPage = () => {
       <main>
         <div className="container">
           {/* About Intro Section */}
-          <section className="section-spacing-sm">
+          <section className="">
             <AboutIntro />
           </section>
 

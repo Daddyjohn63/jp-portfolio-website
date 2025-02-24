@@ -23,7 +23,7 @@ const AboutIntro = () => {
         {/* ABOUT CONTENT */}
         <div className="w-full lg:pr-8 md:order-2 order-1">
           <div className="w-full">
-            <h1 className="mt-10 font-semibold tracking-tight">
+            <h1 className="mt-5 md:mt-10 font-semibold tracking-tight">
               Innovative Web Developer, Problem-Solver, Business thinker...
             </h1>
             <p className="mt-6 leading-8">
