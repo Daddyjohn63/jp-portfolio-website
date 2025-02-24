@@ -9,7 +9,7 @@ const FeedBack = () => {
       <div className="container">
         <div className="grid xl:grid-cols-4 grid-cols-3 gap-6">
           <div className="col-span-3 lg:col-span-1">
-            <span className="text-sm font-medium py-1  rounded-full text-primary bg-primary/10">
+            <span className="text-sm font-medium py-1 px-3  rounded-full text-white/80 bg-primary/10">
               Feedback
             </span>
             <h1 className="text-3xl/tight font-medium mt-3 mb-4">

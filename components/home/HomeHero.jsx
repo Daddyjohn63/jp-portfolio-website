@@ -57,9 +57,13 @@ const HomeHero = () => {
             <div className="flex-1 w-full lg:w-1/2">
               <div className="w-full">
                 <div className="mt-4 md:mt-0">
-                  <Link href="#" className="inline-flex space-x-6">
-                    <p className="flex items-center gap-1 rounded-full bg-muted-foreground/10 px-3 py-1 text-sm font-semibold leading-6 ring-1 ring-inset">
-                      5 <Star className="size-3 fill-yellow-600" /> Rated on
+                  <Link
+                    href="https://g.co/kgs/mSSCttg"
+                    target="_blank"
+                    className="inline-flex space-x-6"
+                  >
+                    <p className="flex items-center gap-1 text-sm font-medium py-1 px-3  rounded-full text-white/80 hover:text-primary bg-primary/10 ">
+                      5 <Star className="size-3 fill-yellow-400" /> Rated on
                       Google
                     </p>
                   </Link>
