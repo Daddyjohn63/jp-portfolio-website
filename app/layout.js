@@ -6,6 +6,7 @@ import { Toaster } from 'sonner';
 import { Footer } from '@/components/common/Footer';
 import Script from 'next/script';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import NextTopLoader from 'nextjs-toploader';
 import CookieBotTrigger from '@/components/common/CookieBotTrigger';
 
 export const metadata = {
@@ -63,6 +64,7 @@ export default function RootLayout({ children }) {
         {/* <CookieBotLoader /> */}
       </head>
       <body className={`dark ${poppins.className} overflow-x-hidden`}>
+        <NextTopLoader color="#ffe4c4" />
         <Header />
         {children}
         <Toaster position="bottom-center" />
