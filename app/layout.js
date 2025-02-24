@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
         {/* <Script
           id="Cookiebot"
           src="https://consent.cookiebot.com/uc.js"
-          data-cbid="008bf995-0224-4cfa-b2ff-4961832b2d91"
+          data-cbid={process.env.NEXT_PUBLIC_COOKIEBOT_ID}
           data-blockingmode="auto"
           type="text/javascript"
           strategy="beforeInteractive"
@@ -67,7 +67,7 @@ export default function RootLayout({ children }) {
         {children}
         <Toaster position="bottom-center" />
         <Footer />
-        <GoogleAnalytics gaId="G-1FLT2HXTTX" />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
       </body>
     </html>
   );
