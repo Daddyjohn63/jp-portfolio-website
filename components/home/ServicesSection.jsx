@@ -59,60 +59,60 @@ const data = [
 const ServicesSection = () => {
   return (
     <>
-      <Reveal from={200}>
-        <div className="flex flex-col items-center justify-center gap-4">
-          <h2 className=" font-bold  text-center px-4">Services</h2>
-          <p className="text-muted-foreground text-xl text-center px-4 md:w-1/3">
-            I offer a range of services to help you grow your business.
-          </p>
-        </div>
-        <div className="relative">
-          <div className="container px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
-              {data.map(item => (
-                <Card
-                  className="bg-customShades-shade2 flex flex-col h-full hover:shadow-lg transition-shadow duration-300"
-                  key={item.id}
-                >
-                  <CardHeader className="p-6">
-                    <div className="flex justify-between items-center mb-3">
-                      <span className="text-sm text-muted-foreground">
-                        {item.serviceNumber}
-                      </span>
-                    </div>
+      {/* <Reveal from={200}> */}
+      <div className="flex flex-col items-center justify-center gap-4">
+        <h2 className=" font-bold  text-center px-4">Services</h2>
+        <p className="text-muted-foreground text-xl text-center px-4 md:w-1/3">
+          I offer a range of services to help you grow your business.
+        </p>
+      </div>
+      <div className="relative">
+        <div className="container px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
+            {data.map(item => (
+              <Card
+                className="bg-customShades-shade2 flex flex-col h-full hover:shadow-lg transition-shadow duration-300"
+                key={item.id}
+              >
+                <CardHeader className="p-6">
+                  <div className="flex justify-between items-center mb-3">
+                    <span className="text-sm text-muted-foreground">
+                      {item.serviceNumber}
+                    </span>
+                  </div>
 
-                    <CardTitle className=" tracking-wide text-lg sm:text-xl">
-                      <Link href={item.href}>
-                        <h3 className="hover:text-accent transition-colors duration-300">
-                          {item.serviceName}
-                        </h3>
-                      </Link>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-grow p-6 pt-2">
-                    <CardDescription className="text-secondary-foreground text-sm sm:text-base">
-                      <p>{item.description}</p>
-                    </CardDescription>
-                  </CardContent>
-                  <CardFooter className="p-6 pt-2">
-                    <Link
-                      href={item.href}
-                      className="group flex items-center hover:translate-x-2 transition-transform duration-300"
-                    >
-                      {item.icon && (
-                        <item.icon className="w-8 h-8 text-primary-foreground bg-muted-foreground group-hover:bg-accent rounded-full p-2 transition duration-300 group-hover:rotate-45" />
-                      )}
-                      <p className="pl-4 font-medium transition-colors duration-300 group-hover:text-accent">
-                        {item.cta}
-                      </p>
+                  <CardTitle className=" tracking-wide text-lg sm:text-xl">
+                    <Link href={item.href}>
+                      <h3 className="hover:text-accent transition-colors duration-300">
+                        {item.serviceName}
+                      </h3>
                     </Link>
-                  </CardFooter>
-                </Card>
-              ))}
-            </div>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow p-6 pt-2">
+                  <CardDescription className="text-secondary-foreground text-sm sm:text-base">
+                    <p>{item.description}</p>
+                  </CardDescription>
+                </CardContent>
+                <CardFooter className="p-6 pt-2">
+                  <Link
+                    href={item.href}
+                    className="group flex items-center hover:translate-x-2 transition-transform duration-300"
+                  >
+                    {item.icon && (
+                      <item.icon className="w-8 h-8 text-primary-foreground bg-muted-foreground group-hover:bg-accent rounded-full p-2 transition duration-300 group-hover:rotate-45" />
+                    )}
+                    <p className="pl-4 font-medium transition-colors duration-300 group-hover:text-accent">
+                      {item.cta}
+                    </p>
+                  </Link>
+                </CardFooter>
+              </Card>
+            ))}
           </div>
         </div>
-      </Reveal>
+      </div>
+      {/* </Reveal> */}
     </>
   );
 };

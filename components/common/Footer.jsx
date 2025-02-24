@@ -40,14 +40,7 @@ export const Footer = () => {
                   About
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-sm text-muted-foreground hover:text-customBiege transition-colors"
-                >
-                  Services
-                </Link>
-              </li>
+
               <li>
                 <Link
                   href="/portfolio"
@@ -64,6 +57,14 @@ export const Footer = () => {
                   Blog
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-sm text-muted-foreground hover:text-customBiege transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -76,7 +77,7 @@ export const Footer = () => {
                   href="/services/"
                   className="text-sm text-muted-foreground hover:text-customBiege transition-colors"
                 >
-                  Web Design
+                  Website Design and Development
                 </Link>
               </li>
               <li>
@@ -84,15 +85,7 @@ export const Footer = () => {
                   href="/services/"
                   className="text-sm text-muted-foreground hover:text-customBiege transition-colors"
                 >
-                  Web Development
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/"
-                  className="text-sm text-muted-foreground hover:text-customBiege transition-colors"
-                >
-                  E-Commerce Solutions
+                  Full-Stack Application Development
                 </Link>
               </li>
               <li>
