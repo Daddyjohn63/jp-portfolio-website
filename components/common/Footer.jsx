@@ -132,9 +132,10 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-customShades-shade8 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-muted-foreground">
-              © {currentYear} Web and Prosper. All rights reserved.
-            </p>
+            <div className="text-sm text-muted-foreground">
+              <p>© {currentYear} Web and Prosper. All rights reserved.</p>
+              <p className="mt-1">* Hero image created with AI technology</p>
+            </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link
                 href="/privacy-policy"
