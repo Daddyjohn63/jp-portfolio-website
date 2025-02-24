@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={poppins.variable} suppressHydrationWarning>
       <head>
         {/* <CookieBotScript /> */}
-        <Script
+        {/* <Script
           id="Cookiebot"
           src="https://consent.cookiebot.com/uc.js"
           data-cbid="008bf995-0224-4cfa-b2ff-4961832b2d91"
@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
           type="text/javascript"
           strategy="beforeInteractive"
         />
-        <CookieBotTrigger />
+        <CookieBotTrigger /> */}
         {/* <CookieBotLoader /> */}
       </head>
       <body className={`dark ${poppins.className} overflow-x-hidden`}>
