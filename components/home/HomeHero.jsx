@@ -121,13 +121,20 @@ const HomeHero = () => {
                     ease: 'easeOut'
                   }}
                 />
-                <picture>
-                  {/* Mobile image */}
-                  <source
-                    media="(max-width: 768px)"
-                    srcSet="/images/chameleon-mob-portrait.jpg"
+                {/* Mobile Image */}
+                <div className="md:hidden">
+                  <Image
+                    src="/images/chameleon-mob-portrait.jpg"
+                    alt="Chameleon sitting at a desk coding"
+                    width={534}
+                    height={667}
+                    className="relative w-full h-auto rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+                    priority
+                    sizes="100vw"
                   />
-                  {/* Desktop image */}
+                </div>
+                {/* Desktop Image */}
+                <div className="hidden md:block">
                   <Image
                     src="/images/chameleon-v1-r-1-5.jpg"
                     alt="Chameleon sitting at a desk coding"
@@ -135,8 +142,9 @@ const HomeHero = () => {
                     height={1000}
                     className="relative w-full h-auto rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
                     priority
+                    sizes="50vw"
                   />
-                </picture>
+                </div>
               </div>
             </div>
           </div>
