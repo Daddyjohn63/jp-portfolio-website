@@ -44,6 +44,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={poppins.variable} suppressHydrationWarning>
       <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/chameleon-mob-portrait.jpg"
+          media="(max-width: 768px)"
+        />
         {/* <CookieBotScript /> */}
         {/* <Script
           id="Cookiebot"
