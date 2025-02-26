@@ -7,7 +7,7 @@ import { Footer } from '@/components/common/Footer';
 import Script from 'next/script';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import NextTopLoader from 'nextjs-toploader';
-import CookieBotTrigger from '@/components/common/CookieBotTrigger';
+//import CookieBotTrigger from '@/components/common/CookieBotTrigger';
 
 export const metadata = {
   title: {
@@ -52,15 +52,15 @@ export default function RootLayout({ children }) {
           media="(max-width: 768px)"
         />
         {/* <CookieBotScript /> */}
-        {/* <Script
+        <Script
           id="Cookiebot"
           src="https://consent.cookiebot.com/uc.js"
           data-cbid={process.env.NEXT_PUBLIC_COOKIEBOT_ID}
           data-blockingmode="auto"
           type="text/javascript"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
-        <CookieBotTrigger /> */}
+
         {/* <CookieBotLoader /> */}
       </head>
       <body className={`dark ${poppins.className} overflow-x-hidden`}>
