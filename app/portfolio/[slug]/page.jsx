@@ -100,7 +100,7 @@ const ProjectSinglePage = async ({ slug }) => {
                 </span>
               </Link>
             ) : (
-              <span className="px-4 py-2 bg-gray-300 text-gray-500 rounded-full cursor-not-allowed flex gap-2 items-center">
+              <span className="px-4 py-2  rounded-full cursor-not-allowed bg-[#ffe4c4] text-black flex gap-2 items-center">
                 <MoveLeft />
                 Previous Project
               </span>
@@ -116,7 +116,7 @@ const ProjectSinglePage = async ({ slug }) => {
                 </span>
               </Link>
             ) : (
-              <span className="px-4 py-2 bg-primary hover:bg-primary/80 rounded-full cursor-not-allowed flex gap-2 items-center">
+              <span className="px-4 py-2 bg-[#ffe4c4] text-black hover:bg-primary/80 rounded-full cursor-not-allowed flex gap-2 items-center">
                 Next Project
                 <MoveRight />
               </span>

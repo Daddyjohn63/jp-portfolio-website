@@ -105,7 +105,7 @@ const BlogPost = async ({ slug }) => {
             </span>
           </Link>
         ) : (
-          <span className="px-4 py-2 bg-primary text-white rounded-full cursor-not-allowed flex gap-2 items-center">
+          <span className="px-4 py-2 bg-[#ffe4c4] text-black rounded-full cursor-not-allowed flex gap-2 items-center">
             <MoveLeft />
             Previous Post
           </span>
@@ -121,7 +121,7 @@ const BlogPost = async ({ slug }) => {
             </span>
           </Link>
         ) : (
-          <span className="px-4 py-2 bg-primary text-white rounded-full cursor-not-allowed flex gap-2 items-center">
+          <span className="px-4 py-2 bg-[#ffe4c4] text-black rounded-full cursor-not-allowed flex gap-2 items-center">
             Next Post
             <MoveRight />
           </span>
