@@ -1,4 +1,8 @@
-import { getCategoryPosts, getCategoryTitleBySlug } from '@/lib/blog';
+import {
+  getCategoryPosts,
+  getCategorySlugs,
+  getCategoryTitleBySlug
+} from '@/lib/blog';
 import Link from 'next/link';
 import Image from 'next/image';
 import { formatDateString } from '@/lib/date';
@@ -13,8 +17,23 @@ import Reveal from '@/components/common/ScrollAnimation';
 import { ScrollToTop } from '@/components/common/ScrollToTop';
 
 export async function generateStaticParams() {
-  const slugs = await getCategorySlugs();
-  return slugs.map(slug => ({ slug }));
+  try {
+    console.log('Fetching category slugs...');
+    const slugs = await getCategorySlugs();
+    console.log('Retrieved slugs:', slugs);
+
+    if (!slugs || slugs.length === 0) {
+      console.warn('No category slugs found, returning default array');
+      // Return at least one slug to prevent build error
+      return [{ slug: 'default' }];
+    }
+
+    return slugs.map(slug => ({ slug }));
+  } catch (error) {
+    console.error('Error in generateStaticParams:', error);
+    // Return a default slug to prevent build failure
+    return [{ slug: 'default' }];
+  }
 }
 
 const CategoryPosts = async ({ slug }) => {
