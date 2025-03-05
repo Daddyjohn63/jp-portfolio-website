@@ -13,13 +13,6 @@ export async function generateStaticParams() {
   return slugs.map(slug => ({ slug }));
 }
 
-// export async function generateMetadata({ params: { slug } }) {
-//   const post = await getBlogPost(slug);
-//   return {
-//     title: post.currentPost?.title
-//   };
-// }
-
 export async function generateMetadata({ params: { slug } }) {
   const post = await getBlogPost(slug);
   const { currentPost } = post;

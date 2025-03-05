@@ -12,6 +12,11 @@ import { InnerHeader } from '@/components/common/InnerHeader';
 import Reveal from '@/components/common/ScrollAnimation';
 import { ScrollToTop } from '@/components/common/ScrollToTop';
 
+export async function generateStaticParams() {
+  const slugs = await getCategorySlugs();
+  return slugs.map(slug => ({ slug }));
+}
+
 const CategoryPosts = async ({ slug }) => {
   try {
     const { data: categoryTitle } = await fetchData(
