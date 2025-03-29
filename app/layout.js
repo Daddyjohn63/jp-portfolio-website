@@ -50,17 +50,6 @@ export default function RootLayout({ children }) {
           href="/images/chameleon-mob-portrait.jpg"
           media="(max-width: 768px)"
         />
-        {/* <CookieBotScript /> */}
-        {/* <Script
-          id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid={process.env.NEXT_PUBLIC_COOKIEBOT_ID}
-          data-blockingmode="auto"
-          type="text/javascript"
-          strategy="afterInteractive"
-        /> */}
-
-        {/* <CookieBotLoader /> */}
       </head>
       <body className={`dark ${poppins.className} overflow-x-hidden`}>
         <NextTopLoader color="#ffe4c4" />
