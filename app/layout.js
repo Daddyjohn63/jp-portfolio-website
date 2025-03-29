@@ -52,14 +52,14 @@ export default function RootLayout({ children }) {
           media="(max-width: 768px)"
         />
         {/* <CookieBotScript /> */}
-        <Script
+        {/* <Script
           id="Cookiebot"
           src="https://consent.cookiebot.com/uc.js"
           data-cbid={process.env.NEXT_PUBLIC_COOKIEBOT_ID}
           data-blockingmode="auto"
           type="text/javascript"
           strategy="afterInteractive"
-        />
+        /> */}
 
         {/* <CookieBotLoader /> */}
       </head>
