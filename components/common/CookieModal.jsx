@@ -9,6 +9,8 @@ import {
   DialogFooter
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
+import { Cookie } from 'lucide-react';
+import Link from 'next/link';
 
 export const CookieModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,25 +56,39 @@ export const CookieModal = () => {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] flex flex-col gap-8">
         <DialogHeader>
-          <DialogTitle>Cookie Consent</DialogTitle>
-          <DialogDescription>
-            This website uses cookies to enhance your experience. By continuing
-            to visit this site you agree to our use of cookies.
+          <DialogTitle className="flex items-center gap-2">
+            <Cookie className="w-6 h-6" /> <h4>Cookie Consent</h4>
+          </DialogTitle>
+          <DialogDescription className="text-sm leading-6">
+            <div className="flex flex-col gap-2">
+              <p className="text-sm leading-6">
+                This website uses cookies so I can see which of my pages are the
+                most popular. You can always change your mind later.
+              </p>
+              <Link
+                className="text-sm leading-6 underline hover:text-gray-600"
+                href="/privacy-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy Policy
+              </Link>
+            </div>
           </DialogDescription>
         </DialogHeader>
-        <DialogFooter className="flex gap-2">
+        <DialogFooter className="flex gap-2 w-full">
           <Button
             variant="outline"
             onClick={handleDecline}
-            className="bg-[#2B373B] text-white hover:bg-[#2B373B]/90"
+            className="bg-[#2B373B] text-white hover:bg-[#2B373B]/90 flex-1"
           >
             Decline
           </Button>
           <Button
             onClick={handleAccept}
-            className="bg-[#ffe4c4] text-black hover:bg-[#ffe4c4]/90"
+            className="bg-[#ffe4c4] text-black hover:bg-[#ffe4c4]/90 flex-1"
           >
             Accept
           </Button>
