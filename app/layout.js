@@ -5,7 +5,6 @@ import Header from '@/components/layout/Header';
 import { Toaster } from 'sonner';
 import { Footer } from '@/components/common/Footer';
 import Script from 'next/script';
-import { GoogleAnalytics } from '@next/third-parties/google';
 import NextTopLoader from 'nextjs-toploader';
 //import CookieBotTrigger from '@/components/common/CookieBotTrigger';
 
@@ -69,7 +68,20 @@ export default function RootLayout({ children }) {
         {children}
         <Toaster position="bottom-center" />
         <Footer />
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+
+        {/* Google Analytics - Loaded after everything else */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+          `}
+        </Script>
       </body>
     </html>
   );
