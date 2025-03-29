@@ -6,7 +6,7 @@ import { Toaster } from 'sonner';
 import { Footer } from '@/components/common/Footer';
 import Script from 'next/script';
 import NextTopLoader from 'nextjs-toploader';
-//import CookieBotTrigger from '@/components/common/CookieBotTrigger';
+import CookieConsentBanner from '@/components/common/CookieConsent';
 
 export const metadata = {
   title: {
@@ -50,17 +50,6 @@ export default function RootLayout({ children }) {
           href="/images/chameleon-mob-portrait.jpg"
           media="(max-width: 768px)"
         />
-        {/* <CookieBotScript /> */}
-        {/* <Script
-          id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid={process.env.NEXT_PUBLIC_COOKIEBOT_ID}
-          data-blockingmode="auto"
-          type="text/javascript"
-          strategy="afterInteractive"
-        /> */}
-
-        {/* <CookieBotLoader /> */}
       </head>
       <body className={`dark ${poppins.className} overflow-x-hidden`}>
         <NextTopLoader color="#ffe4c4" />
@@ -68,20 +57,7 @@ export default function RootLayout({ children }) {
         {children}
         <Toaster position="bottom-center" />
         <Footer />
-
-        {/* Google Analytics - Loaded after everything else */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
-          `}
-        </Script>
+        <CookieConsentBanner />
       </body>
     </html>
   );
