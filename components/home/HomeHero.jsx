@@ -1,7 +1,5 @@
-'use client';
 import { MoveRight, Star } from 'lucide-react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { CtaButton } from '@/components/common/CtaButton';
 
@@ -117,14 +115,10 @@ const HomeHero = () => {
               <div className="w-full h-full relative">
                 {/* Motion effect - desktop only */}
                 <div className="hidden md:block">
-                  <motion.div
-                    className="absolute inset-0 rounded-lg transform translate-x-8 translate-y-8 bg-transparent bg-[radial-gradient(#b16cf1bc_1px,transparent_1px)] [background-size:8px_8px]"
-                    initial={{ opacity: 0, scale: 0.9, x: 0, y: 100 }}
-                    animate={{ opacity: 1, scale: 1, x: 32, y: 32 }}
-                    transition={{
-                      duration: 0.8,
-                      delay: 0.5,
-                      ease: 'easeOut'
+                  <div
+                    className="absolute inset-0 rounded-lg transform translate-x-8 translate-y-8 bg-transparent bg-[radial-gradient(#b16cf1bc_1px,transparent_1px)] [background-size:8px_8px] animate-fade-in"
+                    style={{
+                      animation: 'fadeIn 0.8s ease-out 0.5s forwards'
                     }}
                   />
                 </div>
@@ -134,11 +128,11 @@ const HomeHero = () => {
                   <Image
                     src="/images/chameleon-mob-portrait.jpg"
                     alt="Chameleon sitting at a desk coding"
-                    width={534}
-                    height={667}
+                    width={400}
+                    height={500}
                     className="relative w-full h-auto rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
                     priority
-                    quality={75}
+                    quality={65}
                     loading="eager"
                     sizes="100vw"
                     placeholder="blur"
@@ -151,11 +145,11 @@ const HomeHero = () => {
                   <Image
                     src="/images/chameleon-v1-r-1-5.jpg"
                     alt="Chameleon sitting at a desk coding"
-                    width={1500}
-                    height={1000}
+                    width={1200}
+                    height={800}
                     className="relative w-full h-auto rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
                     priority
-                    quality={75}
+                    quality={65}
                     sizes="50vw"
                     placeholder="blur"
                     blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkMjU1LS0yMi4qQEBALkE2Qjc4QD4+R0hIR0Q/TUtPSEtPR0dPR0f/2wBDAR"
