@@ -32,19 +32,59 @@ export const CookieModal = ({ isOpen, onOpenChange }) => {
   }, []);
 
   const loadGoogleAnalytics = () => {
-    // Create and load the GA script
-    const script = document.createElement('script');
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
-    script.async = true;
-    document.head.appendChild(script);
-
-    // Initialize GA
+    // Initialize data layer
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       window.dataLayer.push(arguments);
     }
-    gtag('js', new Date());
-    gtag('config', process.env.NEXT_PUBLIC_GA_ID);
+
+    // Create and load the GA script
+    const script = document.createElement('script');
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
+    script.async = true;
+
+    // Wait for script to load before initializing GA
+    script.onload = () => {
+      gtag('js', new Date());
+      gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
+        send_page_view: true,
+        cookie_flags: 'SameSite=None;Secure'
+      });
+    };
+
+    document.head.appendChild(script);
+  };
+
+  const clearGoogleAnalytics = () => {
+    // Disable GA
+    window['ga-disable-' + process.env.NEXT_PUBLIC_GA_ID] = true;
+
+    // Clear GA cookies
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i];
+      const eqPos = cookie.indexOf('=');
+      const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+      if (
+        name.includes('_ga') ||
+        name.includes('_gid') ||
+        name.includes('_gat')
+      ) {
+        document.cookie =
+          name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
+      }
+    }
+
+    // Clear GA data layer
+    window.dataLayer = [];
+
+    // Remove GA script if it exists
+    const gaScript = document.querySelector(
+      'script[src*="googletagmanager.com/gtag/js"]'
+    );
+    if (gaScript) {
+      gaScript.remove();
+    }
   };
 
   const handleAccept = () => {
@@ -55,7 +95,21 @@ export const CookieModal = ({ isOpen, onOpenChange }) => {
       'website_cookie_consent_expiry',
       oneYearFromNow.toString()
     );
+
+    // Remove the disable flag before loading GA
+    window['ga-disable-' + process.env.NEXT_PUBLIC_GA_ID] = false;
+
+    // Clear any existing GA script
+    const existingScript = document.querySelector(
+      'script[src*="googletagmanager.com/gtag/js"]'
+    );
+    if (existingScript) {
+      existingScript.remove();
+    }
+
+    // Load GA fresh
     loadGoogleAnalytics();
+
     setInternalIsOpen(false);
     onOpenChange?.(false);
   };
@@ -64,8 +118,10 @@ export const CookieModal = ({ isOpen, onOpenChange }) => {
     // Remove stored consent and expiry
     localStorage.removeItem('website_cookie_consent');
     localStorage.removeItem('website_cookie_consent_expiry');
-    // Disable Google Analytics
-    window['ga-disable-' + process.env.NEXT_PUBLIC_GA_ID] = true;
+
+    // Clear all Google Analytics data and cookies
+    clearGoogleAnalytics();
+
     setInternalIsOpen(false);
     onOpenChange?.(false);
   };
