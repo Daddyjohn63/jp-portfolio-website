@@ -95,7 +95,6 @@ export default async function ContactPage() {
           </div>
         </div>
       </main>
-      <CookieModal />
     </div>
   );
 }

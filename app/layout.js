@@ -8,6 +8,7 @@ import Script from 'next/script';
 import NextTopLoader from 'nextjs-toploader';
 import CookieConsentBanner from '@/components/common/CookieConsent';
 import { CookieModal } from '@/components/common/CookieModal';
+import { CookieButton } from '@/components/common/CookieButton';
 
 export const metadata = {
   title: {
@@ -57,6 +58,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Toaster position="bottom-center" />
+        <CookieButton />
         <Footer />
         <CookieModal />
       </body>

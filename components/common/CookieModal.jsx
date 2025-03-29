@@ -12,14 +12,20 @@ import { Button } from '@/components/ui/button';
 import { Cookie } from 'lucide-react';
 import Link from 'next/link';
 
-export const CookieModal = () => {
-  const [isOpen, setIsOpen] = useState(false);
+export const CookieModal = ({ isOpen, onOpenChange }) => {
+  const [internalIsOpen, setInternalIsOpen] = useState(false);
 
   useEffect(() => {
     // Check if user has already made a choice
     const consent = localStorage.getItem('website_cookie_consent');
-    if (!consent) {
-      setIsOpen(true);
+    const consentExpiry = localStorage.getItem('website_cookie_consent_expiry');
+
+    if (
+      !consent ||
+      !consentExpiry ||
+      new Date().getTime() > parseInt(consentExpiry)
+    ) {
+      setInternalIsOpen(true);
     } else if (consent === 'true') {
       loadGoogleAnalytics();
     }
@@ -42,20 +48,37 @@ export const CookieModal = () => {
   };
 
   const handleAccept = () => {
+    // Set consent with 1 year expiration
+    const oneYearFromNow = new Date().getTime() + 365 * 24 * 60 * 60 * 1000;
     localStorage.setItem('website_cookie_consent', 'true');
+    localStorage.setItem(
+      'website_cookie_consent_expiry',
+      oneYearFromNow.toString()
+    );
     loadGoogleAnalytics();
-    setIsOpen(false);
+    setInternalIsOpen(false);
+    onOpenChange?.(false);
   };
 
   const handleDecline = () => {
-    localStorage.setItem('website_cookie_consent', 'false');
+    // Remove stored consent and expiry
+    localStorage.removeItem('website_cookie_consent');
+    localStorage.removeItem('website_cookie_consent_expiry');
     // Disable Google Analytics
     window['ga-disable-' + process.env.NEXT_PUBLIC_GA_ID] = true;
-    setIsOpen(false);
+    setInternalIsOpen(false);
+    onOpenChange?.(false);
+  };
+
+  // Use controlled state if provided, otherwise use internal state
+  const isModalOpen = isOpen ?? internalIsOpen;
+  const handleOpenChange = open => {
+    setInternalIsOpen(open);
+    onOpenChange?.(open);
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+    <Dialog open={isModalOpen} onOpenChange={handleOpenChange}>
       <DialogContent className="sm:max-w-[425px] flex flex-col gap-8">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
