@@ -31,6 +31,14 @@ const nextConfig = {
         pathname: '/uploads/**'
       }
     ]
+  },
+  webpack: (config, { isServer }) => {
+    // Enable bundle analyzer in development
+    if (!isServer && process.env.NODE_ENV === 'development') {
+      const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+      config.plugins.push(new BundleAnalyzerPlugin());
+    }
+    return config;
   }
 };
 

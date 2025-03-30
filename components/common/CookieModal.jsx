@@ -32,6 +32,12 @@ export const CookieModal = ({ isOpen, onOpenChange }) => {
   }, []);
 
   const loadGoogleAnalytics = () => {
+    // Check if GA ID is defined
+    if (!process.env.NEXT_PUBLIC_GA_ID) {
+      console.warn('Google Analytics ID is not defined');
+      return;
+    }
+
     // Initialize data layer
     window.dataLayer = window.dataLayer || [];
     function gtag() {
