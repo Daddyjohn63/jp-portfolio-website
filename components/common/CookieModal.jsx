@@ -48,7 +48,8 @@ export const CookieModal = ({ isOpen, onOpenChange }) => {
       gtag('js', new Date());
       gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
         send_page_view: true,
-        cookie_flags: 'SameSite=None;Secure'
+        cookie_flags: 'SameSite=Lax;Secure;domain=' + window.location.hostname,
+        cookie_domain: window.location.hostname
       });
     };
 
@@ -64,7 +65,7 @@ export const CookieModal = ({ isOpen, onOpenChange }) => {
     for (let i = 0; i < cookies.length; i++) {
       const cookie = cookies[i];
       const eqPos = cookie.indexOf('=');
-      const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+      const name = eqPos > -1 ? cookie.substring(0, eqPos) : cookie;
       if (
         name.includes('_ga') ||
         name.includes('_gid') ||
@@ -129,8 +130,13 @@ export const CookieModal = ({ isOpen, onOpenChange }) => {
   // Use controlled state if provided, otherwise use internal state
   const isModalOpen = isOpen ?? internalIsOpen;
   const handleOpenChange = open => {
-    setInternalIsOpen(open);
-    onOpenChange?.(open);
+    // If the modal is being closed and no choice has been made yet
+    if (!open && !localStorage.getItem('website_cookie_consent')) {
+      handleAccept();
+    } else {
+      setInternalIsOpen(open);
+      onOpenChange?.(open);
+    }
   };
 
   return (
@@ -143,8 +149,9 @@ export const CookieModal = ({ isOpen, onOpenChange }) => {
           <DialogDescription className="text-sm leading-6">
             <div className="flex flex-col gap-2">
               <p className="text-sm leading-6">
-                This website uses cookies so I can see which of my pages are the
-                most popular. You can always change your mind later.
+                This website uses analytic cookies so I can see which of my
+                pages are the most popular. You can always change your mind
+                later.
               </p>
               <Link
                 className="text-sm leading-6 underline hover:text-gray-600"
