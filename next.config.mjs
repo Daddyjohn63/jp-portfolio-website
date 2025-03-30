@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+import withBundleAnalyzer from '@next/bundle-analyzer';
+
 const nextConfig = {
   images: {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -31,15 +33,9 @@ const nextConfig = {
         pathname: '/uploads/**'
       }
     ]
-  },
-  webpack: (config, { isServer }) => {
-    // Enable bundle analyzer in development
-    if (!isServer && process.env.NODE_ENV === 'development') {
-      const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-      config.plugins.push(new BundleAnalyzerPlugin());
-    }
-    return config;
   }
 };
 
-export default nextConfig;
+export default withBundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true'
+})(nextConfig);

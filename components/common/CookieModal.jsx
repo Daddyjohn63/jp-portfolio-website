@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+import Script from 'next/script';
 import {
   Dialog,
   DialogContent,
@@ -14,6 +15,7 @@ import Link from 'next/link';
 
 export const CookieModal = ({ isOpen, onOpenChange }) => {
   const [internalIsOpen, setInternalIsOpen] = useState(false);
+  const [shouldLoadGA, setShouldLoadGA] = useState(false);
 
   useEffect(() => {
     // Check if user has already made a choice
@@ -27,40 +29,9 @@ export const CookieModal = ({ isOpen, onOpenChange }) => {
     ) {
       setInternalIsOpen(true);
     } else if (consent === 'true') {
-      loadGoogleAnalytics();
+      setShouldLoadGA(true);
     }
   }, []);
-
-  const loadGoogleAnalytics = () => {
-    // Check if GA ID is defined
-    if (!process.env.NEXT_PUBLIC_GA_ID) {
-      console.warn('Google Analytics ID is not defined');
-      return;
-    }
-
-    // Initialize data layer
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      window.dataLayer.push(arguments);
-    }
-
-    // Create and load the GA script
-    const script = document.createElement('script');
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
-    script.async = true;
-
-    // Wait for script to load before initializing GA
-    script.onload = () => {
-      gtag('js', new Date());
-      gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
-        send_page_view: true,
-        cookie_flags: 'SameSite=Lax;Secure;domain=' + window.location.hostname,
-        cookie_domain: window.location.hostname
-      });
-    };
-
-    document.head.appendChild(script);
-  };
 
   const clearGoogleAnalytics = () => {
     // Disable GA
@@ -71,7 +42,8 @@ export const CookieModal = ({ isOpen, onOpenChange }) => {
     for (let i = 0; i < cookies.length; i++) {
       const cookie = cookies[i];
       const eqPos = cookie.indexOf('=');
-      const name = eqPos > -1 ? cookie.substring(0, eqPos) : cookie;
+      const name =
+        eqPos > -1 ? cookie.substring(0, eqPos).trim() : cookie.trim();
       if (
         name.includes('_ga') ||
         name.includes('_gid') ||
@@ -84,14 +56,6 @@ export const CookieModal = ({ isOpen, onOpenChange }) => {
 
     // Clear GA data layer
     window.dataLayer = [];
-
-    // Remove GA script if it exists
-    const gaScript = document.querySelector(
-      'script[src*="googletagmanager.com/gtag/js"]'
-    );
-    if (gaScript) {
-      gaScript.remove();
-    }
   };
 
   const handleAccept = () => {
@@ -103,19 +67,9 @@ export const CookieModal = ({ isOpen, onOpenChange }) => {
       oneYearFromNow.toString()
     );
 
-    // Remove the disable flag before loading GA
+    // Remove the disable flag
     window['ga-disable-' + process.env.NEXT_PUBLIC_GA_ID] = false;
-
-    // Clear any existing GA script
-    const existingScript = document.querySelector(
-      'script[src*="googletagmanager.com/gtag/js"]'
-    );
-    if (existingScript) {
-      existingScript.remove();
-    }
-
-    // Load GA fresh
-    loadGoogleAnalytics();
+    setShouldLoadGA(true);
 
     setInternalIsOpen(false);
     onOpenChange?.(false);
@@ -128,6 +82,7 @@ export const CookieModal = ({ isOpen, onOpenChange }) => {
 
     // Clear all Google Analytics data and cookies
     clearGoogleAnalytics();
+    setShouldLoadGA(false);
 
     setInternalIsOpen(false);
     onOpenChange?.(false);
@@ -146,46 +101,66 @@ export const CookieModal = ({ isOpen, onOpenChange }) => {
   };
 
   return (
-    <Dialog open={isModalOpen} onOpenChange={handleOpenChange}>
-      <DialogContent className="sm:max-w-[425px] flex flex-col gap-8">
-        <DialogHeader>
-          <DialogTitle className="flex items-center gap-2">
-            <Cookie className="w-6 h-6" /> <h4>Cookie Consent</h4>
-          </DialogTitle>
-          <DialogDescription className="text-sm leading-6">
-            <div className="flex flex-col gap-2">
-              <p className="text-sm leading-6">
-                This website uses analytic cookies so I can see which of my
-                pages are the most popular. You can always change your mind
-                later.
-              </p>
-              <Link
-                className="text-sm leading-6 underline hover:text-gray-600"
-                href="/privacy-policy"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Privacy Policy
-              </Link>
-            </div>
-          </DialogDescription>
-        </DialogHeader>
-        <DialogFooter className="flex gap-2 w-full">
-          <Button
-            variant="outline"
-            onClick={handleDecline}
-            className="bg-[#2B373B] text-white hover:bg-[#2B373B]/90 flex-1"
-          >
-            Decline
-          </Button>
-          <Button
-            onClick={handleAccept}
-            className="bg-[#ffe4c4] text-black hover:bg-[#ffe4c4]/90 flex-1"
-          >
-            Accept
-          </Button>
-        </DialogFooter>
-      </DialogContent>
-    </Dialog>
+    <>
+      {shouldLoadGA && (
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+          strategy="afterInteractive"
+          onLoad={() => {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              window.dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
+              send_page_view: true,
+              cookie_flags:
+                'SameSite=Lax;Secure;domain=' + window.location.hostname,
+              cookie_domain: window.location.hostname
+            });
+          }}
+        />
+      )}
+      <Dialog open={isModalOpen} onOpenChange={handleOpenChange}>
+        <DialogContent className="sm:max-w-[425px] flex flex-col gap-8">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <Cookie className="w-6 h-6" /> <h4>Cookie Consent</h4>
+            </DialogTitle>
+            <DialogDescription className="text-sm leading-6">
+              <div className="flex flex-col gap-2">
+                <p className="text-sm leading-6">
+                  This website uses cookies so I can see which of my pages are
+                  the most popular. You can always change your mind later.
+                </p>
+                <Link
+                  className="text-sm leading-6 underline hover:text-gray-600"
+                  href="/privacy-policy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Privacy Policy
+                </Link>
+              </div>
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter className="flex gap-2 w-full">
+            <Button
+              variant="outline"
+              onClick={handleDecline}
+              className="bg-[#2B373B] text-white hover:bg-[#2B373B]/90 flex-1"
+            >
+              Decline
+            </Button>
+            <Button
+              onClick={handleAccept}
+              className="bg-[#ffe4c4] text-black hover:bg-[#ffe4c4]/90 flex-1"
+            >
+              Accept
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+    </>
   );
 };

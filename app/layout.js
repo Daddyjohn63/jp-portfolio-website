@@ -2,11 +2,9 @@ import { poppins } from './fonts';
 import '../custom-styles/custom-styles.css';
 import './globals.css';
 import Header from '@/components/layout/Header';
-import { Toaster } from 'sonner';
+// import { Toaster } from 'sonner';
 import { Footer } from '@/components/common/Footer';
-import Script from 'next/script';
-import NextTopLoader from 'nextjs-toploader';
-import CookieConsentBanner from '@/components/common/CookieConsent';
+//import NextTopLoader from 'nextjs-toploader';
 import { CookieModal } from '@/components/common/CookieModal';
 import { CookieButton } from '@/components/common/CookieButton';
 
@@ -54,10 +52,10 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={`dark ${poppins.className} overflow-x-hidden`}>
-        <NextTopLoader color="#ffe4c4" />
+        {/* <NextTopLoader color="#ffe4c4" /> */}
         <Header />
         {children}
-        <Toaster position="bottom-center" />
+        {/* <Toaster position="bottom-center" /> */}
         <CookieButton />
         <Footer />
         <CookieModal />

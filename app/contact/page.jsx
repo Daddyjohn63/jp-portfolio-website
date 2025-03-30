@@ -1,12 +1,9 @@
-import { CookieModal } from '@/components/common/CookieModal';
 import { InnerHeader } from '@/components/common/InnerHeader';
-import ContactForm from '@/components/contact/ContactForm';
 import { Card, CardContent } from '@/components/ui/card';
 import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaPhone,
-  FaRegHandshake,
   FaWhatsapp
 } from 'react-icons/fa';
 
