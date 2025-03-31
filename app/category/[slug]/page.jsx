@@ -15,6 +15,8 @@ import { Sidebar } from '@/components/common/Sidebar';
 import { InnerHeader } from '@/components/common/InnerHeader';
 import Reveal from '@/components/common/ScrollAnimation';
 import { ScrollToTop } from '@/components/common/ScrollToTop';
+import { CtaButton } from '@/components/common/CtaButton';
+import { ArrowLeftIcon } from 'lucide-react';
 
 export async function generateStaticParams() {
   try {
@@ -53,9 +55,18 @@ const CategoryPosts = async ({ slug }) => {
 
     if (!categoryPosts?.length) {
       return (
-        <p className="text-center text-gray-600">
-          No posts found in this category.
-        </p>
+        <div className="container h-screen flex flex-col items-center justify-center gap-6">
+          <p className="text-center text-gray-600">
+            Sorry there are no posts found in this category.
+          </p>
+          <CtaButton
+            label="Back to Blog"
+            text="Back to Blog"
+            href="/blog"
+            className="mt-4"
+            icon={<ArrowLeftIcon />}
+          />
+        </div>
       );
     }
 
