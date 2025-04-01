@@ -204,11 +204,16 @@ module.exports = {
 
             // Customize code blocks
             pre: {
-              backgroundColor: 'hsl(var(--accent))',
-              color: 'hsl(var(--accent-foreground))'
+              backgroundColor: '#f8f8f8',
+              color: 'hsl(var(--accent-foreground))',
+              borderRadius: '0.5rem',
+              padding: '1rem'
             },
             code: {
               color: 'hsl(var(--primary))',
+              backgroundColor: '#f8f8f8',
+              padding: '0.2rem 0.4rem',
+              borderRadius: '0.25rem',
               '&::before': {
                 content: '""'
               },
@@ -244,7 +249,8 @@ module.exports = {
             '--tw-prose-links': 'hsl(var(--link))',
             '--tw-prose-bold': 'hsl(var(--primary))',
             '--tw-prose-quotes': 'hsl(var(--muted-foreground))',
-            '--tw-prose-code': 'hsl(var(--primary))',
+            '--tw-prose-code': 'hsl(var(--prose-code-text))',
+            '--tw-prose-code-bg': 'hsl(var(--prose-code-bg))',
             '--tw-prose-quote-borders': 'hsl(var(--primary))',
             '--tw-prose-pre-bg': 'hsl(var(--accent))'
           }

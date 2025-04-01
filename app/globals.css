@@ -122,6 +122,14 @@ h4 {
     --button-text: 255 40% 98%;
     --link: 267 85% 75%;
     --link-hover: 267 85% 85%;
+
+    /* for prose */
+    --prose-code-bg: 250 25% 16%;
+    --prose-code-text: 0 0% 0%;
+    --prose-code-border: 250 25% 16%;
+    --prose-code-pre-bg: 250 25% 16%;
+    --prose-code-pre-text: 255 40% 98%;
+    --prose-code-pre-border: 250 25% 16%;
   }
 }
 
