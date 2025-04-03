@@ -1,7 +1,7 @@
 import Heading from '@/components/common/Heading';
 import { getBlogPost, getSlugs } from '@/lib/blog';
 import { formatDateString } from '@/lib/date';
-import { MoveLeft, MoveRight } from 'lucide-react';
+import { ChevronRight, MoveLeft, MoveRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Suspense } from 'react';
@@ -67,6 +67,14 @@ const BlogPost = async ({ slug }) => {
 
   return (
     <div className=" max-w-[800px] p-6 mx-auto mt-[1rem] pb-12">
+      {/* breadcrumbs */}
+      <div className="flex items-center gap-2 mb-4">
+        <Link href="/blog" className="text-sm text-gray-300">
+          Blog
+        </Link>
+        <ChevronRight className="text-gray-300 size-4" />
+        <span className="text-sm text-gray-300">{currentPost.title}</span>
+      </div>
       <div>
         <Heading>{currentPost.title}</Heading>
         <h3 className="mb-3">{currentPost.subtitle}</h3>
