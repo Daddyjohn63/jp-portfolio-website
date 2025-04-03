@@ -4,3 +4,4 @@ Disallow: /.env
 Disallow: /.env.local
 Disallow: /api/
 Disallow: /jptestcontact/
+Sitemap: https://webandprosper.com/sitemap.xml
