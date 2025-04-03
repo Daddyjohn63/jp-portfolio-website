@@ -2,7 +2,8 @@ import { getSlugs } from '@/lib/blog';
 import { getProjectSlugs } from '@/lib/projects';
 
 export default async function sitemap() {
-  const baseUrl = 'https://webandprosper.com'; // Replace with your actual domain
+  // Use environment variable for the base URL, fallback to webandprosper.co.uk
+  const baseUrl = process.env.WEBSITE_URL || 'https://webandprosper.co.uk';
 
   // Get all blog post slugs
   const blogSlugs = await getSlugs();
