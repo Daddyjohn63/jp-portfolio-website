@@ -16,6 +16,30 @@ export const metadata = {
   description:
     'Web and Prosper will help you get more clients and grow your business.',
   manifest: '/site.webmanifest',
+  openGraph: {
+    title: 'Web and Prosper',
+    description:
+      'Web and Prosper will help you get more clients and grow your business.',
+    url: 'https://webandprosper.com',
+    siteName: 'Web and Prosper',
+    images: [
+      {
+        url: '/open-graph/open-graph.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Web and Prosper - Helping businesses grow online'
+      }
+    ],
+    locale: 'en_US',
+    type: 'website'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Web and Prosper',
+    description:
+      'Web and Prosper will help you get more clients and grow your business.',
+    images: ['/open-graph/open-graph.jpg']
+  },
   icons: {
     icon: [
       { url: '/favicon.ico' },
