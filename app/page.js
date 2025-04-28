@@ -9,9 +9,9 @@ import { CallToAction } from '@/components/common/CallToAction';
 import { Mail, Phone } from 'lucide-react';
 
 export const metadata = {
-  title: 'Web application development Sussex',
+  title: 'Web Developer Sussex | Websites & Applications that Deliver',
   description:
-    'Professional web application development services that help you grow your business and increase productivity.'
+    'Looking for a reliable web developer in Sussex? I build fast, secure websites and powerful web applications that drive growth. Get a free consultation today!.'
 };
 
 export default async function Home() {
