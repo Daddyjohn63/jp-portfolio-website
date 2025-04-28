@@ -21,7 +21,7 @@ export default async function Home() {
     <article>
       {/* Hero Section */}
       <header>
-        <section className="min-h-[calc(100vh-100px)]">
+        <section className="xl:min-h-[calc(100vh-100px)]">
           <HomeHero />
         </section>
       </header>

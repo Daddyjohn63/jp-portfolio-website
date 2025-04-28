@@ -54,25 +54,21 @@ const HomeHero = () => {
             {/* Text Section and buttons */}
             <div className="flex-1 w-full lg:w-1/2">
               <div className="w-full">
-                {/* <div className="mt-4 md:mt-0">
-                  <Link
-                    href="https://g.co/kgs/mSSCttg"
-                    target="_blank"
-                    className="inline-flex space-x-6"
-                  >
-                    <p className="flex items-center gap-1 text-sm font-medium py-1 px-3  rounded-full text-white/80 hover:text-primary bg-primary/10 ">
-                      5 <Star className="size-3 fill-yellow-400" /> Rated on
-                      Google
-                    </p>
-                  </Link>
-                </div> */}
+                <div className="mt-4 md:mt-0">
+                  <h1 className="inline-flex text-[15px] md:text-lg xl:text-xl  items-center gap-1 font-light py-1 px-3 rounded-full text-white/80 bg-primary/10">
+                    Professional Web Developer based in Sussex
+                  </h1>
+                </div>
 
-                <h1 className="mt-6 md:mt-10 text-3xl md:text-3xl xl:text-6xl !leading-10 md:!leading-[70px] font-bold">
-                  Transforming ideas into powerful{' '}
-                  <span className="text-3xl md:text-3xl xl:text-6xl font-bold bg-gradient-to-r from-purple-600 via-blue-400 to-orange-300 inline-block text-transparent bg-clip-text">
-                    Web Applications
+                <h2 className="mt-6 md:mt-10 text-3xl md:text-3xl xl:text-5xl !leading-10 md:!leading-[70px] font-bold ">
+                  Transforming ideas into{' '}
+                  <span className="md:whitespace-nowrap md:mt-10 text-3xl md:text-3xl xl:text-5xl !leading-10 md:!leading-[70px] font-bold">
+                    powerful{' '}
+                    <span className="text-3xl md:text-3xl xl:text-5xl font-bold bg-gradient-to-r from-purple-600 via-blue-400 to-orange-300 inline-block text-transparent bg-clip-text">
+                      Web Applications
+                    </span>
                   </span>
-                </h1>
+                </h2>
 
                 <p className="mt-6 leading-8">
                   Adapt and stay ahead of the competition with modern, scalable
