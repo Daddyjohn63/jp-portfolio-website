@@ -24,7 +24,12 @@ export const Sidebar = () => {
         <p className="font-bold">Phone:</p>
         <p>07739 875445</p>
         <p className="font-bold">Email:</p>
-        <p>john@webandprosper.co.uk</p>
+        <Link
+          href="mailto:john@webandprosper.co.uk"
+          className="underline-offset-4 font-bold"
+        >
+          john@webandprosper.co.uk
+        </Link>
       </CardContent>
       {/* <CardFooter>
         <Button>Use The Contact Form</Button>
