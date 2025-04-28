@@ -8,6 +8,12 @@ import { WebDesignProcessFlow } from '@/components/home/WebDesignProcessFlow';
 import { CallToAction } from '@/components/common/CallToAction';
 import { Mail, Phone } from 'lucide-react';
 
+export const metadata = {
+  title: 'Home | Web and Prosper',
+  description:
+    'Professional web application development services that help you grow your business and increase productivity.'
+};
+
 export default async function Home() {
   const processFlow = await getWebDesignProcessFlow();
 
