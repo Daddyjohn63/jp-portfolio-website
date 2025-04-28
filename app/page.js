@@ -9,7 +9,7 @@ import { CallToAction } from '@/components/common/CallToAction';
 import { Mail, Phone } from 'lucide-react';
 
 export const metadata = {
-  title: 'Home | Web and Prosper',
+  title: 'Web application development Sussex',
   description:
     'Professional web application development services that help you grow your business and increase productivity.'
 };
