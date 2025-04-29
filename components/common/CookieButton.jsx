@@ -17,6 +17,7 @@ export const CookieButton = () => {
         variant="outline"
         onClick={handleClick}
         className="fixed bottom-4 right-4 md:right-auto md:left-4 z-50 border-none cursor-pointer bg-transparent hover:bg-transparent p-0 group"
+        aria-label="Open cookie preferences"
       >
         <Cookie className="!w-8 !h-8 text-[#ffe4c4] group-hover:text-[#d5c8b8]" />
       </Button>
