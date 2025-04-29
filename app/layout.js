@@ -13,6 +13,12 @@ export const metadata = {
     default: 'Web and Prosper',
     template: '%s | Web and Prosper'
   },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    minimumScale: 1,
+    maximumScale: 5
+  },
   description:
     'Web and Prosper will help you get more clients and grow your business.',
   manifest: '/site.webmanifest',
