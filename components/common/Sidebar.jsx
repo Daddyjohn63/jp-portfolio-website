@@ -22,11 +22,16 @@ export const Sidebar = () => {
 
       <CardContent className="flex flex-col gap-2">
         <p className="font-bold">Phone:</p>
-        <p>07739 875445</p>
+        <Link
+          href="tel:07739875445"
+          className="hover:underline hover:underline-offset-4"
+        >
+          07739 875445
+        </Link>
         <p className="font-bold">Email:</p>
         <Link
           href="mailto:john@webandprosper.co.uk"
-          className="underline-offset-4 font-bold"
+          className="hover:underline hover:underline-offset-4"
         >
           john@webandprosper.co.uk
         </Link>
