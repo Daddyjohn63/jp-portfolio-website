@@ -35,7 +35,7 @@ const PortfolioPosts = async ({ searchParams }) => {
     const { projects, pageCount } = data;
 
     if (!projects?.length) {
-      throw new NotFoundError('No projects found');
+      throw new NotFoundError('Sorry, no projects found');
     }
 
     if (page > pageCount) {
