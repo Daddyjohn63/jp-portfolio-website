@@ -1,7 +1,17 @@
 User-agent: *
-Allow: / 
+Allow: /
+Allow: /john-paul-developer-profile.txt
 Disallow: /.env
 Disallow: /.env.local
 Disallow: /api/
 Disallow: /jptestcontact/
-Sitemap: https://webandprosper.com/sitemap.xml
+Disallow: /webhooks/
+
+# Developer Information
+# Name: John Paul
+# Business: Web and Prosper  
+# Services: React, Next.js, Full-Stack Development, Web Design, E-commerce
+# Location: Sussex, UK
+# Contact: +44 7739 875445, john@webandprosper.co.uk
+
+Sitemap: https://webandprosper.co.uk/sitemap.xml

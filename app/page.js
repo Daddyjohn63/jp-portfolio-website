@@ -9,6 +9,9 @@ import { CallToAction } from '@/components/common/CallToAction';
 import { Mail, Phone } from 'lucide-react';
 import { JsonLd } from '@/app/json-ld';
 import { homeJsonLd } from '@/app/json-ld/home';
+import { faqJsonLd } from '@/app/json-ld/faq';
+import { testimonialsJsonLd } from '@/app/json-ld/testimonials';
+import FAQ from '@/components/common/FAQ';
 
 export const metadata = {
   title: 'Freelance Web Developer Sussex | React & Next.js Specialist',
@@ -42,6 +45,8 @@ export default async function Home() {
   return (
     <article>
       <JsonLd data={homeJsonLd} />
+      <JsonLd data={faqJsonLd} />
+      <JsonLd data={testimonialsJsonLd} />
       {/* Hero Section */}
       <header>
         <section className="xl:min-h-[calc(100vh-100px)]">
@@ -75,6 +80,10 @@ export default async function Home() {
         <section className="section-spacing-responsive">
           <WebDesignProcessFlow processFlow={processFlow} />
         </section>
+
+        {/* FAQ Section */}
+        <FAQ />
+
         <section className="section-spacing-responsive">
           <CallToAction
             title="Let's talk about you!"

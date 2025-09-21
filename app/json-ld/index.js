@@ -6,7 +6,51 @@ export const baseJsonLd = {
   founder: {
     '@type': 'Person',
     name: 'John Paul',
-    jobTitle: 'Freelance Web Developer'
+    jobTitle: 'Freelance Web Developer & Full-Stack Engineer',
+    description:
+      'Sussex-based freelance web developer with 5+ years in web development and extensive IT project leadership experience at IBM, Rolls-Royce, and Ericsson. Specializes in React, Next.js, Node.js, and creating scalable business solutions.',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Web and Prosper'
+    },
+    hasCredential: [
+      'Full-Stack Web Development',
+      'React Specialist',
+      'Next.js Expert',
+      'Node.js Development',
+      'TypeScript',
+      'PostgreSQL',
+      'AI Integration',
+      'Project Management',
+      'Business Strategy'
+    ],
+    yearOfExperience: '5+ years in web development',
+    previousWorkExperience: [
+      'IBM - IT Project Leadership',
+      'Rolls-Royce - IT Project Leadership',
+      'Ericsson - IT Project Leadership'
+    ],
+    expertise: [
+      'Frontend Development (React, Next.js, TypeScript)',
+      'Backend Development (Node.js, Express, Hono)',
+      'Database Design (PostgreSQL, SQL)',
+      'CMS Development (Strapi, WordPress)',
+      'E-commerce Solutions',
+      'Performance Optimization',
+      'SEO Technical Implementation',
+      'AI Integration',
+      'DevOps (Docker, VPS Management)',
+      'Authentication Systems (Lucia Auth, Clerk, NextAuth.js)',
+      'Testing (Cypress)',
+      'UI/UX Design (Figma)',
+      'Business Consultation',
+      'Project Management (Agile, Scrum)'
+    ],
+    serviceArea: 'Sussex, Surrey, London, Kent and surrounding areas',
+    workingHours: 'Monday-Friday, 9:00-17:00',
+    contactPreference: 'Phone consultation followed by email',
+    specialization:
+      'Creating fast, SEO-friendly websites and custom business applications for startups, agencies, and established businesses'
   },
   description:
     'Sussex-based freelance web developer. Fast, SEO-friendly websites & apps built with React & Next.js. ☎ 07739 875445 for a free consultation.',
@@ -141,9 +185,34 @@ export const baseJsonLd = {
   knowsAbout: [
     'React Development',
     'Next.js Development',
-    'Web Development',
+    'Full-Stack Web Development',
     'Frontend Development',
-    'SEO Optimization'
+    'Backend Development',
+    'Node.js Development',
+    'TypeScript Development',
+    'JavaScript Development',
+    'SEO Optimization',
+    'API Development',
+    'Database Design',
+    'PostgreSQL',
+    'Strapi CMS',
+    'WordPress Development',
+    'E-commerce Development',
+    'Custom Web Applications',
+    'Performance Optimization',
+    'UI/UX Design',
+    'Responsive Web Design',
+    'Progressive Web Apps',
+    'AI Integration',
+    'Cypress Testing',
+    'DevOps',
+    'Docker',
+    'VPS Management',
+    'Authentication Systems',
+    'Business Strategy',
+    'Client Consultation',
+    'Project Management',
+    'Agile Development'
   ],
   sameAs: [
     // Add your social media profiles here
@@ -159,8 +228,42 @@ export const baseJsonLd = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
+          name: 'Website Design & Development',
+          description:
+            'End-to-end website creation including discovery sessions, wireframing, UI design, responsive development, and testing. Specializing in modern, fast-loading, SEO-friendly websites that convert visitors into customers.',
+          provider: {
+            '@type': 'Person',
+            name: 'John Paul'
+          },
+          category: 'Web Development'
+        }
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Full-Stack Application Development',
+          description:
+            'Custom web applications using React, Next.js, Node.js, and PostgreSQL. Includes frontend and backend development, database design, API development, authentication systems, and deployment with ongoing support.',
+          provider: {
+            '@type': 'Person',
+            name: 'John Paul'
+          },
+          category: 'Application Development'
+        }
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
           name: 'React Development',
-          description: 'Custom React applications and components'
+          description:
+            'Custom React applications, component libraries, and interactive user interfaces. Expertise in modern React patterns, hooks, state management, and performance optimization.',
+          provider: {
+            '@type': 'Person',
+            name: 'John Paul'
+          },
+          category: 'Frontend Development'
         }
       },
       {
@@ -168,31 +271,27 @@ export const baseJsonLd = {
         itemOffered: {
           '@type': 'Service',
           name: 'Next.js Development',
-          description: 'Full-stack Next.js websites and applications'
+          description:
+            'Full-stack Next.js applications with server-side rendering, static site generation, API routes, and optimized performance. Perfect for modern, scalable web applications.',
+          provider: {
+            '@type': 'Person',
+            name: 'John Paul'
+          },
+          category: 'Full-Stack Development'
         }
       },
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Website Design & Development',
-          description: 'Custom websites from design to deployment'
-        }
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'SEO Optimization',
-          description: 'Technical SEO and performance optimization'
-        }
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Web Application Development',
-          description: 'Interactive web applications and dashboards'
+          name: 'Contract Development Services',
+          description:
+            'Flexible frontend and backend development support for existing teams. Includes React, Next.js, Node.js development, API integration, and project collaboration with clear communication and reliable delivery.',
+          provider: {
+            '@type': 'Person',
+            name: 'John Paul'
+          },
+          category: 'Contract Services'
         }
       },
       {
@@ -200,7 +299,41 @@ export const baseJsonLd = {
         itemOffered: {
           '@type': 'Service',
           name: 'E-commerce Development',
-          description: 'Online stores and e-commerce solutions'
+          description:
+            'Custom online stores and e-commerce solutions with payment integration, inventory management, and optimized checkout flows. Built for conversion and growth.',
+          provider: {
+            '@type': 'Person',
+            name: 'John Paul'
+          },
+          category: 'E-commerce'
+        }
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'SEO & Performance Optimization',
+          description:
+            'Technical SEO, page speed optimization, Core Web Vitals improvements, and performance auditing to increase search rankings and user experience.',
+          provider: {
+            '@type': 'Person',
+            name: 'John Paul'
+          },
+          category: 'Optimization'
+        }
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'AI Integration Services',
+          description:
+            'Integration of AI capabilities into web applications, including chatbots, content generation, and intelligent automation features.',
+          provider: {
+            '@type': 'Person',
+            name: 'John Paul'
+          },
+          category: 'AI Development'
         }
       }
     ]

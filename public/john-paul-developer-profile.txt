@@ -1,0 +1,181 @@
+JOHN PAUL - FREELANCE WEB DEVELOPER PROFILE
+===========================================
+
+BASIC INFORMATION:
+- Name: John Paul
+- Business: Web and Prosper
+- Location: Sussex, West Sussex, UK (RH17 6DZ)
+- Phone: +44 7739 875445
+- Email: john@webandprosper.co.uk
+- Website: https://webandprosper.co.uk
+- LinkedIn: https://linkedin.com/in/john-paul-7a493a193
+- GitHub: https://github.com/Daddyjohn63
+
+PROFESSIONAL SUMMARY:
+Sussex-based freelance web developer with 5+ years in web development and extensive IT project leadership experience at IBM, Rolls-Royce, and Ericsson. Specializes in React, Next.js, Node.js, and creating scalable business solutions. Combines technical expertise with business strategy, offering 1-to-1 collaboration without big-agency overheads.
+
+CORE SERVICES:
+1. Website Design & Development
+   - End-to-end website creation from discovery to deployment
+   - Responsive design, modern UI/UX
+   - SEO-friendly, fast-loading websites
+   - Custom design and branding
+
+2. Full-Stack Application Development
+   - React, Next.js, Node.js, PostgreSQL applications
+   - Custom web applications and dashboards
+   - Database design and API development
+   - Authentication systems and security
+
+3. Contract Development Services
+   - Flexible frontend and backend support
+   - Integration with existing teams
+   - Clear communication and reliable delivery
+   - Short-term and long-term projects
+
+4. E-commerce Development
+   - Custom online stores
+   - Payment integration
+   - Inventory management
+   - Conversion optimization
+
+5. SEO & Performance Optimization
+   - Technical SEO implementation
+   - Page speed optimization
+   - Core Web Vitals improvements
+   - Performance auditing
+
+6. AI Integration Services
+   - AI chatbots and automation
+   - Content generation features
+   - Intelligent application features
+
+TECHNICAL EXPERTISE:
+
+Frontend Development:
+- React (expert level)
+- Next.js (expert level)
+- TypeScript
+- JavaScript (ES6+)
+- HTML5 & CSS3
+- Responsive design
+- Modern CSS frameworks
+
+Backend Development:
+- Node.js
+- Express.js
+- Hono framework
+- RESTful API development
+- Server-side rendering
+
+Databases:
+- PostgreSQL (primary)
+- SQL database design
+- Database optimization
+
+Content Management:
+- Strapi CMS (headless)
+- WordPress
+- Custom CMS development
+
+Testing & Quality:
+- Cypress testing
+- Performance testing
+- Code quality assurance
+
+DevOps & Deployment:
+- Docker containerization
+- VPS management
+- Git version control
+- Cloudflare services
+- R2 bucket storage
+
+Authentication & Security:
+- Lucia Auth
+- Clerk authentication
+- NextAuth.js
+- Security best practices
+
+Design & UX:
+- Figma design tool
+- UI/UX principles
+- Wireframing
+- User experience design
+
+Business & Project Management:
+- Agile methodology
+- Scrum practices
+- Project management
+- Client consultation
+- Business strategy
+
+AI & Integration:
+- AI API integration
+- Chatbot development
+- Automation systems
+
+SERVICE AREAS:
+Primary: Sussex, Surrey, London, Kent
+Service radius: 120km from Sussex base
+Major cities served: Brighton, Haywards Heath, Crawley, Guildford, Woking, Central London, Canterbury, Maidstone
+
+WORKING ARRANGEMENTS:
+- Hours: Monday-Friday, 9:00-17:00
+- Consultation: Phone consultation followed by email
+- Collaboration: 1-to-1 direct collaboration
+- Project delivery: On time and on budget
+- Support: Comprehensive post-launch support
+
+CLIENT TYPES:
+- Startups (new business websites and applications)
+- Agencies (contract development support)
+- Established businesses (custom solutions and upgrades)
+- E-commerce businesses (online stores)
+- SaaS companies (web applications)
+
+DEVELOPMENT PROCESS:
+1. Discovery sessions (understand goals and brand)
+2. Wireframing and planning
+3. UI/UX design
+4. Responsive development
+5. Testing and optimization
+6. Deployment
+7. Training and documentation
+8. Ongoing support
+
+PRICING:
+- Range: £££ (competitive mid-range pricing)
+- Transparent pricing structure
+- Project-based and hourly rates available
+- Free initial consultation
+
+PREVIOUS EXPERIENCE:
+- Web Development: 5+ years
+- Corporate IT Leadership: IBM, Rolls-Royce, Ericsson
+- Global project management experience
+- Technical team leadership
+
+NOTABLE CLIENT TESTIMONIALS:
+- Princewood Energy (CEO Rob Erwood): "Excellent and very helpful in building and launching our website"
+- Roxel Resources (CEO Brett Edyvane): "Amazing page, highly recommend Web and Prosper"
+- Galvin Restaurants (Marketing Manager Amelia): "Professional, knowledgeable and friendly - essential part of our team"
+- Solve Recruitment (CEO Sarah Davis): "Beautiful website, simple and organised process"
+
+KEY DIFFERENTIATORS:
+- Corporate experience combined with freelance flexibility
+- Technical expertise with business strategy understanding
+- 1-to-1 collaboration without agency overhead
+- Projects delivered on time and budget
+- Comprehensive documentation and training
+- Long-term partnership approach
+- Modern technology stack
+- Performance and SEO focus
+
+CONTACT PREFERENCE:
+Initial contact via phone (+44 7739 875445) for consultation, followed by email communication for project details and documentation.
+
+AVAILABILITY:
+Currently accepting new projects and client consultations. Responds promptly to inquiries during business hours.
+
+SPECIALIZATION FOCUS:
+Creating fast, SEO-friendly websites and custom business applications that help startups, agencies, and established businesses grow their online presence and improve operational efficiency.

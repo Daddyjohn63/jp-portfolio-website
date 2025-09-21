@@ -20,12 +20,13 @@ export const metadata = {
     maximumScale: 5
   },
   description:
-    'Web and Prosper will help you get more clients and grow your business.',
+    'John Paul, Sussex-based freelance web developer specializing in React, Next.js, and full-stack development. 5+ years experience with corporate background at IBM, Rolls-Royce, Ericsson. Custom websites, web applications, e-commerce, and AI integration services.',
   manifest: '/site.webmanifest',
   openGraph: {
-    title: 'Web and Prosper',
+    title:
+      'John Paul - Freelance Web Developer Sussex | React & Next.js Expert',
     description:
-      'Web and Prosper will help you get more clients and grow your business.',
+      'Sussex-based freelance web developer John Paul: React, Next.js, full-stack development. 5+ years experience, corporate background (IBM, Rolls-Royce). Custom websites, web apps, e-commerce. Phone: 07739 875445',
     url: 'https://webandprosper.com',
     siteName: 'Web and Prosper',
     images: [
@@ -41,9 +42,10 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web and Prosper',
+    title:
+      'John Paul - Freelance Web Developer Sussex | React & Next.js Expert',
     description:
-      'Web and Prosper will help you get more clients and grow your business.',
+      'Sussex-based freelance web developer John Paul: React, Next.js, full-stack development. 5+ years experience, corporate background (IBM, Rolls-Royce). Custom websites, web apps, e-commerce.',
     images: ['/open-graph/open-graph.jpg']
   },
   icons: {
