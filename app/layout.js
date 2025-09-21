@@ -13,12 +13,6 @@ export const metadata = {
     default: 'Web and Prosper',
     template: '%s | Web and Prosper'
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    minimumScale: 1,
-    maximumScale: 5
-  },
   description:
     'John Paul, Sussex-based freelance web developer specializing in React, Next.js, and full-stack development. 5+ years experience with corporate background at IBM, Rolls-Royce, Ericsson. Custom websites, web applications, e-commerce, and AI integration services.',
   manifest: '/site.webmanifest',
@@ -70,6 +64,13 @@ export const metadata = {
       }
     ]
   }
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  minimumScale: 1,
+  maximumScale: 5
 };
 
 export default function RootLayout({ children }) {

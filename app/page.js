@@ -1,4 +1,3 @@
-import { getWebDesignProcessFlow } from '@/lib/single-types';
 import HomeHero from '@/components/home/HomeHero';
 import ServicesSection from '@/components/home/ServicesSection';
 import { AboutSection } from '@/components/home/AboutSection';
@@ -45,11 +44,11 @@ export default async function Home() {
       <JsonLd data={faqJsonLd} />
       <JsonLd data={testimonialsJsonLd} />
       {/* Hero Section */}
-      <header>
-        <section className="xl:min-h-[calc(100vh-100px)]">
-          <HomeHero />
-        </section>
-      </header>
+      {/* <header> */}
+      <section className="xl:min-h-[calc(100vh-100px)]">
+        <HomeHero />
+      </section>
+      {/* </header> */}
 
       {/* Main Content */}
       <main className="">

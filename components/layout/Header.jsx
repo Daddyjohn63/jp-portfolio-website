@@ -12,12 +12,10 @@ import { SocialLinks } from '../common/SocialLinks';
 const Header = () => {
   const { sticky } = useSticky(150);
   const pathname = usePathname();
-  const isHome = pathname === '/'; // Returns true if on home page
+  //const isHome = pathname === '/'; // Returns true if on home page
 
-  // const isActive =
-  //   (pathname === '/' && href === '/') ||
-  //   pathname === href ||
-  //   pathname?.startsWith(`${href}/`);
+  const landingPages = ['/', '/web-developer-london'];
+  const isHome = landingPages.includes(pathname);
 
   // Adjust header classes based on the page and scroll position
   const headerClass = cn('w-full z-10 transition-all duration-300', {
