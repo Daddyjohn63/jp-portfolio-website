@@ -7,11 +7,33 @@ import PortfolioSection from '@/components/home/PortfolioSection';
 import { WebDesignProcessFlow } from '@/components/home/WebDesignProcessFlow';
 import { CallToAction } from '@/components/common/CallToAction';
 import { Mail, Phone } from 'lucide-react';
+import { JsonLd } from '@/app/json-ld';
+import { homeJsonLd } from '@/app/json-ld/home';
 
 export const metadata = {
-  title: 'Web Developer Sussex | Websites & Applications that Deliver',
+  title: 'Freelance Web Developer Sussex | React & Next.js Specialist',
   description:
-    'Looking for a reliable web developer in Sussex? I build fast, secure websites and powerful web applications that drive growth. Get a free consultation today!.'
+    'Sussex-based freelance web developer. I build Fast, SEO-friendly websites & apps built with React & Next.js. ☎ 07739 875445 for a free consultation.',
+  openGraph: {
+    title: 'Freelance Web Developer Sussex | React & Next.js Specialist',
+    description:
+      'Sussex-based freelance web developer. I build Fast, SEO-friendly websites & apps built with React & Next.js. ☎ 07739 875445 for a free consultation.',
+    type: 'website'
+  },
+  alternates: {
+    canonical: 'https://webandprosper.co.uk'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  }
 };
 
 export default async function Home() {
@@ -19,6 +41,7 @@ export default async function Home() {
 
   return (
     <article>
+      <JsonLd data={homeJsonLd} />
       {/* Hero Section */}
       <header>
         <section className="xl:min-h-[calc(100vh-100px)]">
@@ -60,7 +83,7 @@ export default async function Home() {
             buttonLink="/contact"
             buttonColor="bg-primary"
             buttonTextColor="text-white"
-            email="john@webandprosper.com"
+            email="john@webandprosper.co.uk"
             phone="+44 7739 875445"
             emailIcon={<Mail />}
             phoneIcon={<Phone />}

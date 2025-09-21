@@ -56,7 +56,8 @@ const HomeHero = () => {
               <div className="w-full">
                 <div className="mt-4 md:mt-0">
                   <h1 className="inline-flex text-[15px] md:text-lg xl:text-xl  items-center gap-1 font-light py-1 px-3 rounded-full text-white/80 bg-primary/10">
-                    Professional Web Developer based in Sussex
+                    Freelance Web Developer in Sussex – React & Next.js
+                    Specialist
                   </h1>
                 </div>
 
@@ -71,9 +72,12 @@ const HomeHero = () => {
                 </h2>
 
                 <p className="mt-6 leading-8">
-                  Adapt and stay ahead of the competition with modern, scalable
-                  web applications that will deliver more sales, more
-                  productivity and a return on your investment.
+                  I’m John Paul, a Sussex-based freelance web developer. I build
+                  fast, SEO-friendly websites and custom applications using
+                  modern frameworks like React and Next.js. Whether you’re a
+                  startup, agency, or established business, I offer 1-to-1
+                  collaboration, clean code, and reliable delivery — without
+                  big-agency overheads.
                 </p>
 
                 <ul className="flex flex-col mt-3 gap-2">
