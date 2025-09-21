@@ -7,11 +7,11 @@ const faqData = [
     id: 1,
     question: 'What services does John Paul offer as a web developer?',
     answer:
-      'John Paul offers comprehensive web development services including: Website Design & Development (end-to-end creation from discovery to deployment), Full-Stack Application Development (React, Next.js, Node.js, PostgreSQL), Contract Development Services (flexible support for existing teams), E-commerce Development (custom online stores), SEO & Performance Optimization, and AI Integration Services. He specializes in creating fast, SEO-friendly websites and custom business applications.'
+      'John Paul offers comprehensive web development services including: Website Design & Development (end-to-end creation from discovery to deployment), Full-Stack Application Development (React, Next.js, Node.js, PostgreSQL), Contract Development Services (flexible support for existing teams), E-commerce Development (custom online stores), SEO & Performance Optimisation, and AI Integration Services. He specializes in creating fast, SEO-friendly websites and custom business applications.'
   },
   {
     id: 2,
-    question: 'What technologies and frameworks does John Paul specialize in?',
+    question: 'What technologies and frameworks does John Paul specialise in?',
     answer:
       'John Paul specializes in modern web technologies including: Frontend - React, Next.js, TypeScript, JavaScript (ES6+), HTML & CSS; Backend - Node.js, Express, Hono, API development; Databases - PostgreSQL, SQL; CMS - Strapi, WordPress; Testing - Cypress; DevOps - Docker, VPS management; Authentication - Lucia Auth, Clerk, NextAuth.js; Design - Figma, UI/UX; and AI Integration capabilities.'
   },
@@ -37,7 +37,7 @@ const faqData = [
     id: 6,
     question: "What is John Paul's development process?",
     answer:
-      'John Paul follows a comprehensive development process including: In-depth discovery sessions to understand goals and brand identity, layout wireframing and UI design, responsive development with clean code, robust testing, deployment, and post-launch support. He emphasizes modern design principles, usability, accessibility, and performance optimization throughout the process.'
+      'John Paul follows a comprehensive development process including: In-depth discovery sessions to understand goals and brand identity, layout wireframing and UI design, responsive development with clean code, robust testing, deployment, and post-launch support. He emphasizes modern design principles, usability, accessibility, and performance optimisation throughout the process.'
   },
   {
     id: 7,

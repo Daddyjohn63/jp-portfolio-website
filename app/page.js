@@ -4,7 +4,6 @@ import ServicesSection from '@/components/home/ServicesSection';
 import { AboutSection } from '@/components/home/AboutSection';
 import FeedBack from '@/components/FeedbackTestimonial';
 import PortfolioSection from '@/components/home/PortfolioSection';
-import { WebDesignProcessFlow } from '@/components/home/WebDesignProcessFlow';
 import { CallToAction } from '@/components/common/CallToAction';
 import { Mail, Phone } from 'lucide-react';
 import { JsonLd } from '@/app/json-ld';
@@ -40,8 +39,6 @@ export const metadata = {
 };
 
 export default async function Home() {
-  const processFlow = await getWebDesignProcessFlow();
-
   return (
     <article>
       <JsonLd data={homeJsonLd} />
@@ -74,11 +71,6 @@ export default async function Home() {
         {/* Portfolio Section */}
         <section className="section-spacing-lg">
           <PortfolioSection />
-        </section>
-
-        {/* Process Flow Section */}
-        <section className="section-spacing-responsive">
-          <WebDesignProcessFlow processFlow={processFlow} />
         </section>
 
         {/* FAQ Section */}

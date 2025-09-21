@@ -1,6 +1,8 @@
 import { CallToAction } from '@/components/common/CallToAction';
 import { InnerHeader } from '@/components/common/InnerHeader';
 import { FaLaptopCode, FaCogs, FaHandshake } from 'react-icons/fa';
+import { WebDesignProcessFlow } from '@/components/home/WebDesignProcessFlow';
+import { getWebDesignProcessFlow } from '@/lib/single-types';
 
 export const metadata = {
   title: 'Services | Web and Prosper',
@@ -30,7 +32,8 @@ const servicesData = [
   }
 ];
 
-const ServicesPage = () => {
+const ServicesPage = async () => {
+  const processFlow = await getWebDesignProcessFlow();
   return (
     <>
       <InnerHeader
@@ -68,6 +71,11 @@ const ServicesPage = () => {
               </div>
             );
           })}
+        </section>
+
+        {/* Process Flow Section */}
+        <section className="section-spacing-lg">
+          <WebDesignProcessFlow processFlow={processFlow} />
         </section>
 
         {/* Call to Action */}
