@@ -1,13 +1,13 @@
-import { MoveRight, Star } from 'lucide-react';
+//import { MoveRight, Star } from 'lucide-react';
 //import Link from 'next/link';
-import Image from 'next/image';
+//import Image from 'next/image';
 import { CtaButton } from '@/components/common/CtaButton';
 
 const LandingHeroLondon = () => {
   return (
     <>
       <div>
-        <div className="w-full relative isolate overflow-hidden bg-background/70 bg-opacity-70">
+        <div className="w-full min-h-screen relative isolate overflow-hidden bg-background/70 bg-opacity-70 before:absolute before:inset-0 before:w-full before:h-full before:bg-[url('/images/john-paul/john_paul_2_bg.jpg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-20 before:-z-20">
           <svg
             className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
             aria-hidden="true"
@@ -50,17 +50,17 @@ const LandingHeroLondon = () => {
             />
           </div>
 
-          <div className="container mx-auto max-w-8xl px-6 pt-[80px] md:pt-[150px] lg:pt-[200px] lg:flex lg:items-center lg:gap-12 lg:px-8">
+          <div className="container px-6 pt-[80px] md:pt-[150px] lg:pt-[200px]">
             {/* Text Section and buttons */}
-            <div className="flex-1 w-full lg:w-1/2">
-              <div className="w-full">
+            <div className="max-w-3xl">
+              <div className="">
                 <div className="mt-4 md:mt-0">
                   <h1 className="inline-flex text-[15px] md:text-lg xl:text-xl  items-center gap-1 font-light py-1 px-3 rounded-full text-white/80 bg-primary/10">
                     Freelance Web Developer London – React & Next.js Specialist
                   </h1>
                 </div>
 
-                <h2 className="mt-6 md:mt-10 text-2xl md:text-3xl xl:text-4xl !leading-10 md:!leading-[45px] font-bold ">
+                <h2 className="mt-6 md:mt-10 text-2xl md:text-2xl xl:text-3xl !leading-10 md:!leading-[45px] font-bold ">
                   Helping London startups, agencies & businesses build fast,
                   SEO-friendly websites and custom web applications.
                 </h2>
@@ -82,54 +82,6 @@ const LandingHeroLondon = () => {
                     label="My work"
                     href="/portfolio"
                     className="w-full md:w-auto"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Image Section */}
-            <div className="flex-1 w-full lg:w-1/2 mt-10 lg:mt-0">
-              <div className="w-full h-full relative">
-                {/* Motion effect - desktop only */}
-                <div className="hidden md:block">
-                  <div
-                    className="absolute inset-0 rounded-lg transform translate-x-8 translate-y-8 bg-transparent bg-[radial-gradient(#b16cf1bc_1px,transparent_1px)] [background-size:8px_8px] animate-fade-in"
-                    style={{
-                      animation: 'fadeIn 0.8s ease-out 0.5s forwards'
-                    }}
-                  />
-                </div>
-
-                {/* Mobile Image */}
-                <div className="md:hidden">
-                  <Image
-                    src="/images/chameleon-mob-portrait.jpg"
-                    alt="Chameleon sitting at a desk coding"
-                    width={400}
-                    height={500}
-                    className="relative w-full h-auto rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
-                    priority
-                    quality={65}
-                    loading="eager"
-                    sizes="100vw"
-                    placeholder="blur"
-                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkMjU1LS0yMi4qQEBALkE2Qjc4QD4+R0hIR0Q/TUtPSEtPR0dPR0f/2wBDAR"
-                  />
-                </div>
-
-                {/* Desktop Image */}
-                <div className="hidden md:block">
-                  <Image
-                    src="/images/chameleon-v1-r-1-5.jpg"
-                    alt="Chameleon sitting at a desk coding"
-                    width={1200}
-                    height={800}
-                    className="relative w-full h-auto rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
-                    priority
-                    quality={65}
-                    sizes="50vw"
-                    placeholder="blur"
-                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkMjU1LS0yMi4qQEBALkE2Qjc4QD4+R0hIR0Q/TUtPSEtPR0dPR0f/2wBDAR"
                   />
                 </div>
               </div>
