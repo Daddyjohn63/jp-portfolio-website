@@ -15,7 +15,7 @@ const data = [
     serviceNumber: '01',
     serviceName: 'Websites',
     description:
-      'Fast, secure, SEO friendly websites that are designed to convert visitors into customers. From simple landing pages, to e-commerce stores.',
+      'Fast, secure, SEO friendly websites that are designed to convert visitors into loyal customers. From sleek landing pages, to powerful e-commerce stores.',
     icon: MoveUpRight,
     cta: 'About Web Development',
     href: '/services/'
@@ -25,7 +25,7 @@ const data = [
     serviceNumber: '02',
     serviceName: 'Business Applications',
     description:
-      'Custom business applications that are designed to streamline your operations and improve your bottom line. From inventory management, to customer relationship management.',
+      'Bespoke business applications crafted to streamline operations and boost profitability. From powerful dashboards and AI Agents, to customer relationship management.',
     icon: MoveUpRight,
     cta: 'About Business Applications',
     href: '/services/'
@@ -35,7 +35,7 @@ const data = [
     serviceNumber: '03',
     serviceName: 'Contract Services',
     description:
-      'I can become part of your team, providing the skills and expertise you need to get the job done. From web design, to business applications, bringing front-end and back-end skills to the table.',
+      'Think of me as an extension of your team. I will bring the front-end and back-end expertise you need to deliver everything from web design to complex business applications.',
     icon: MoveUpRight,
     cta: 'About Contract Services',
     href: '/services/'

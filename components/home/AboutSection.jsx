@@ -9,7 +9,7 @@ import { BsGraphUpArrow } from 'react-icons/bs';
 
 const aboutMessages = [
   {
-    title: 'Investment',
+    title: 'Growth',
     description: 'I want to help you grow your business',
     icon: <BsGraphUpArrow className="text-blue-500" size={38} />
   },

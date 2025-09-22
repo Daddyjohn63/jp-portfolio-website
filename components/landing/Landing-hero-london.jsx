@@ -60,17 +60,16 @@ const LandingHeroLondon = () => {
                   </h1>
                 </div>
 
-                <h2 className="mt-6 md:mt-10 text-2xl md:text-3xl xl:text-4xl !leading-10 md:!leading-[40px] font-bold ">
+                <h2 className="mt-6 md:mt-10 text-2xl md:text-3xl xl:text-4xl !leading-10 md:!leading-[45px] font-bold ">
                   Helping London startups, agencies & businesses build fast,
                   SEO-friendly websites and custom web applications.
                 </h2>
 
                 <p className="mt-6 leading-8">
-                  I am John Paul and I am based in West Sussex, I work with
-                  London clients who need modern websites and apps that scale. I
-                  specialise in React & Next.js — delivering clean code,
-                  performance, and 1-to-1 collaboration without agency
-                  overheads.
+                  I am John Paul and I work with London clients who need modern
+                  websites and apps that scale. I specialise in React & Next.js
+                  — delivering clean code, performance, and 1-to-1 collaboration
+                  without agency overheads.
                 </p>
 
                 <div className="mt-10 flex flex-row justify-start gap-4 md:gap-x-6 w-full mb-4">

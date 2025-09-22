@@ -1,4 +1,5 @@
 //import LondonHeroWithSkyline from '@/components/landing/london-hero-skyline';
+import { CompanyLogos } from '@/components/common/company-logos';
 import LandingHeroLondon from '@/components/landing/landing-hero-london';
 import ServicesSectionLondon from '@/components/landing/ServicesSectionLondon';
 
@@ -13,6 +14,9 @@ const WebDeveloperLondon = () => {
       <main className="">
         <section className="section-spacing-responsive">
           <ServicesSectionLondon />
+        </section>
+        <section className="section-spacing-responsive">
+          <CompanyLogos />
         </section>
       </main>
     </article>
