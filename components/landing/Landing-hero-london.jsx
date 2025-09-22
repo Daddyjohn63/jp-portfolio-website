@@ -60,39 +60,18 @@ const LandingHeroLondon = () => {
                   </h1>
                 </div>
 
-                <h2 className="mt-6 md:mt-10 text-3xl md:text-3xl xl:text-5xl !leading-10 md:!leading-[70px] font-bold ">
-                  Transforming ideas into{' '}
-                  <span className="md:whitespace-nowrap md:mt-10 text-3xl md:text-3xl xl:text-5xl !leading-10 md:!leading-[70px] font-bold">
-                    powerful{' '}
-                    <span className="text-3xl md:text-3xl xl:text-5xl font-bold bg-gradient-to-r from-purple-600 via-blue-400 to-orange-300 inline-block text-transparent bg-clip-text">
-                      Web Applications
-                    </span>
-                  </span>
+                <h2 className="mt-6 md:mt-10 text-2xl md:text-3xl xl:text-4xl !leading-10 md:!leading-[40px] font-bold ">
+                  Helping London startups, agencies & businesses build fast,
+                  SEO-friendly websites and custom web applications.
                 </h2>
 
                 <p className="mt-6 leading-8">
-                  I’m John Paul, a Sussex-based freelance web developer. I build
-                  fast, SEO-friendly websites and custom applications using
-                  modern frameworks like React and Next.js. Whether you’re a
-                  startup, agency, or established business, I offer 1-to-1
-                  collaboration, clean code, and reliable delivery — without
-                  big-agency overheads.
+                  I am John Paul and I am based in West Sussex, I work with
+                  London clients who need modern websites and apps that scale. I
+                  specialise in React & Next.js — delivering clean code,
+                  performance, and 1-to-1 collaboration without agency
+                  overheads.
                 </p>
-
-                <ul className="flex flex-col mt-3 gap-2">
-                  <li className="flex items-center gap-1">
-                    <MoveRight className="size-5 text-muted-foreground mr-2" />
-                    Websites that convert
-                  </li>
-                  <li className="flex items-center gap-1">
-                    <MoveRight className="size-5 text-muted-foreground mr-2" />
-                    Business applications that will increase productivity
-                  </li>
-                  <li className="flex items-center gap-1">
-                    <MoveRight className="size-5 text-muted-foreground mr-2" />
-                    Projects delivered on time and on budget
-                  </li>
-                </ul>
 
                 <div className="mt-10 flex flex-row justify-start gap-4 md:gap-x-6 w-full mb-4">
                   <CtaButton

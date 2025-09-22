@@ -2,11 +2,29 @@
 import withBundleAnalyzer from '@next/bundle-analyzer';
 
 const nextConfig = {
+  // Disable caching in development
+  onDemandEntries: {
+    // Period (in ms) where the server will keep pages in the buffer
+    maxInactiveAge: 25 * 1000,
+    // Number of pages that should be kept simultaneously without being disposed
+    pagesBufferLength: 2
+  },
+
+  // Ensure fresh builds in development
+  ...(process.env.NODE_ENV === 'development' && {
+    webpack: (config, { dev }) => {
+      if (dev) {
+        config.cache = false;
+      }
+      return config;
+    }
+  }),
+
   images: {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     formats: ['image/webp'],
-    minimumCacheTTL: 60,
+    minimumCacheTTL: process.env.NODE_ENV === 'development' ? 0 : 60,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
