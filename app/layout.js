@@ -9,6 +9,7 @@ import { CookieModal } from '@/components/common/CookieModal';
 import { CookieButton } from '@/components/common/CookieButton';
 
 export const metadata = {
+  metadataBase: new URL('https://webandprosper.co.uk'),
   title: {
     default: 'Web and Prosper',
     template: '%s | Web and Prosper'
