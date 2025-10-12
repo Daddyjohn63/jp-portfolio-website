@@ -70,6 +70,12 @@ export default async function sitemap() {
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.3
+    },
+    {
+      url: `${baseUrl}/web-developer-london`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.9
     }
   ];
 
