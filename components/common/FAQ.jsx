@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import Link from 'next/link';
 
 const faqData = [
   {
@@ -30,8 +31,22 @@ const faqData = [
   {
     id: 5,
     question: 'What areas does John Paul serve?',
-    answer:
-      'John Paul is based in Sussex (West Sussex, RH17 6DZ) and serves clients across Sussex, Surrey, London, and Kent. His service radius covers up to 120km from his base, including major cities like Brighton, Haywards Heath, Crawley, Guildford, Woking, Central London, Canterbury, and Maidstone. He offers both local and remote collaboration.'
+    answer: (
+      <>
+        John Paul is based in Sussex (West Sussex, RH17 6DZ) and serves clients
+        across Sussex, Surrey,{' '}
+        <Link
+          href="/web-developer-london"
+          className="text-primary hover:text-primary/80 underline transition-colors"
+        >
+          London
+        </Link>
+        , and Kent. His service radius covers up to 120km from his base,
+        including major cities like Brighton, Haywards Heath, Crawley,
+        Guildford, Woking, Central London, Canterbury, and Maidstone. He offers
+        both local and remote collaboration.
+      </>
+    )
   },
   {
     id: 6,
