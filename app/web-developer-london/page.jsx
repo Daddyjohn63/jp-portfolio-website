@@ -13,7 +13,9 @@ import { faqJsonLd } from '@/app/json-ld/faq';
 import { testimonialsJsonLd } from '@/app/json-ld/testimonials';
 
 export const metadata = {
-  title: 'Freelance Web Developer London | React & Next.js Expert',
+  title: {
+    absolute: 'Freelance Web Developer London | React & Next.js Expert'
+  },
   description:
     'Freelance web developer John Paul working in London. Specializing in React, Next.js, and full-stack development. 5+ years experience with corporate background. ☎ 07739 875445 for consultation.',
   openGraph: {
@@ -21,13 +23,24 @@ export const metadata = {
     description:
       'Freelance web developer John Paul working in London. Specializing in React, Next.js, and full-stack development. 5+ years experience with corporate background. ☎ 07739 875445 for consultation.',
     url: 'https://webandprosper.co.uk/web-developer-london',
+    siteName: 'Web and Prosper',
+    images: [
+      {
+        url: '/open-graph/open-graph.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Freelance Web Developer London - John Paul'
+      }
+    ],
+    locale: 'en_US',
     type: 'website'
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Freelance Web Developer London | React & Next.js Expert',
     description:
-      'Freelance web developer John Paul working in London. Specializing in React, Next.js, and full-stack development. 5+ years experience with corporate background.'
+      'Freelance web developer John Paul working in London. Specializing in React, Next.js, and full-stack development. 5+ years experience with corporate background.',
+    images: ['/open-graph/open-graph.jpg']
   },
   alternates: {
     canonical: 'https://webandprosper.co.uk/web-developer-london'
