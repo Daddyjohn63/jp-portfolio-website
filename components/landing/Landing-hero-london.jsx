@@ -55,7 +55,7 @@ const LandingHeroLondon = () => {
             <div className="max-w-3xl">
               <div className="">
                 <div className="mt-4 md:mt-0">
-                  <h1 className="inline-flex text-[15px] md:text-lg xl:text-xl  items-center gap-1 font-light py-1 px-3 rounded-full text-white/80 bg-primary/10">
+                  <h1 className="inline-flex text-[15px] md:text-lg xl:text-xl  items-center font-light py-1 px-3 rounded-full text-white/80 bg-primary/10">
                     Freelance Web Developer London – React & Next.js Specialist
                   </h1>
                 </div>
