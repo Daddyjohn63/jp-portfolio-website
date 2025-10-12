@@ -18,25 +18,25 @@ export const CompanyLogos = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-20 justify-items-center items-center">
             <Image
               src="/images/company-logos/ibm_logo.svg"
-              alt="Company Logo 1"
+              alt="IBM"
               width={150}
               height={150}
             />
             <Image
-              src="/images/company-logos/ericsson_logo_white.svg"
-              alt="Company Logo 2"
+              src="/images/company-logos/ericsson_logo.svg"
+              alt="Ericsson"
               width={150}
               height={150}
             />
             <Image
               src="/images/company-logos/rolls_royce.svg"
-              alt="Company Logo 3"
+              alt="Rolls-Royce"
               width={250}
               height={250}
             />
             <Image
               src="/images/company-logos/diageo_logo.svg"
-              alt="Company Logo 4"
+              alt="Diageo"
               width={150}
               height={150}
             />

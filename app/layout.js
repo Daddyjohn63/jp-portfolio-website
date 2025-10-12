@@ -22,7 +22,7 @@ export const metadata = {
       'John Paul - Freelance Web Developer Sussex | React & Next.js Expert',
     description:
       'Sussex-based freelance web developer John Paul: React, Next.js, full-stack development. 5+ years experience, corporate background (IBM, Rolls-Royce). Custom websites, web apps, e-commerce. Phone: 07739 875445',
-    url: 'https://webandprosper.com',
+    url: 'https://webandprosper.co.uk',
     siteName: 'Web and Prosper',
     images: [
       {
