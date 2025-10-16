@@ -13,12 +13,15 @@ import { Button } from '@/components/ui/button';
 import { Cookie } from 'lucide-react';
 import Link from 'next/link';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 export const CookieModal = ({ isOpen, onOpenChange }) => {
   const [internalIsOpen, setInternalIsOpen] = useState(false);
   const [shouldLoadGA, setShouldLoadGA] = useState(false);
 
   useEffect(() => {
-    // Check if user has already made a choice
+    if (!isProd) return; // Skip consent logic in non-prod environments
+
     const consent = localStorage.getItem('website_cookie_consent');
     const consentExpiry = localStorage.getItem('website_cookie_consent_expiry');
 
@@ -34,6 +37,7 @@ export const CookieModal = ({ isOpen, onOpenChange }) => {
   }, []);
 
   const clearGoogleAnalytics = () => {
+    if (!isProd) return; // Prevent clearing GA in development
     // Disable GA
     window['ga-disable-' + process.env.NEXT_PUBLIC_GA_ID] = true;
 
@@ -102,7 +106,7 @@ export const CookieModal = ({ isOpen, onOpenChange }) => {
 
   return (
     <>
-      {shouldLoadGA && (
+      {isProd && shouldLoadGA && (
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
           strategy="afterInteractive"
@@ -121,46 +125,49 @@ export const CookieModal = ({ isOpen, onOpenChange }) => {
           }}
         />
       )}
-      <Dialog open={isModalOpen} onOpenChange={handleOpenChange}>
-        <DialogContent className="sm:max-w-[425px] flex flex-col gap-8">
-          <DialogHeader>
-            <DialogTitle className="flex items-center gap-2">
-              <Cookie className="w-6 h-6" /> <h4>Cookie Consent</h4>
-            </DialogTitle>
-            <DialogDescription className="text-sm leading-6">
-              <div className="flex flex-col gap-2">
-                <p className="text-sm leading-6">
-                  This website uses cookies so I can see which of my pages are
-                  the most popular. You can always change your mind later.
-                </p>
-                <Link
-                  className="text-sm leading-6 underline hover:text-gray-600"
-                  href="/privacy-policy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Privacy Policy
-                </Link>
-              </div>
-            </DialogDescription>
-          </DialogHeader>
-          <DialogFooter className="flex gap-2 w-full">
-            <Button
-              variant="outline"
-              onClick={handleDecline}
-              className="bg-[#2B373B] text-white hover:bg-[#2B373B]/90 flex-1"
-            >
-              Decline
-            </Button>
-            <Button
-              onClick={handleAccept}
-              className="bg-[#ffe4c4] text-black hover:bg-[#ffe4c4]/90 flex-1"
-            >
-              Accept
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
+
+      {isProd && (
+        <Dialog open={isModalOpen} onOpenChange={handleOpenChange}>
+          <DialogContent className="sm:max-w-[425px] flex flex-col gap-8">
+            <DialogHeader>
+              <DialogTitle className="flex items-center gap-2">
+                <Cookie className="w-6 h-6" /> <h4>Cookie Consent</h4>
+              </DialogTitle>
+              <DialogDescription className="text-sm leading-6">
+                <div className="flex flex-col gap-2">
+                  <p className="text-sm leading-6">
+                    This website uses cookies so I can see which of my pages are
+                    the most popular. You can always change your mind later.
+                  </p>
+                  <Link
+                    className="text-sm leading-6 underline hover:text-gray-600"
+                    href="/privacy-policy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Privacy Policy
+                  </Link>
+                </div>
+              </DialogDescription>
+            </DialogHeader>
+            <DialogFooter className="flex gap-2 w-full">
+              <Button
+                variant="outline"
+                onClick={handleDecline}
+                className="bg-[#2B373B] text-white hover:bg-[#2B373B]/90 flex-1"
+              >
+                Decline
+              </Button>
+              <Button
+                onClick={handleAccept}
+                className="bg-[#ffe4c4] text-black hover:bg-[#ffe4c4]/90 flex-1"
+              >
+                Accept
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+      )}
     </>
   );
 };

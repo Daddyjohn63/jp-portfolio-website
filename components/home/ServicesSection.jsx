@@ -10,20 +10,17 @@ import { CloudArrowUpIcon } from '@heroicons/react/20/solid';
 import { Button } from '../ui/button';
 import { MoveUpRight } from 'lucide-react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+
 import Reveal from '@/components/common/ScrollAnimation';
 import { InnerHeader } from '../common/InnerHeader';
+import { MotionDiv } from '../common/MotionWrapper';
+import {
+  containerVariants,
+  itemVariants,
+  itemVariants2
+} from '@/util/constants';
 
 const data = [
-  // {
-  //   id: 1,
-  //   serviceNumber: '01',
-  //   serviceName: 'Web Design',
-  //   description:
-  //     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-  //   icon: MoveUpRight,
-  //   cta: 'About Web Design'
-  // },
   {
     id: 1,
     serviceNumber: '01',
@@ -58,15 +55,22 @@ const data = [
 
 const ServicesSection = () => {
   return (
-    <>
-      {/* <Reveal from={200}> */}
-      <div className="flex flex-col items-center justify-center gap-4">
+    <MotionDiv
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
+      <MotionDiv
+        variants={itemVariants}
+        className="flex flex-col items-center justify-center gap-4"
+      >
         <h2 className=" font-bold  text-center px-4">Services</h2>
         <p className="text-muted-foreground text-xl text-center px-4 md:w-1/3">
           I offer a range of services to help you grow your business.
         </p>
-      </div>
-      <div className="relative">
+      </MotionDiv>
+      <MotionDiv variants={itemVariants2} className="relative">
         <div className="container px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
             {data.map(item => (
@@ -111,9 +115,9 @@ const ServicesSection = () => {
             ))}
           </div>
         </div>
-      </div>
+      </MotionDiv>
       {/* </Reveal> */}
-    </>
+    </MotionDiv>
   );
 };
 
