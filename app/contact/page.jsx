@@ -1,5 +1,5 @@
 import { InnerHeader } from '@/components/common/InnerHeader';
-import TechCircle from '@/components/graphics/TechCircle';
+//import TechCircle from '@/components/graphics/TechCircle';
 import { Card, CardContent } from '@/components/ui/card';
 import {
   FaEnvelope,
@@ -93,7 +93,7 @@ export default async function ContactPage() {
           </div>
         </div>
       </main>
-      <TechCircle />
+      {/* <TechCircle /> */}
     </div>
   );
 }

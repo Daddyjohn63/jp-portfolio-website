@@ -22,7 +22,14 @@ export async function generateMetadata({ params: { slug } }) {
 }
 
 const ProjectSinglePage = async ({ slug }) => {
-  const { data } = await fetchData(getProject, slug);
+  const { data, error } = await fetchData(getProject, slug);
+
+  if (error) {
+    throw error;
+  }
+  if (!data) {
+    throw new Error(`Project "${slug}" not found`);
+  }
   const { currentProject, previousProject, nextProject } = data;
 
   if (!currentProject) {
